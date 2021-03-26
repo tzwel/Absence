@@ -1,14 +1,14 @@
 # An open-source Gelbooru client
 
 ## Installation:
-```bat
+```
 git clone https://github.com/tzwel/gelbooru_client.git
 npm install
 ```
 
 #### Running the client:
 
-```bat
+```
 npm start
 ```
 
