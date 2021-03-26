@@ -1,0 +1,41 @@
+/* set variables */
+:root {
+  --main-background: #1c1b29;
+  --secondary-background: #161621;
+  --text-color: #fff;
+  --border-radius: 20px;
+  --accent-color: #53f3de;
+}
+/* boilerplate colors */
+html {
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--text-color);
+}
+/* simple normalize */
+*,* * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+  user-select: none;
+  -webkit-user-drag: none;
+  box-sizing: inherit;
+  font-size: 1.2rem;
+  max-width: 100%;
+}
+/* fix <head> bug */
+head {
+  display: none !important;
+  visibility: hidden;
+}
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

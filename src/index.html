@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Gelbooru Client</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+  </head>
+  <body>
+    <container>
+
+      <aside>
+        <h1>nazwa</h1>
+        <label for="">tags</label>
+        <input class="tags" type="text" name="" value="">
+        <input class="page" min="0" type="number" placeholder="strona" name="" value="0">
+        <button class="search" type="button" name="button">szukaj</button>
+      </aside>
+      <main>
+        <header>
+          <nav>
+            <button class="minimize-button" type="button" name="button">
+              <img src="img/minimize.svg" alt="- minimize button"/>
+            </button>
+            <button class="close-button" type="button" name="button">
+              <img src="img/x.svg" alt="X close button"/>
+            </button>
+          </nav>
+        </header>
+
+        <grid>
+          <!-- image grid -->
+        </grid>
+
+      </main>
+
+      <display-wrapper>
+        <img src="" alt="large displayed image">
+        <display-buttons>
+          <a href="./html/info.html">detailed image info</a>
+          <button type="button" name="button">download</button>
+        </display-buttons>
+      </display-wrapper>
+
+    </container>
+    <script src="./renderer.js"></script>
+    <script src="js/blacklist.js" charset="utf-8"></script>
+    <script src="js/popup.js" charset="utf-8"></script>
+    <script src="js/populate.js" charset="utf-8"></script>
+    <script src="js/Fletcher.js" charset="utf-8"></script>
+    <script src="js/fetch.js" charset="utf-8"></script>
+    <script src="js/nav.js" charset="utf-8"></script>
+  </body>
+</html>

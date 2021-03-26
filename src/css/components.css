@@ -1,0 +1,151 @@
+container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+aside {
+  height: 100%;
+  height: 100vh;
+  /* min-width: calc(100px + 20%); */
+  position: fixed;
+  width: 100%;
+  max-width: 300px;
+  background: var(--secondary-background);
+  border-radius: var(--border-radius) 0 var(--border-radius) var(--border-radius);
+  z-index: 5;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: var(--secondary-background);
+  -webkit-app-region: drag;
+}
+
+main {
+  background: var(--main-background);
+  border-radius: var(--border-radius) 0 var(--border-radius) var(--border-radius);
+  width: 100%;
+  height: 100vh;
+  padding-left: 300px;
+}
+
+nav {
+  display: flex;
+  max-height: 40px;
+}
+
+nav button {
+  transition: background .1s;
+  min-width: 40px;
+  -webkit-app-region: no-drag;
+  background: var(--secondary-background);
+}
+
+nav button img {
+  transition: filter .1s;
+}
+
+nav button:hover {
+  background: var(--accent-color);
+}
+
+nav button:hover img {
+  filter: invert();
+}
+
+input {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+grid {
+  display: flex;
+  overflow-y: auto;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 900px;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s, top 0.3s;
+  top: 12px;
+  width: 225px;
+}
+
+article img:hover {
+  transform: scale(1.025);
+}
+
+article img {
+  cursor: pointer;
+}
+
+img,video {
+  margin: 10px;
+  max-width: 100%;
+  transition: transform .2s;
+}
+
+display-wrapper {
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  transition: background .2s, transform .2s, border-radius .2s;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  cursor: pointer;
+  transform: scale(.4);
+  border-radius: 100px;
+}
+
+
+display-wrapper.open {
+  display: flex;
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1);
+  border-radius: 0;
+}
+
+display-wrapper img {
+  background: linear-gradient(0deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+  max-width: calc(100% - 10px);
+  height: auto;
+  max-height: 100%;
+  cursor: default;
+}
+
+display-buttons {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+display-buttons a, display-buttons button {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.62);
+}

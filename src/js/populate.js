@@ -1,0 +1,36 @@
+
+function populate() {
+  if (resp.length === undefined) {
+    return console.log("No search results!");
+  }
+
+  for(let i = 0; i < resp.length; i++) {
+    let img = [];
+    let sampleUrl = "https://gelbooru.com/thumbnails/"
+    const imageWrapper = document.createElement("article");
+    sampleUrl = `${sampleUrl}${resp[i].directory}/thumbnail_${resp[i].hash}.jpg`
+    console.log(sampleUrl);
+
+    if (resp[i].file_url.includes("video-c") === true) {
+       img = document.createElement("video");
+       img.setAttribute("controls","");
+       img.setAttribute("loop","");
+    } else {
+       img = document.createElement("img");
+       img.addEventListener("load", imageLoad);
+    }
+
+
+    function imageLoad() {
+      imageWrapper.style.opacity = "1";
+      imageWrapper.style.top = "0px";
+    }
+
+    document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
+    img.setAttribute("original", `${resp[i].file_url}`);
+    img.src = sampleUrl;
+    imageWrapper.insertAdjacentElement("beforeend", img);
+
+
+  }
+}
