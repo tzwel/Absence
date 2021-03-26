@@ -10,6 +10,7 @@ window.onclick = e => {
         console.log(originalClickedImageUrl);
         document.querySelector("display-wrapper > img").src = "";
         document.querySelector("display-wrapper > img").src = originalClickedImageUrl;
+        document.querySelector(".download-link").href = originalClickedImageUrl;
         document.querySelector("display-wrapper").classList.add("open");
       }
     }
