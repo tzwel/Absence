@@ -5,7 +5,7 @@
 npm install
 ```
 
-### Running the client:
+#### Running the client:
 
 ```
 npm start
