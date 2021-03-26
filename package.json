@@ -1,0 +1,20 @@
+{
+  "name": "Gelbooru_Client",
+  "version": "0.1.0",
+  "description": "ojj",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "Gelbooru",
+    "Booru",
+    "Client"
+  ],
+  "author": "Tzwel",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron": "^12.0.0"
+  }
+}
