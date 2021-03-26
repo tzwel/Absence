@@ -1,5 +1,16 @@
 # An open-source Gelbooru client
 
+## Installation:
+```
+npm install
+```
+
+### Running the client:
+
+```
+npm start
+```
+
 ## Todo:
 
 - Add themes
