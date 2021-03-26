@@ -117,6 +117,7 @@ display-wrapper {
   cursor: pointer;
   transform: scale(.4);
   border-radius: 100px;
+  padding: 10px;
 }
 
 
