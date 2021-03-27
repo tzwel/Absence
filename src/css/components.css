@@ -110,13 +110,11 @@ display-wrapper {
   display: flex;
   position: fixed;
   z-index: 10;
-  transition: background .2s, transform .2s, border-radius .2s;
+  transition: background .2s;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   cursor: pointer;
-  transform: scale(.4);
-  border-radius: 100px;
   padding: 10px;
 }
 
@@ -125,8 +123,6 @@ display-wrapper.open {
   display: flex;
   visibility: visible;
   background: rgba(0, 0, 0, 0.6);
-  transform: scale(1);
-  border-radius: 0;
 }
 
 display-wrapper img {
