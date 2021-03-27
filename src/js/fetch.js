@@ -17,3 +17,6 @@ async function apiFetch() {
 }
 
 document.querySelector(".search").addEventListener("click", apiFetch)
+
+//fetch upon load
+apiFetch();
