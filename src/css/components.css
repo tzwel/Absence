@@ -5,6 +5,10 @@ container {
   align-items: stretch;
 }
 
+.logo {
+  font-size: 2rem;
+}
+
 aside {
   height: 100%;
   height: 100vh;
