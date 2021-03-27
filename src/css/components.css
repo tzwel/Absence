@@ -130,7 +130,8 @@ display-wrapper img {
   max-width: calc(100% - 10px);
   height: auto;
   max-height: 100%;
-  cursor: default;
+  cursor: grab;
+  transition: transform 0s;
 }
 
 display-buttons {
