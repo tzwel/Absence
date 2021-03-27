@@ -5,6 +5,7 @@
   --text-color: #fff;
   --border-radius: 20px;
   --accent-color: #53f3de;
+  --pagination-height: 80px;
 }
 /* boilerplate colors */
 html {

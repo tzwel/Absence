@@ -71,7 +71,7 @@ grid {
   flex-wrap: wrap;
 
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--pagination-height));
 
   justify-content: center;
   align-items: center;
@@ -87,6 +87,14 @@ article {
   transition: transform 0.3s, opacity 0.3s, top 0.3s;
   top: 12px;
   width: 225px;
+}
+
+pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 
 article img:hover {
