@@ -11,6 +11,8 @@ window.onclick = e => {
         document.querySelector("display-wrapper > img").src = "";
         document.querySelector("display-wrapper > img").src = originalClickedImageUrl;
         document.querySelector(".download-link").href = originalClickedImageUrl;
+        localStorage.currentImageDetails = originalClickedImageUrl;
+        console.log(`local ${localStorage.currentImageDetails}`);
         document.querySelector("display-wrapper").classList.add("open");
       }
     }
