@@ -20,6 +20,6 @@ npm start
 - Remove console logs
 - Add maximize button
 - Improve UI
-- ~~Image/video downloading~~
+- ~~Image~~/video downloading
 - Detailed image info
 - Video support
