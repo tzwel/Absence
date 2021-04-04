@@ -2,7 +2,7 @@
 
 ## Installation:
 ```
-git clone https://github.com/tzwel/gelbooru_client.git && gelbooru_client && cd npm install
+git clone https://github.com/tzwel/gelbooru_client.git && cd gelbooru_client && npm install
 ```
 
 #### Running the client:
