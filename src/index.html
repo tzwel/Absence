@@ -13,9 +13,16 @@
 
       <aside>
         <h1 class="logo">nazwa</h1>
-        <label for="">tags</label>
-        <input class="tags" type="text" name="" value="">
-        <input class="page" min="0" type="number" placeholder="strona" name="" value="0">
+        <label for="tags">tags</label>
+        <input id="tags" class="tags" type="text" name="" value="">
+        <label for="page">page</label>
+        <input id="page" class="page" min="0" type="number" placeholder="strona" name="" value="0">
+        <div id="ratingsWrapper">
+          <label for="ratingsWrapper">rating</label>
+          <button type="button" name="button">safe</button>
+          <button type="button" name="button">questionable</button>
+          <button type="button" name="button">explicit</button>
+        </div>
         <button class="search" type="button" name="button">szukaj</button>
 
         <label for="">saved searches</label>
@@ -24,6 +31,12 @@
           <li>oma</li>
           <li>omamale</li>
         </ul>
+
+        <h2>options</h2>
+        <label for="reflowToggle">
+          image reflow
+          <input id="reflowToggle" class="reflowToggle" type="checkbox" name="" value="">
+        </label>
       </aside>
       <main>
         <header>
@@ -65,5 +78,6 @@
     <script src="js/Fletcher.js" charset="utf-8"></script>
     <script src="js/fetch.js" charset="utf-8"></script>
     <script src="js/nav.js" charset="utf-8"></script>
+    <script src="js/options.js" charset="utf-8"></script>
   </body>
 </html>

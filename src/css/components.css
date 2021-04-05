@@ -17,7 +17,6 @@ aside {
   width: 100%;
   max-width: 300px;
   background: var(--secondary-background);
-  border-radius: var(--border-radius) 0 var(--border-radius) var(--border-radius);
   z-index: 5;
   padding: 20px;
 }
@@ -34,7 +33,6 @@ header {
 
 main {
   background: var(--main-background);
-  border-radius: var(--border-radius) 0 var(--border-radius) var(--border-radius);
   width: 100%;
   height: 100vh;
   padding-left: 300px;
@@ -64,9 +62,33 @@ nav button:hover img {
   filter: invert();
 }
 
+label {
+  opacity: 0.5;
+}
+
+[for="tags"], [for="page"]{
+  bottom: -33px;
+}
+
+#tags, #page{
+  padding-left: 60px;
+}
+
+
 input {
   max-width: 100%;
-  border-radius: var(--border-radius);
+  background: transparent;
+  outline: 0;
+  border: 0;
+  color: var(--text-color);
+  padding: 4px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--main-background);
+  transition: border-bottom .3s;
+}
+
+input:hover, input:active, input:focus {
+  border-bottom: 2px solid var(--accent-color);
 }
 
 grid {
@@ -107,6 +129,7 @@ article img:hover {
 
 article img {
   cursor: pointer;
+  border-radius: 2px;
 }
 
 img,video {
@@ -122,12 +145,14 @@ display-wrapper {
   display: flex;
   position: fixed;
   z-index: 10;
-  transition: background .2s;
+  transition: background .2s, opacity .2s, visibility .2s;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   cursor: pointer;
   padding: 10px;
+  backdrop-filter: blur(3px);
+  opacity: 0;
 }
 
 
@@ -135,6 +160,11 @@ display-wrapper.open {
   display: flex;
   visibility: visible;
   background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+display-wrapper.open img {
+  top: 0;
 }
 
 display-wrapper img {
@@ -143,8 +173,11 @@ display-wrapper img {
   height: auto;
   max-height: 100%;
   cursor: grab;
-  transition: transform 0s;
+  transition: transform 0s, top .4s;
+  top: -20px;
 }
+
+
 
 display-buttons {
   color: #fff;
@@ -158,4 +191,8 @@ display-buttons a, display-buttons button {
   color: #fff;
   text-decoration: none;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.62);
+}
+
+grid.reflow article {
+  width: auto;
 }

@@ -4,6 +4,10 @@ window.onclick = e => {
     if (e.target.tagName == "IMG") {
 
       if (e.target.hasAttribute("original") === true && e.target.tagName == "IMG") {
+        document.querySelector("display-wrapper > img").style.transform = "translate3d(0px,0px,0px)";
+        yOffset = 0;
+        xOffset = 0;
+
         console.log("klikniety obrazek");
         console.log("mamal");
         const originalClickedImageUrl = e.target.getAttribute("original");
@@ -18,9 +22,6 @@ window.onclick = e => {
     }
 
     if (e.target.tagName === "DISPLAY-WRAPPER") {
-      document.querySelector("display-wrapper > img").style.transform = "translate3d(0px,0px,0px)";
-      yOffset = 0;
-      xOffset = 0;
       document.querySelector("display-wrapper").classList.remove("open");
 
     }
