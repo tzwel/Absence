@@ -73,7 +73,7 @@ aside button {
   margin-bottom: 6px;
   background: transparent;
   padding: 8px;
-  border-bottom: 2px solid var(--main-background);
+  border-bottom: 4px solid var(--main-background);
 }
 
 label {
@@ -97,7 +97,7 @@ input {
   color: var(--text-color);
   padding: 4px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--main-background);
+  border-bottom: 4px solid var(--main-background);
   transition: border-bottom .3s;
   width: 100%;
 }
@@ -107,7 +107,7 @@ input::placeholder {
 }
 
 input:hover, input:active, input:focus {
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
 }
 
 grid {
