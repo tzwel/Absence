@@ -84,6 +84,7 @@ input {
   padding-bottom: 8px;
   border-bottom: 2px solid var(--main-background);
   transition: border-bottom .3s;
+  width: 100%;
 }
 
 input:hover, input:active, input:focus {
