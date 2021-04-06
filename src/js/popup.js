@@ -44,3 +44,10 @@ window.onclick = e => {
     }
 
 };
+
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    event.preventDefault();
+    document.querySelector("display-wrapper").classList.remove("open");
+  }
+});

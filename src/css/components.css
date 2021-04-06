@@ -54,8 +54,10 @@ nav button img {
   transition: filter .1s;
 }
 
-nav button:hover {
+button:hover {
   background: var(--accent-color);
+  color: #000;
+  transition: background .1s, color .1s;
 }
 
 nav button:hover img {
@@ -69,7 +71,7 @@ aside button {
   background: transparent;
   box-shadow: inset 0px 0px 0px 2px var(--main-background);
   border-radius: 999px;
-  padding: 6px;
+  padding: 8px;
 }
 
 label {
@@ -219,7 +221,7 @@ display-buttons a, display-buttons button {
 }
 
 #ratingsWrapper button {
-  width: 100%;
+  min-width: 33%;
 }
 
 grid.reflow article {
