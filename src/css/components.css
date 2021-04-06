@@ -50,14 +50,17 @@ nav button {
   background: var(--secondary-background);
 }
 
+button {
+  transition: background .1s, color .1s;
+}
+
 nav button img {
   transition: filter .1s;
 }
 
-button:hover {
+button:hover, button:focus {
   background: var(--accent-color);
   color: #000;
-  transition: background .1s, color .1s;
 }
 
 nav button:hover img {
@@ -65,13 +68,12 @@ nav button:hover img {
 }
 
 aside button {
-  min-width: 100px;
+  min-width: 40px;
   margin-top: 6px;
   margin-bottom: 6px;
   background: transparent;
-  box-shadow: inset 0px 0px 0px 2px var(--main-background);
-  border-radius: 999px;
   padding: 8px;
+  border-bottom: 2px solid var(--main-background);
 }
 
 label {
@@ -221,7 +223,7 @@ display-buttons a, display-buttons button {
 }
 
 #ratingsWrapper button {
-  min-width: 33%;
+  width: 33%;
 }
 
 grid.reflow article {
