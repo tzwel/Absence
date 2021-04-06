@@ -62,8 +62,19 @@ nav button:hover img {
   filter: invert();
 }
 
+aside button {
+  min-width: 100px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background: transparent;
+  box-shadow: inset 0px 0px 0px 2px var(--main-background);
+  border-radius: 999px;
+  padding: 6px;
+}
+
 label {
   opacity: 0.5;
+  width: 100%;
 }
 
 [for="tags"], [for="page"]{
@@ -85,6 +96,10 @@ input {
   border-bottom: 2px solid var(--main-background);
   transition: border-bottom .3s;
   width: 100%;
+}
+
+input::placeholder {
+  opacity: .6;
 }
 
 input:hover, input:active, input:focus {
@@ -195,6 +210,16 @@ display-buttons a, display-buttons button {
   color: #fff;
   text-decoration: none;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.62);
+}
+
+#ratingsWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#ratingsWrapper button {
+  width: 100%;
 }
 
 grid.reflow article {
