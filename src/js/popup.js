@@ -1,10 +1,11 @@
 window.onclick = e => {
-    console.log(e.target);
-    console.log(e.target.tagName);
+    //console.log(e.target);
+    //console.log(e.target.tagName);
     if (e.target.tagName == "IMG") {
 
       if (e.target.hasAttribute("original") === true && e.target.tagName == "IMG") {
         document.querySelector("display-wrapper > img").style.transform = "translate3d(0px,0px,0px)";
+
         yOffset = 0;
         xOffset = 0;
 
@@ -14,6 +15,17 @@ window.onclick = e => {
         console.log(originalClickedImageUrl);
         document.querySelector("display-wrapper > img").src = "";
         document.querySelector("display-wrapper > img").src = originalClickedImageUrl;
+
+        document.querySelector("display-wrapper > img").style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
+
+
+        document.querySelector("display-wrapper > img").style.filter = "blur(4px)"
+        document.querySelector("display-wrapper > img").addEventListener("load", popupLoad);
+        function popupLoad() {
+          document.querySelector("display-wrapper > img").style.filter = "blur(0)"
+          document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
+        }
+
         document.querySelector(".download-link").href = originalClickedImageUrl;
         localStorage.currentImageDetails = originalClickedImageUrl;
         console.log(`local ${localStorage.currentImageDetails}`);

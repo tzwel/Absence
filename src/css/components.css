@@ -121,6 +121,7 @@ pagination {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 article img:hover {
@@ -173,8 +174,10 @@ display-wrapper img {
   height: auto;
   max-height: 100%;
   cursor: grab;
-  transition: transform 0s, top .4s;
+  transition: transform 0s, top .4s, filter .2s;
   top: -20px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

@@ -1,6 +1,6 @@
 
 function populate() {
-  if (resp.length === undefined) {
+  if (resp.length === undefined || resp.length === 0) {
     return console.log("No search results!");
   }
 
@@ -9,7 +9,7 @@ function populate() {
     let sampleUrl = "https://gelbooru.com/thumbnails/"
     const imageWrapper = document.createElement("article");
     sampleUrl = `${sampleUrl}${resp[i].directory}/thumbnail_${resp[i].hash}.jpg`
-    console.log(sampleUrl);
+    //console.log(sampleUrl);
 
     if (resp[i].file_url.includes("video-c") === true) {
        img = document.createElement("video");

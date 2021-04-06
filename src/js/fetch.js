@@ -12,6 +12,7 @@ async function apiFetch() {
 
   resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${tags} ${blacklist}&json=1`, "json");
 
+  console.log("loaded images:");
   console.log(resp);
   populate();
 }
