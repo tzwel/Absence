@@ -6,6 +6,7 @@ git clone https://github.com/tzwel/gelbooru_client.git && cd gelbooru_client && 
 ```
 
 #### Running the client:
+Running start.cmd or
 
 ```
 npm start
