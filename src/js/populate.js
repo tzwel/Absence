@@ -15,8 +15,15 @@ function populate() {
        img = document.createElement("video");
        img.setAttribute("controls","");
        img.setAttribute("loop","");
+       img.setAttribute("poster", sampleUrl);
+       img.src = resp[i].file_url;
+       imageWrapper.style.opacity = "1";
+       imageWrapper.style.top = "0px";
+
     } else {
        img = document.createElement("img");
+       img.addEventListener("load", imageLoad);
+       img.src = sampleUrl;
        img.addEventListener("load", imageLoad);
     }
 
@@ -28,7 +35,6 @@ function populate() {
 
     document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
     img.setAttribute("original", `${resp[i].file_url}`);
-    img.src = sampleUrl;
     imageWrapper.insertAdjacentElement("beforeend", img);
 
 
