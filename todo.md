@@ -4,7 +4,7 @@
 - Add filters
 - Add post limit
 - Add bottom pagination
-- Remove console logs
+- ~~Remove console logs~~
 - Add maximize button
 - Improve UI
 - ~~Image/video downloading~~
