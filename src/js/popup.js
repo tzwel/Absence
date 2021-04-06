@@ -19,12 +19,17 @@ window.onclick = e => {
         document.querySelector("display-wrapper > img").style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
 
 
-        document.querySelector("display-wrapper > img").style.filter = "blur(4px)"
-        document.querySelector("display-wrapper > img").addEventListener("load", popupLoad);
-        function popupLoad() {
-          document.querySelector("display-wrapper > img").style.filter = "blur(0)"
-          document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
+        if (document.querySelector("display-wrapper > img").src.includes(".gif") === false) {
+
+          document.querySelector("display-wrapper > img").style.filter = "blur(4px)"
+          document.querySelector("display-wrapper > img").addEventListener("load", popupLoad);
+          function popupLoad() {
+            document.querySelector("display-wrapper > img").style.filter = "blur(0)"
+            document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
+          }
+
         }
+
 
         document.querySelector(".download-link").href = originalClickedImageUrl;
         localStorage.currentImageDetails = originalClickedImageUrl;
