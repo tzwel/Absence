@@ -208,12 +208,22 @@ display-buttons {
   right: 0;
   bottom: 0;
   display: flex;
+  /*padding: 1rem;*/
+  padding-right: 1rem;
 }
 
 display-buttons a, display-buttons button {
   color: #fff;
   text-decoration: none;
-  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.62);
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+  padding: 1rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  transition: color .2s;
+}
+
+display-buttons a:hover, display-buttons button:hover {
+  color: #bfbfbf;
 }
 
 #ratingsWrapper {
