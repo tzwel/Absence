@@ -3,6 +3,7 @@ function populate() {
   if (resp.length === undefined || resp.length === 0) {
     return console.log("No search results!");
   }
+  document.querySelector("grid").innerHTML = '';
 
   for(let i = 0; i < resp.length; i++) {
     let img = [];
