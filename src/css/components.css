@@ -15,7 +15,7 @@ aside {
   /* min-width: calc(100px + 20%); */
   /* position: fixed; */
   width: 100%;
-  max-width: 300px;
+  max-width: 330px;
   background: var(--secondary-background);
   z-index: 5;
   padding: 20px;
@@ -86,7 +86,9 @@ aside button {
 label {
   opacity: 0.5;
   width: 100%;
-  display: block;
+  z-index: 10;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 [for="tags"], [for="page"]{
@@ -94,18 +96,19 @@ label {
 }
 
 #tags, #page{
-  padding-left: 60px;
+  padding-left: 4rem;
 }
 
 input {
   max-width: 100%;
-  background: transparent;
+  background: var(--main-background);
   outline: 0;
   border: 0;
   color: var(--text-color);
   padding: 4px;
   padding-bottom: 8px;
-  border-bottom: 4px solid var(--main-background);
+  /* border-bottom: 4px solid var(--main-background); */
+  border-bottom: 4px solid transparent;
   transition: border-bottom .3s;
   width: 100%;
 }
