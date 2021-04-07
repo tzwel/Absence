@@ -239,3 +239,7 @@ display-buttons a:hover, display-buttons button:hover {
 grid.reflow article {
   width: auto;
 }
+
+container.mirror {
+  flex-direction: row-reverse;
+}
