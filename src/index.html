@@ -16,8 +16,14 @@
         <h1 class="logo">booru client</h1>
         <label for="tags">tags</label>
         <input placeholder="black_hair bangs" id="tags" class="tags" type="text" name="" value="">
-        <label for="page">page</label>
-        <input max="200" id="page" class="page" min="0" type="number" name="" value="0">
+
+        <div class="pageWrapper">
+          <button class="previous" type="button" name="button"><</button>
+          <label for="page">page</label>
+          <input max="200" id="page" class="page" min="0" type="number" name="" value="0">
+          <button class="next" type="button" name="button">></button>
+        </div>
+
         <div id="ratingsWrapper">
           <label for="ratingsWrapper">rating</label>
           <button type="button" name="button">s</button>

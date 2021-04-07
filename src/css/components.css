@@ -241,6 +241,28 @@ display-buttons a:hover, display-buttons button:hover {
   color: #bfbfbf;
 }
 
+.pageWrapper {
+  display: flex;
+}
+
+.pageWrapper * {
+  margin: 0;
+}
+
+.pageWrapper button {
+  z-index: 15;
+}
+
+.pageWrapper label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  max-width: 4rem;
+}
+
 #ratingsWrapper {
   width: 100%;
   display: flex;

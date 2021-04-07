@@ -17,7 +17,19 @@ async function apiFetch() {
   populate();
 }
 
+function previousFetch() {
+  document.querySelector(".page").value --;
+  apiFetch();
+}
+
+function nextFetch() {
+  document.querySelector(".page").value ++;
+  apiFetch();
+}
+
 document.querySelector(".search").addEventListener("click", apiFetch)
+document.querySelector(".previous").addEventListener("click", previousFetch)
+document.querySelector(".next").addEventListener("click", nextFetch)
 
 //fetch upon load
 apiFetch();
