@@ -18,6 +18,9 @@ async function apiFetch() {
 }
 
 function previousFetch() {
+  if (document.querySelector(".page").value <= 0) {
+    return document.querySelector(".page").value = 0;
+  }
   document.querySelector(".page").value --;
   apiFetch();
 }

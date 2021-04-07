@@ -92,7 +92,7 @@ label {
 }
 
 [for="tags"], [for="page"]{
-  bottom: -33px;
+  bottom: -2.1rem
 }
 
 #tags, #page{
@@ -111,6 +111,7 @@ input {
   border-bottom: 4px solid transparent;
   transition: border-bottom .3s;
   width: 100%;
+  min-height: 60px;
 }
 
 input[type="checkbox"] {
@@ -255,7 +256,7 @@ display-buttons a:hover, display-buttons button:hover {
 
 .pageWrapper label {
   position: absolute;
-  top: 5px;
+  top: .5rem;
   left: 0;
   height: auto;
   margin-left: 2rem;
