@@ -13,7 +13,7 @@ aside {
   height: 100%;
   height: 100vh;
   /* min-width: calc(100px + 20%); */
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   max-width: 300px;
   background: var(--secondary-background);
@@ -35,7 +35,7 @@ main {
   background: var(--main-background);
   width: 100%;
   height: 100vh;
-  padding-left: 300px;
+/*  padding-left: 300px; */
 }
 
 nav {
