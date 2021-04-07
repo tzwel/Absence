@@ -6,9 +6,9 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-// panic comma shortcut
+// panic comma/tilde shortcut
 document.addEventListener("keydown", function(event) {
-  if (event.keyCode === 188) {
+  if (event.keyCode === 188 || event.keyCode === 192) {
     event.preventDefault();
     remote.getCurrentWindow().minimize();
   }
