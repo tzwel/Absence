@@ -56,6 +56,9 @@ button {
 
 button.search {
   background: var(--accent-color);
+  border-radius: 999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 nav button img {
