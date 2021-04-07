@@ -6,10 +6,26 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-// panic comma/tilde shortcut
+// panic tilde shortcut
 document.addEventListener("keydown", function(event) {
-  if (event.keyCode === 188 || event.keyCode === 192) {
+  if (event.keyCode === 192) {
     event.preventDefault();
     remote.getCurrentWindow().minimize();
+  }
+});
+
+// previous arrow shortcut
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 37) {
+    event.preventDefault();
+    previousFetch()
+  }
+});
+
+// previous arrow shortcut
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 39) {
+    event.preventDefault();
+    nextFetch()
   }
 });
