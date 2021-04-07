@@ -228,7 +228,7 @@ display-buttons {
   padding-right: 1rem;
 }
 
-display-buttons a, display-buttons button {
+display-buttons a{
   color: #fff;
   text-decoration: none;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
@@ -236,10 +236,12 @@ display-buttons a, display-buttons button {
   padding-right: .5rem;
   padding-left: .5rem;
   transition: color .2s;
+  background: transparent;
 }
 
-display-buttons a:hover, display-buttons button:hover {
+display-buttons a:hover {
   color: #bfbfbf;
+  background: transparent;
 }
 
 .pageWrapper {
