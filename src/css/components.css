@@ -80,7 +80,7 @@ aside button {
   margin-bottom: 6px;
   background: transparent;
   padding: 8px;
-  border-bottom: 4px solid var(--main-background);
+  border-bottom: 4px solid transparent;
 }
 
 label {
