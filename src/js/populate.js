@@ -9,6 +9,8 @@ function populate() {
     let img = [];
     let sampleUrl = "https://gelbooru.com/thumbnails/"
     const imageWrapper = document.createElement("article");
+    const badge = document.createElement("badge");
+    badge.innerHTML = ".gif";
     sampleUrl = `${sampleUrl}${resp[i].directory}/thumbnail_${resp[i].hash}.jpg`
     //console.log(sampleUrl);
 
@@ -26,6 +28,10 @@ function populate() {
        img.addEventListener("load", imageLoad);
        img.src = sampleUrl;
        img.addEventListener("load", imageLoad);
+    }
+
+    if (resp[i].file_url.includes(".gif") === true) {
+      imageWrapper.appendChild(badge);
     }
 
 

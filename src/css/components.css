@@ -164,6 +164,11 @@ article img:hover, article video:hover {
   transform: scale(1.025);
 }
 
+article:hover badge {
+  transform: scale(1.025);
+  opacity: 0;
+}
+
 article img, article video {
   cursor: pointer;
   border-radius: 2px;
@@ -216,8 +221,6 @@ display-wrapper img {
   background-size: cover;
 }
 
-
-
 display-buttons {
   color: #fff;
   position: absolute;
@@ -243,6 +246,22 @@ display-buttons a{
 display-buttons a:hover {
   color: #bfbfbf;
   background: transparent;
+}
+
+badge {
+  transition: transform .2s, opacity .2s;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  pointer-events: none;
+  padding: 2px;
+  margin: 10px;
+  padding-right: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(0 0 0 / 37%) 39%, rgb(33 33 33 / 59%) 100%);
+  text-align: right;
 }
 
 .pageWrapper {
