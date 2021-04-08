@@ -164,11 +164,6 @@ article img:hover, article video:hover {
   transform: scale(1.025);
 }
 
-article:hover badge {
-  transform: scale(1.025);
-  opacity: 0;
-}
-
 article img, article video {
   cursor: pointer;
   border-radius: 2px;
@@ -249,7 +244,7 @@ display-buttons a:hover {
 }
 
 badge {
-  transition: transform .2s, opacity .2s;
+  transition: transform .2s, opacity .2s, bottom .2s;
   position: absolute;
   z-index: 10;
   right: 0;
@@ -262,6 +257,14 @@ badge {
   padding-right: 10px;
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(0 0 0 / 37%) 39%, rgb(33 33 33 / 59%) 100%);
   text-align: right;
+  font-size: .8rem;
+}
+
+
+article:hover badge {
+  transform: scale(1.025);
+  opacity: 0;
+  bottom: -6px;
 }
 
 .pageWrapper {
