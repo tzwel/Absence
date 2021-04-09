@@ -46,4 +46,6 @@ function populate() {
 
 
   }
+
+  generateReport();
 }

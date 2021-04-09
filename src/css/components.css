@@ -138,6 +138,7 @@ grid {
   justify-content: center;
   align-items: center;
   padding-bottom: 80px;
+
 }
 
 article {
@@ -305,4 +306,11 @@ grid.reflow article {
 
 container.mirror {
   flex-direction: row-reverse;
+}
+
+report {
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  opacity: .3
 }
