@@ -1,4 +1,4 @@
-# An open-source Gelbooru client
+# An (heavily WIP) open-source Gelbooru client
 
 ## Installation:
 ```
