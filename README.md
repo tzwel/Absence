@@ -3,6 +3,7 @@ At least it works
 
 ## Dependencies:
 [Node](https://nodejs.org)
+[Git](https://git-scm.com)
 
 ## Installation:
 ```
