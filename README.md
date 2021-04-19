@@ -1,6 +1,9 @@
 # An (heavily WIP) open-source Gelbooru client
 At least it works
 
+## Dependencies:
+[Node](https://nodejs.org)
+
 ## Installation:
 ```
 git clone https://github.com/tzwel/gelbooru_client.git && cd gelbooru_client && npm install
