@@ -10,7 +10,6 @@ window.onclick = e => {
         xOffset = 0;
 
         console.log("klikniety obrazek");
-        console.log("mamal");
         const originalClickedImageUrl = e.target.getAttribute("original");
         console.log(originalClickedImageUrl);
         document.querySelector("display-wrapper > img").src = "";
