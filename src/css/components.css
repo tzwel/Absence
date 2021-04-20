@@ -294,9 +294,10 @@ article:hover badge {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
-#ratingsWrapper button {
+#ratingsWrapper * {
   width: 33%;
 }
 
