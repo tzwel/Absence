@@ -189,7 +189,7 @@ display-wrapper {
   visibility: hidden;
   cursor: pointer;
   padding: 10px;
-  backdrop-filter: blur(3px);
+/*  backdrop-filter: blur(3px); */
   opacity: 0;
 }
 
