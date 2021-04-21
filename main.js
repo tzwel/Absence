@@ -8,7 +8,9 @@ function createWindow () {
     transparent: true,
     frame: false,
     width: 1200,
+    minWidth: 480,
     height: 600,
+    minHeight: 700,
     webPreferences: {
       enableRemoteModule: true,
       preload: path.join(__dirname, 'preload.js'),
