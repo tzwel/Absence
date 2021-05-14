@@ -1,9 +1,9 @@
 /* set variables */
 :root {
-  --main-background: #1c1b29;
-  --secondary-background: #161621;
+  --main-background: #1d1d1d;
+  --secondary-background: #161616;
   --text-color: #fff;
-  --accent-color: #5c4eff;
+  --accent-color: #5345f3;
   --pagination-height: 80px;
 }
 /* boilerplate colors */
