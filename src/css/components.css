@@ -55,8 +55,9 @@ button {
 }
 
 button.search {
-  background: var(--accent-color);
-  border-radius: 999px;
+  /* background: var(--accent-color); */
+  /* border-radius: 999px; */
+  border-bottom: 2px solid var(--accent-color);
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -123,7 +124,7 @@ input::placeholder {
 }
 
 input:hover, input:active, input:focus {
-  border-bottom: 4px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 grid {
@@ -228,7 +229,7 @@ display-buttons {
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(0 0 0 / 37%) 39%, rgb(33 33 33 / 59%) 100%);
 }
 
-display-buttons a{
+display-buttons a {
   color: #fff;
   text-decoration: none;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
@@ -251,7 +252,7 @@ badge {
   right: 0;
   bottom: 0;
   width: 100%;
-  color: #fff;
+  color: rgb(255, 255, 255);
   pointer-events: none;
   padding: 2px;
   margin: 10px;
