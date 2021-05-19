@@ -60,6 +60,7 @@ button.search {
   border-bottom: 2px solid var(--accent-color);
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 100%;
 }
 
 nav button img {
