@@ -7,13 +7,13 @@ At least it works
 [Git](https://git-scm.com)
 
 ## Installation:
-```
+```shell
 git clone https://github.com/tzwel/gelbooru_client.git && cd gelbooru_client && npm install
 ```
 
 #### Running the client:
 Running start.cmd or
 
-```
+```shell
 npm start
 ```
