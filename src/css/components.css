@@ -128,6 +128,11 @@ input:hover, input:active, input:focus {
   border-bottom: 2px solid var(--accent-color);
 }
 
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 grid {
   display: flex;
   overflow-y: auto;
