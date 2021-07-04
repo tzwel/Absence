@@ -26,6 +26,7 @@ html {
   max-width: 100%;
   line-height: 1.3;
   font-family: Segoe UI, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 /* fix <head> bug */
 head {
@@ -40,7 +41,4 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-button,a {
-  -webkit-tap-highlight-color: transparent;
 }
