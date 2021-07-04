@@ -41,3 +41,6 @@ button {
   justify-content: center;
   align-items: center;
 }
+button,a {
+  -webkit-tap-highlight-color: transparent;
+}
