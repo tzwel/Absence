@@ -24,7 +24,7 @@ window.onclick = e => {
           document.querySelector("display-wrapper > img").addEventListener("load", popupLoad);
           function popupLoad() {
             document.querySelector("display-wrapper > img").style.filter = "blur(0)"
-            document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
+         //   document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
           }
 
         }
