@@ -44,14 +44,14 @@ nav {
 }
 
 nav button {
-  transition: background .1s;
+  transition: background .3s;
   min-width: 40px;
   -webkit-app-region: no-drag;
   background: var(--secondary-background);
 }
 
 button {
-  transition: background .1s, color .1s;
+  transition: background .3s, color .3s;
 }
 
 button.search {
@@ -315,6 +315,28 @@ grid.reflow article {
 
 container.mirror {
   flex-direction: row-reverse;
+}
+
+body.mobile container {
+  flex-direction: column;
+}
+
+body.mobile aside {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: scroll;
+  max-height: 30vh;
+}
+
+body.mobile main > header {
+  position: fixed;
+  bottom: 0;
+  z-index: 6;
+}
+
+body.mobile main {
+  padding-bottom: 30vh;
 }
 
 report {

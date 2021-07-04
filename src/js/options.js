@@ -2,9 +2,11 @@
 
 const reflowToggle = document.querySelector(".reflowToggle");
 const mirrorLayoutToggle = document.querySelector(".mirrorLayout");
+const mobileLayoutToggle = document.querySelector(".mobileView");
 
 reflowToggle.addEventListener("click", toggleReflow)
 mirrorLayoutToggle.addEventListener("click", toggleMirror)
+mobileLayoutToggle.addEventListener("click", toggleMobile)
 
 function toggleReflow() {
   if (reflowToggle.checked) {
@@ -26,6 +28,17 @@ function toggleMirror() {
   }
 }
 
+function toggleMobile() {
+  if (mobileView.checked) {
+    document.querySelector("body").setAttribute("class", "mobile")
+    localStorage.setItem('layout', 'mobile');
+    mirrorLayoutToggle.checked = false;
+  } else {
+    document.querySelector("body").setAttribute("class", "")
+    localStorage.setItem('layout', 'normal');
+  }
+}
+
 function readOptions() {
   if (localStorage.layout === "mirror") {
     document.querySelector("container").setAttribute("class", "mirror")
@@ -34,6 +47,10 @@ function readOptions() {
   if (localStorage.grid === "reflow") {
     reflowToggle.checked = true;
     document.querySelector("grid").setAttribute("class", "reflow")
+  }
+  if (localStorage.layout === "mobile") {
+    document.querySelector("body").setAttribute("class", "mobile")
+    mobileView.checked = true;
   }
 }
 
