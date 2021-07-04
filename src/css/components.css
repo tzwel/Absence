@@ -335,6 +335,16 @@ body.mobile main > header {
   z-index: 6;
 }
 
+body.mobile article {
+  width: 100%;
+  height: auto;
+}
+
+body.mobile article img {
+  margin: 1%;
+  width: 80%;
+}
+
 body.mobile main {
   padding-bottom: 30vh;
 }
