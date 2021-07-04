@@ -1,10 +1,12 @@
+const imageDisplayer = document.querySelector("display-wrapper > img");
+
 window.onclick = e => {
     //console.log(e.target);
     //console.log(e.target.tagName);
     if (e.target.tagName == "IMG") {
 
       if (e.target.hasAttribute("original") === true && e.target.tagName == "IMG") {
-        document.querySelector("display-wrapper > img").style.transform = "translate3d(0px,0px,0px)";
+        imageDisplayer.style.transform = "translate3d(0px,0px,0px)";
 
         yOffset = 0;
         xOffset = 0;
@@ -12,19 +14,19 @@ window.onclick = e => {
         console.log("klikniety obrazek");
         const originalClickedImageUrl = e.target.getAttribute("original");
         console.log(originalClickedImageUrl);
-        document.querySelector("display-wrapper > img").src = "";
-        document.querySelector("display-wrapper > img").src = originalClickedImageUrl;
+        imageDisplayer.src = "";
+        imageDisplayer.src = originalClickedImageUrl;
 
-        document.querySelector("display-wrapper > img").style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
+        imageDisplayer.style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
 
 
-        if (document.querySelector("display-wrapper > img").src.includes(".gif") === false) {
+        if (imageDisplayer.src.includes(".gif") === false) {
 
-          document.querySelector("display-wrapper > img").style.filter = "blur(4px)"
-          document.querySelector("display-wrapper > img").addEventListener("load", popupLoad);
+          imageDisplayer.style.filter = "blur(4px)"
+          imageDisplayer.addEventListener("load", popupLoad);
           function popupLoad() {
-            document.querySelector("display-wrapper > img").style.filter = "blur(0)"
-         //   document.querySelector("display-wrapper > img").style.backgroundImage = `url("")`;
+            imageDisplayer.style.filter = "blur(0)"
+         //   imageDisplayer.style.backgroundImage = `url("")`;
           }
 
         }
