@@ -2,4 +2,4 @@ let blacklist = `-1boy -scat -pregnant -fat -1boy -gay -futabu -futanari -2boys 
 
 let enhancedBlacklist = '-yaoi -futanari -futa -trap -pregnant -dark_skin -dark_skinned_male -dark_skinned_female -pubic_hair -multiple_boys -gigantic_breasts -large_areolae -old_man -furry -asian -fat -3d -amputee -uterine_prolapse -dog -pig -ugly_man -vore -milking_machine -horse -horse_penis -goldfish -male_focus -naruto -deer -prolapse -anal_hair';
 
-console.log(blacklist);
+//console.log(blacklist);

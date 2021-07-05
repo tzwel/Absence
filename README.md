@@ -1,6 +1,9 @@
 # An (heavily WIP) open-source Gelbooru client
 At least it works
 
+## ⚠️ Disclaimer:
+This client is still in early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
+
 ## Dependencies:
 [Node](https://nodejs.org)
 
