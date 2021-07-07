@@ -169,8 +169,8 @@ pagination {
 }
 
 article img:hover, article video:hover {
-  /*transform: scale(1.025);*/
-  transform: scale(0.975);
+ transform: scale(1.025);
+   /*transform: scale(0.975);*/
 }
 
 article img, article video {
@@ -273,8 +273,8 @@ badge {
 
 
 article:hover badge {
- /*transform:  translateZ(0) scale(1.025);*/
-  transform: scale(0.975);
+ transform:  translateZ(0) scale(1.025);
+  /*transform: scale(0.975);*/
   opacity: 0;
   bottom: -6px;
 }
