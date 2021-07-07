@@ -169,7 +169,8 @@ pagination {
 }
 
 article img:hover, article video:hover {
-  transform: scale(1.025);
+  /*transform: scale(1.025);*/
+  transform: scale(0.975);
 }
 
 article img, article video {
@@ -222,6 +223,7 @@ display-wrapper img {
   top: -20px;
   background-repeat: no-repeat;
   background-size: cover;
+  position:relative;
 }
 
 display-buttons {
@@ -271,7 +273,8 @@ badge {
 
 
 article:hover badge {
-  transform: scale(1.025);
+ /*transform:  translateZ(0) scale(1.025);*/
+  transform: scale(0.975);
   opacity: 0;
   bottom: -6px;
 }
