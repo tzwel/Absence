@@ -376,3 +376,8 @@ report {
   bottom: 0;
   right: 0;
   z-index: 5;}
+
+::selection {
+  background-color: var(--accent-color);
+  color: black;
+}
