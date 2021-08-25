@@ -50,8 +50,12 @@ nav {
   max-height: 40px;
 }
 
-grid, aside {
+grid {
   padding-top: 40px;
+}
+
+aside {
+  padding-top: 60px;
 }
 
 nav button {
