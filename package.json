@@ -1,7 +1,7 @@
 {
-  "name": "gelbooru_client",
+  "name": "Absence",
   "version": "0.1.0",
-  "description": "ojj",
+  "description": "An open-source client for browsing Gelbooru",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -34,7 +34,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "gelbooru_client"
+            "name": "Absence"
           }
         },
         {

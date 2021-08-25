@@ -1,4 +1,6 @@
-# An (heavily WIP) open-source Gelbooru client
+<span align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </span>
+<span align="center"> # Absence </span>
+## An (heavily WIP) open-source Gelbooru client
 At least it works
 
 ## ⚠️ Disclaimer:

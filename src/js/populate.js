@@ -35,11 +35,11 @@ function populate() {
       imageWrapper.appendChild(badge);
     }
 
-
     function imageLoad() {
       imageWrapper.style.opacity = "1";
       imageWrapper.style.top = "0px";
     }
+
     img.setAttribute("loading", "lazy");
     document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
     let sampleUrl = `https://img3.gelbooru.com//samples/${resp[i].directory}/sample_${resp[i].file_url.replace("https://img3.gelbooru.com/images/","").replace(`${resp[i].directory}/`,"").replace("jpeg","jpg").replace("png","jpg")}`;
