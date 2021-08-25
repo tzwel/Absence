@@ -1,8 +1,6 @@
 <p align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </p>
 <h1 align="center"> Absence </h1>
-
-## An (heavily WIP) open-source Gelbooru client
-At least it works
+<h5 align="center"> An (heavily WIP) open-source Gelbooru client </h5>
 
 ## ⚠️ Disclaimer:
 This client is still in early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
