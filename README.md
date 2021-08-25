@@ -1,6 +1,6 @@
 <p align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </p>
 <h1 align="center"> Absence </h1>
-<h5 align="center"> An (heavily WIP) open-source Gelbooru client </h5>
+<h4 align="center"> An (heavily WIP) open-source Gelbooru client </h4>
 
 ## ⚠️ Disclaimer:
 This client is still in early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
@@ -12,7 +12,7 @@ This client is still in early development stage. Everything (code, ui, etc.) is 
 
 ## Installation:
 ```shell
-git clone https://github.com/tzwel/gelbooru_client.git && cd gelbooru_client && npm install
+git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
 ```
 
 #### Running the client:
