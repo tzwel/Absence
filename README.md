@@ -1,5 +1,5 @@
-<span align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </span>
-<span align="center"> # Absence </span>
+<p align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </p>
+<h1 align="center"> Absence </h1>
 ## An (heavily WIP) open-source Gelbooru client
 At least it works
 
