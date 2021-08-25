@@ -43,7 +43,7 @@ function populate() {
     img.setAttribute("loading", "lazy");
     document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
     let sampleUrl = `https://img3.gelbooru.com//samples/${resp[i].directory}/sample_${resp[i].file_url.replace("https://img3.gelbooru.com/images/","").replace(`${resp[i].directory}/`,"").replace("jpeg","jpg").replace("png","jpg")}`;
-    console.log(`kutas ${sampleUrl}`);
+    //console.log(`kutas ${sampleUrl}`);
     img.setAttribute("original", `${resp[i].file_url}`);
     img.setAttribute("sample", sampleUrl);
     img.setAttribute("sampleBoolean", resp[i].sample);

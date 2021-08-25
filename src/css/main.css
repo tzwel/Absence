@@ -5,6 +5,12 @@
   --text-color: #fff;
   --accent-color: #65b3ef;
 }
+[data-theme="dark"] {
+  --main-background: #101010;
+  --secondary-background: #000000;
+  --text-color: #ececec;
+  --accent-color: #65b3ef;
+}
 /* boilerplate colors */
 html {
   box-sizing: border-box;
