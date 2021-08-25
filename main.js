@@ -19,7 +19,8 @@ function createWindow () {
   })
   mainWindow.setMenuBarVisibility(false);
 
-  mainWindow.loadFile('./src/index.html')
+  mainWindow.loadFile('./src/index.html');
+  mainWindow.setIcon(path.join(__dirname, '/src/img/Absence-logo.png'));
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

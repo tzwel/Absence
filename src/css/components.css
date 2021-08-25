@@ -219,7 +219,7 @@ display-wrapper img {
   height: auto;
   max-height: 100%;
   cursor: grab;
-  transition: transform 0s, top .4s, filter .2s;
+  transition: transform 0s, top .3s, filter .2s;
   top: -20px;
   background-repeat: no-repeat;
   background-size: cover;
