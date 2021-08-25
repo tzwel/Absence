@@ -10,6 +10,19 @@ container {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform .3s;
+}
+
+.logo img {
+  transition: filter .3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo:hover img {
+  filter: hue-rotate(-25deg);
 }
 
 aside {
