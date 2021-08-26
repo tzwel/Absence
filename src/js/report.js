@@ -11,6 +11,7 @@ function render(component, content, destination) {
 
 function generateReport() {
   if (resp.length === undefined || resp.length === 0) {
+    alert("No results")
     return render(report, "No results", "grid")
   }
   render(report, `${document.querySelector("grid").getElementsByTagName("article").length} images loaded`, "grid")

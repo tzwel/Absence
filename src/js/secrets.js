@@ -2,6 +2,13 @@ if (localStorage.theme === "darker") {
     document.documentElement.setAttribute('data-theme', 'dark');
 }
 
+document.querySelector("h1.logo").addEventListener("dblclick", event => {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'darker');
+});
+  
+/*
+
 function konami(callback) {
     let kkeys = [];
     // up,up,down,down,left,right,left,right,B,A
@@ -17,11 +24,11 @@ function konami(callback) {
 const handler = konami(() => {
     console.log('konami 1');
     alert("it's still not amoled");
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'darker');
 });
 
 window.addEventListener('keydown', handler);
 window.addEventListener('keydown', konami(() => {
     console.log('konami 2');
 }));
+
+*/
