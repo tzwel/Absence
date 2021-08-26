@@ -4,7 +4,7 @@ drawer {
     transform: translateX(-100vw);
     opacity: 0;
     width: 100%;
-    max-width:330px;
+    max-width:430px;
     height: 100vh;
     display: flex;
     flex-direction: column;

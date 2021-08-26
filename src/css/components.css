@@ -46,6 +46,7 @@ header {
   flex-direction: row;
   justify-content: flex-end;
   background: rgba(22, 22, 22, 0.6);
+  background: linear-gradient(90deg, rgba(22,22,22,0.6) 0%, rgba(22,22,22,1) 100%);
   backdrop-filter: blur(20px);
   -webkit-app-region: drag;
   z-index: 10;
@@ -106,11 +107,15 @@ nav button:hover img {
 
 aside button {
   min-width: 40px;
-  margin-top: 6px;
+ /* margin-top: 6px; */
   margin-bottom: 6px;
   background: var(--main-background);
   padding: 8px;
   border-bottom: 4px solid transparent;
+}
+
+h2 {
+  margin-bottom: .2rem;
 }
 
 h2:not(:first-child)  {
@@ -338,6 +343,7 @@ article:hover badge {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  display: none;
 }
 
 #ratingsWrapper * {
