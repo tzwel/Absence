@@ -1,3 +1,11 @@
-if (document.querySelector("detailed-image-view")) {
-  document.querySelector("detailed-image-view img").src = localStorage.currentImageDetails;
+function loadDetails() {
+  let clickedNumber = parseInt(clickedImageNumber, 10);
+  console.log(resp[clickedNumber]);
+  drawer.innerHTML = "";
+  // temporary solution
+  drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span> ${resp[clickedNumber]["tags"]} </span>`);
+  drawer.insertAdjacentHTML("beforeend", `<h2> Source </h2> <span> ${resp[clickedNumber]["source"]} </span>`);
+  drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp[clickedNumber]["rating"]} </span>`);
+  drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
 }
+

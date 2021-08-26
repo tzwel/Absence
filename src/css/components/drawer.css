@@ -1,0 +1,45 @@
+drawer {
+    background-color: var(--secondary-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transform: translateX(-100vw);
+    opacity: 0;
+    width: 100%;
+    max-width:330px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 30;
+    transition: transform var(--drawer-speed), opacity var(--drawer-speed);
+    justify-self: flex-start;
+    padding: 20px;
+    user-select:text;
+}
+
+drawer * {
+    user-select:text;
+}
+
+drawer-background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  padding: 0;
+  position: fixed;
+  opacity: .6;
+  transition: opacity var(--drawer-speed);
+  z-index: 20;
+  cursor: pointer;
+}
+
+drawer.open {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+drawer-background.closed {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,9 +1,14 @@
+@import url("components.css");
+@import url("scrollbar.css");
+@import url("components/drawer.css");
+
 /* set variables */
 :root {
   --main-background: #1d1d1d;
   --secondary-background: #161616;
   --text-color: #fff;
   --accent-color: #65b3ef;
+  --drawer-speed: .3s;
 }
 [data-theme="dark"] {
   --main-background: #101010;

@@ -1,4 +1,5 @@
 const imageDisplayer = document.querySelector("display-wrapper > img");
+let clickedImageNumber;
 
 window.onclick = e => {
     //console.log(e.target);
@@ -12,8 +13,11 @@ window.onclick = e => {
         xOffset = 0;
 
         console.log("klikniety obrazek");
+
+
         const originalClickedImageUrl = e.target.getAttribute("original");
         const sampleClickedImageUrl = e.target.getAttribute("sample");
+        clickedImageNumber = e.target.getAttribute("number");
         console.log(originalClickedImageUrl);
         imageDisplayer.src = "";
 
@@ -24,7 +28,8 @@ window.onclick = e => {
           imageDisplayer.src = originalClickedImageUrl;
         }
 
-   
+        loadDetails();
+
 
         imageDisplayer.style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
 
