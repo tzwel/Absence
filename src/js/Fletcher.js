@@ -13,7 +13,7 @@ async function Fletcher(argument, get, log) {
       if (get === "json") {
         FletcherResponse = await FletcherResponse.json();
       } else if (get === "blob") {
-        FletcherResponse = await FletcherResponse.blob();
+        FletcherResponse = await FletcherResponse.text();
       } else if (get === "status") {
         FletcherResponse = FletcherResponse.status;
       }
