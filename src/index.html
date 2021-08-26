@@ -31,7 +31,7 @@
       <aside>
         <h1 class="logo"> <img height="40px" width="auto" src="img/Absence-logo.png"> Absence</h1>
         <label for="tags">tags</label>
-        <input placeholder="black_hair bangs" id="tags" class="tags" type="text" name="" value="">
+        <input spellcheck="false" placeholder="black_hair bangs" id="tags" class="tags" type="text" name="" value="">
 
         <div class="pageWrapper">
           <button  class="previous" type="button" name="button"><</button>
@@ -60,9 +60,18 @@
           <!--         score:>=10 -->
         </div>
 
+        <search-buttons>
+          <button  class="search" type="button" name="button">search</button>
 
-        <button  class="search" type="button" name="button">search</button>
+          <label class="switch">
+            <input class="trendingToggle" type="checkbox"/>
+            <span class="switch-label"><img src="img/trending-up.svg" class="switch-icon"/>
+            </span> 
+          </label>
+        </search-buttons>
 
+
+  
         <!-- <h2>search history</h2> -->
 
         <!--

@@ -2,6 +2,8 @@ let resp;
 let tags;
 let pid;
 let limit;
+let trending = "";
+const trendingThreshold = "10";
 const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";
 
 async function apiFetch() {
@@ -10,7 +12,7 @@ async function apiFetch() {
 //  limit = document.querySelector(".limit").value;
   pid = document.querySelector(".page").value;
 
-  resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${tags} ${blacklist}&json=1`, "json");
+  resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklist} &json=1`, "json");
 
   console.log("loaded images:");
   console.log(resp);

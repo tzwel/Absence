@@ -1,6 +1,7 @@
 @import url("components.css");
 @import url("scrollbar.css");
 @import url("components/drawer.css");
+@import url("components/switch.css");
 
 /* set variables */
 :root {

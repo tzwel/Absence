@@ -17,13 +17,25 @@ if (localStorage.fullscreen === "on") {
   remote.getCurrentWindow().maximize();
 }
 
-
+/*
 function fullscreen() {
   if (localStorage.fullscreen === "off") {
     localStorage.setItem('fullscreen', 'on');
     remote.getCurrentWindow().maximize();
   } else {
     remote.getCurrentWindow().unmaximize();
+    localStorage.setItem('fullscreen', 'off');
+  }
+}
+*/
+// stolen from other open source booru client
+function fullscreen() {
+  let window = remote.getCurrentWindow();
+  if (!window.isMaximized()) {
+    window.maximize();
+    localStorage.setItem('fullscreen', 'on');
+  } else {
+    window.unmaximize();
     localStorage.setItem('fullscreen', 'off');
   }
 }

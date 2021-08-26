@@ -96,7 +96,7 @@ nav button img {
   transition: filter .1s;
 }
 
-button:hover, button:focus {
+button:hover {
   background: var(--accent-color);
   color: #000;
 }
@@ -161,7 +161,7 @@ input::placeholder {
   opacity: .6;
 }
 
-input:hover, input:active, input:focus {
+input:hover, input:active {
   border-bottom: 2px solid var(--accent-color);
 }
 
@@ -400,6 +400,9 @@ report {
   right: 0;
   z-index: 5;}
 
+search-buttons {
+  display: flex;
+}
   
 ::selection {
   background-color: var(--accent-color);
