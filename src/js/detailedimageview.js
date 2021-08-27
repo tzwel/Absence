@@ -1,9 +1,16 @@
 //const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
+let clickedNumber;
 
 function loadDetails() {
-  let clickedNumber = parseInt(clickedImageNumber, 10);
+  if (!document.querySelector("display-wrapper").classList.contains("open")) {
+   clickedNumber = parseInt(clickedImageNumber, 10);
+  } else {
+    clickedNumber = parseInt(viewedImageNumber, 10);
+  }
+  
   console.log(resp[clickedNumber]);
   drawer.innerHTML = "";
+
 
   // temporary solution
   drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, '</br>')} </span>`);

@@ -1,5 +1,8 @@
 const imageDisplayer = document.querySelector("display-wrapper > img");
 let clickedImageNumber;
+let viewedImageNumber;
+let sampleClickedImageUrl;
+let originalClickedImageUrl;
 
 window.onclick = e => {
     //console.log(e.target);
@@ -15,11 +18,12 @@ window.onclick = e => {
         console.log("klikniety obrazek");
 
 
-        const originalClickedImageUrl = e.target.getAttribute("original");
-        const sampleClickedImageUrl = e.target.getAttribute("sample");
+         originalClickedImageUrl = e.target.getAttribute("original");
+         sampleClickedImageUrl = e.target.getAttribute("sample");
         clickedImageNumber = e.target.getAttribute("number");
         console.log(originalClickedImageUrl);
         imageDisplayer.src = "";
+        viewedImageNumber = e.target.getAttribute("number");
 
         if (e.target.getAttribute("sampleBoolean") === "1") {
           imageDisplayer.src = sampleClickedImageUrl;
@@ -34,17 +38,9 @@ window.onclick = e => {
         imageDisplayer.style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
 
 
-        if (imageDisplayer.src.includes(".gif") === false) {
+        imageBlur();
 
-          imageDisplayer.style.filter = "blur(4px)"
-          imageDisplayer.addEventListener("load", popupLoad);
-          function popupLoad() {
-            imageDisplayer.style.filter = "blur(0)"
-         //   imageDisplayer.style.backgroundImage = `url("")`;
-          }
-
-        }
-
+        viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
         document.querySelector(".download-link").href = originalClickedImageUrl;
         localStorage.currentImageDetails = originalClickedImageUrl;
@@ -59,3 +55,16 @@ window.onclick = e => {
     }
 
 };
+
+function imageBlur() {
+  if (imageDisplayer.src.includes(".gif") === false) {
+
+    imageDisplayer.style.filter = "blur(4px)"
+    imageDisplayer.addEventListener("load", popupLoad);
+    function popupLoad() {
+      imageDisplayer.style.filter = "blur(0)"
+   //   imageDisplayer.style.backgroundImage = `url("")`;
+    }
+
+  }
+}

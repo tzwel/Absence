@@ -1,3 +1,5 @@
+let viewedImage;
+
 document.addEventListener("keydown", function(event) {
   // ESC shortcut
   if (event.keyCode === 27) {
@@ -21,5 +23,44 @@ document.addEventListener("keydown", function(event) {
       event.preventDefault();
       previousFetch()
     }
+  } else {
+    if (event.keyCode === 39) {
+      loadLargeImage("next");
+    }
+
+    if (event.keyCode === 37) {
+      loadLargeImage("previous");
+    }
   }
 });
+
+function loadLargeImage(direction) {
+  if (direction === "next") {
+    viewedImageNumber++;
+  } else {
+    viewedImageNumber--;
+  }
+
+  try {
+    viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
+
+    imageDisplayer.src = "";
+    imageDisplayer.style.backgroundImage = `url("${viewedImage.getAttribute("src")}")`;  
+
+    if (viewedImage.getAttribute("sampleBoolean") === "1") {
+      imageDisplayer.src = viewedImage.getAttribute("sample");
+    } else {
+      console.log("nie ma sampla");
+      imageDisplayer.src = viewedImage.getAttribute("original");
+    }
+
+    imageBlur();
+
+
+  } catch (error) {
+    return console.log(`something went wrong! ${error}`);
+  }
+
+
+  loadDetails();
+}
