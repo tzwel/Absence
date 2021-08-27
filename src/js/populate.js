@@ -39,6 +39,14 @@ function populate() {
       imageWrapper.style.opacity = "1";
       imageWrapper.style.top = "0px";
     }
+
+    const imgScore = resp[i].score;
+
+    if (trendingToggle.checked) {
+      imageWrapper.insertAdjacentHTML("beforeend", `<likes>${imgScore}^</likes>`);
+
+    }
+
     img.setAttribute("number", [i]);
     img.setAttribute("loading", "lazy");
     document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
