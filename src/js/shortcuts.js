@@ -41,6 +41,10 @@ function loadLargeImage(direction) {
     viewedImageNumber--;
   }
 
+  imageDisplayer.style.transform = "translate3d(0px,0px,0px)";
+  yOffset = 0;
+  xOffset = 0;
+
   try {
     viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
