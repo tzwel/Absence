@@ -58,8 +58,9 @@ function loadLargeImage(direction) {
       imageDisplayer.src = viewedImage.getAttribute("original");
     }
 
+    viewedImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
     imageBlur();
-    createDownloadLink(viewedImage.getAttribute("original"));
+    setDownloadLink(viewedImage.getAttribute("original"));
 
   } catch (error) {
     return console.log(`something went wrong! ${error}`);

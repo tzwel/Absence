@@ -42,7 +42,7 @@ window.onclick = e => {
 
         viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
-        createDownloadLink(originalClickedImageUrl);
+        setDownloadLink(originalClickedImageUrl);
         localStorage.currentImageDetails = originalClickedImageUrl;
         console.log(`local ${localStorage.currentImageDetails}`);
         document.querySelector("display-wrapper").classList.add("open");
@@ -56,7 +56,7 @@ window.onclick = e => {
 
 };
 
-function createDownloadLink(link) {
+function setDownloadLink(link) {
   document.querySelector(".download-link").href = link;
 }
 
