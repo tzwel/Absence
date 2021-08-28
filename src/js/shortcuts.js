@@ -59,7 +59,7 @@ function loadLargeImage(direction) {
     }
 
     imageBlur();
-
+    createDownloadLink(viewedImage.getAttribute("original"));
 
   } catch (error) {
     return console.log(`something went wrong! ${error}`);

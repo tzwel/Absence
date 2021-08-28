@@ -42,7 +42,7 @@ window.onclick = e => {
 
         viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
-        document.querySelector(".download-link").href = originalClickedImageUrl;
+        createDownloadLink(originalClickedImageUrl);
         localStorage.currentImageDetails = originalClickedImageUrl;
         console.log(`local ${localStorage.currentImageDetails}`);
         document.querySelector("display-wrapper").classList.add("open");
@@ -55,6 +55,10 @@ window.onclick = e => {
     }
 
 };
+
+function createDownloadLink(link) {
+  document.querySelector(".download-link").href = link;
+}
 
 function imageBlur() {
   if (imageDisplayer.src.includes(".gif") === false) {
