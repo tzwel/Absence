@@ -26,7 +26,6 @@ function populate() {
 
     } else {
        img = document.createElement("img");
-       img.addEventListener("load", imageLoad);
        img.src = thumbnailUrl;
        img.addEventListener("load", imageLoad);
     }

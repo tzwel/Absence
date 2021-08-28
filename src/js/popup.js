@@ -43,8 +43,6 @@ window.onclick = e => {
         viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
         setDownloadLink(originalClickedImageUrl);
-        localStorage.currentImageDetails = originalClickedImageUrl;
-        console.log(`local ${localStorage.currentImageDetails}`);
         document.querySelector("display-wrapper").classList.add("open");
       }
     }

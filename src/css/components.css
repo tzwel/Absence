@@ -436,3 +436,9 @@ search-buttons {
   background-color: var(--accent-color);
   color: black;
 }
+
+/*
+
+*:focus-visible {
+  box-shadow: inset 0 0px 0 2px rgb(73, 144, 185);
+} */

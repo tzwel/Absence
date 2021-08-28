@@ -4,10 +4,10 @@ const reflowToggle = document.querySelector(".reflowToggle");
 const mirrorLayoutToggle = document.querySelector(".mirrorLayout");
 const mobileLayoutToggle = document.querySelector(".mobileView");
 
-trendingToggle.addEventListener("click", toggleTrending)
-reflowToggle.addEventListener("click", toggleReflow)
-mirrorLayoutToggle.addEventListener("click", toggleMirror)
-mobileLayoutToggle.addEventListener("click", toggleMobile)
+trendingToggle.addEventListener("click", toggleTrending);
+reflowToggle.addEventListener("click", toggleReflow);
+mirrorLayoutToggle.addEventListener("click", toggleMirror);
+mobileLayoutToggle.addEventListener("click", toggleMobile);
 
 function toggleTrending() {
   if (trendingToggle.checked) {

@@ -17,15 +17,21 @@ function loadDetails() {
   
   switch (resp[clickedNumber]["rating"]) {
     case "e":
-      drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span style="color:#f72828"> explicit </span>`);
+      drawer.insertAdjacentHTML("beforeend",`
+        <h2> Rating </h2> <span style="color:#f72828"> explicit </span>
+      `);
     break;
 
     case "q":
-      drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span style="color:#efe031"> questionable </span>`);
+      drawer.insertAdjacentHTML("beforeend",`
+         <h2> Rating </h2> <span style="color:#efe031"> questionable </span>
+      `);
     break;
   
     case "s":
-      drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span style="color:#83f753"> safe </span>`);
+      drawer.insertAdjacentHTML("beforeend",`
+      <h2> Rating </h2> <span style="color:#83f753"> safe </span>
+      `);
     break;
 
     default:
