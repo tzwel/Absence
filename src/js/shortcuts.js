@@ -4,7 +4,11 @@ document.addEventListener("keydown", function(event) {
   // ESC shortcut
   if (event.keyCode === 27) {
     event.preventDefault();
+    if (drawer.classList.contains("open")) {
+      drawerAction();
+    }
     document.querySelector("display-wrapper").classList.remove("open");
+
   }
 
   // panic tilde shortcut
