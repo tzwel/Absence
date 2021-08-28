@@ -63,10 +63,12 @@ function imageBlur() {
 
         imageDisplayer.style.filter = "blur(4px)";
         imageDisplayer.addEventListener("load", popupLoad);
-        function popupLoad() {
-            imageDisplayer.style.filter = "blur(0)";
-            //   imageDisplayer.style.backgroundImage = `url("")`;
-        }
+
 
     }
+}
+
+function popupLoad() {
+    imageDisplayer.style.filter = "blur(0)";
+    //   imageDisplayer.style.backgroundImage = `url("")`;
 }
