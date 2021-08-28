@@ -1,10 +1,10 @@
 if (localStorage.theme === "darker") {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute("data-theme", "dark");
 }
 
 document.querySelector("h1.logo").addEventListener("dblclick", event => {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'darker');
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "darker");
 });
   
 /*

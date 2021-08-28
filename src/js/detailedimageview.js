@@ -1,47 +1,47 @@
-//const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
+// const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
 let clickedNumber;
 
 function loadDetails() {
-  if (!document.querySelector("display-wrapper").classList.contains("open")) {
-   clickedNumber = parseInt(clickedImageNumber, 10);
-  } else {
-    clickedNumber = parseInt(viewedImageNumber, 10);
-  }
+    if (!document.querySelector("display-wrapper").classList.contains("open")) {
+        clickedNumber = parseInt(clickedImageNumber, 10);
+    } else {
+        clickedNumber = parseInt(viewedImageNumber, 10);
+    }
   
-  console.log(resp[clickedNumber]);
-  drawer.innerHTML = "";
+    console.log(resp[clickedNumber]);
+    drawer.innerHTML = "";
 
 
-  // temporary solution
-  drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, '</br>')} </span>`);
+    // temporary solution
+    drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
   
-  switch (resp[clickedNumber]["rating"]) {
+    switch (resp[clickedNumber]["rating"]) {
     case "e":
-      drawer.insertAdjacentHTML("beforeend",`
+        drawer.insertAdjacentHTML("beforeend",`
         <h2> Rating </h2> <span style="color:#f72828"> explicit </span>
       `);
-    break;
+        break;
 
     case "q":
-      drawer.insertAdjacentHTML("beforeend",`
+        drawer.insertAdjacentHTML("beforeend",`
          <h2> Rating </h2> <span style="color:#efe031"> questionable </span>
       `);
-    break;
+        break;
   
     case "s":
-      drawer.insertAdjacentHTML("beforeend",`
+        drawer.insertAdjacentHTML("beforeend",`
       <h2> Rating </h2> <span style="color:#83f753"> safe </span>
       `);
-    break;
+        break;
 
     default:
-      drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp[clickedNumber]["rating"]} </span>`);
-      break;
-  }
+        drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp[clickedNumber]["rating"]} </span>`);
+        break;
+    }
 
-  drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
-  if (`${resp[clickedNumber]["sample"]}` === "0") {
-    drawer.insertAdjacentHTML("beforeend", `<h2> This image doesn't have a smaller version. </h2>`);
-  }
+    drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
+    if (`${resp[clickedNumber]["sample"]}` === "0") {
+        drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");
+    }
 //  drawer.insertAdjacentHTML("beforeend", `<h2> Comments </h2> <span> ${commentsLink + resp[clickedNumber]["id"]} </span>`);
 }

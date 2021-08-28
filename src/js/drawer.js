@@ -5,11 +5,11 @@ let drawerBackground;
 if (document.querySelector("drawer")){
 
     if (document.querySelectorAll("drawer").length > 1) {
-         console.error("there can only be 1 drawer on page");
+        console.error("there can only be 1 drawer on page");
     } else {
-            drawer = document.querySelector("drawer");
-            drawer.insertAdjacentHTML("afterend", "<drawer-background class='closed'></drawer-background>");
-            drawerBackground = document.querySelector("drawer-background");    
+        drawer = document.querySelector("drawer");
+        drawer.insertAdjacentHTML("afterend", "<drawer-background class='closed'></drawer-background>");
+        drawerBackground = document.querySelector("drawer-background");    
           
     }
 
@@ -20,7 +20,7 @@ if (document.querySelector("drawer")){
 
 function drawerAction() {
     if (drawer.classList.contains("open")) {
-        //drawer close
+        // drawer close
         drawer.classList.remove("open");
         drawerBackground.classList.add("closed");
     } else {
@@ -30,13 +30,12 @@ function drawerAction() {
 }
 
 
-
 document.onclick = e => {
     //   console.log(e.target);
     //   console.log(e.target.tagName);
    
-       if (e.target.tagName === "DRAWER-BACKGROUND") {
-           drawerAction();
-       }
+    if (e.target.tagName === "DRAWER-BACKGROUND") {
+        drawerAction();
+    }
    
-   };
+};
