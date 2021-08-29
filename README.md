@@ -10,6 +10,8 @@ Absence is still in early development stage. Everything (code, ui, etc.) is a su
 
 [Git](https://git-scm.com)
 
+[Eslint](https://eslint.org/)
+
 ## Installation:
 ```shell
 git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
