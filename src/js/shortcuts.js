@@ -48,28 +48,32 @@ function loadLargeImage(direction) {
     imageDisplayer.style.transform = "translate3d(0px,0px,0px)";
     yOffset = 0;
     xOffset = 0;
-
-    try {
-        viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
-
-        imageDisplayer.src = "";
-        imageDisplayer.style.backgroundImage = `url("${viewedImage.getAttribute("src")}")`;  
-
-        if (viewedImage.getAttribute("sampleBoolean") === "1") {
-            imageDisplayer.src = viewedImage.getAttribute("sample");
-        } else {
-            console.log("nie ma sampla");
-            imageDisplayer.src = viewedImage.getAttribute("original");
+    
+    if (viewedImageNumber < 100) {
+        try {
+            viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
+    
+            imageDisplayer.src = "";
+            imageDisplayer.style.backgroundImage = `url("${viewedImage.getAttribute("src")}")`;  
+    
+            if (viewedImage.getAttribute("sampleBoolean") === "1") {
+                imageDisplayer.src = viewedImage.getAttribute("sample");
+            } else {
+                console.log("nie ma sampla");
+                imageDisplayer.src = viewedImage.getAttribute("original");
+            }
+    
+            viewedImage.scrollIntoView({ behavior: "smooth", block: "center" });
+            imageBlur();
+            setDownloadLink(viewedImage.getAttribute("original"));
+            loadDetails();
+            
+        } catch (error) {
+            return console.log(`something went wrong! ${error}`);
         }
-
-        viewedImage.scrollIntoView({ behavior: "smooth", block: "center" });
-        imageBlur();
-        setDownloadLink(viewedImage.getAttribute("original"));
-
-    } catch (error) {
-        return console.log(`something went wrong! ${error}`);
+    } else {
+        nextFetch();
+        document.querySelector("display-wrapper").classList.remove("open");
     }
 
-
-    loadDetails();
 }
