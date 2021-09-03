@@ -6,7 +6,7 @@
 - Add bottom pagination
 - ~~Remove console logs~~
 - ~~Add maximize button~~
-- Improve UI
+- ~~Improve UI~~
 - ~~Image/video downloading~~
-- Detailed image info
+- ~~Detailed image info~~
 - ~~Video support~~
