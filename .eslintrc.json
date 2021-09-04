@@ -59,6 +59,14 @@
         "semi": [
             "error",
             "always"
+        ],
+        "yoda": [
+            "error",
+            "never"
+        ],
+        "strict": [
+            "error",
+            "global"
         ]
     }
 }

@@ -3,7 +3,7 @@ let content = "dynamicContent";
 const report = `<report> ${content} </report>`;
 
 function render(component, content, destination) {
-    "use strict";
+    
     component = component.replace("dynamicContent", content);
     document.querySelector(destination).insertAdjacentHTML("beforeend", component);
 }

@@ -1,5 +1,5 @@
 async function Fletcher(argument, get, log) {
-    "use strict";
+    
 
     if (argument === "test") {
         return console.log("🏹 Fletcher is active");
