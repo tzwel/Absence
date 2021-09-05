@@ -62,10 +62,9 @@ function loadLargeImage(direction) {
                 console.log("nie ma sampla");
                 imageDisplayer.src = viewedImage.getAttribute("original");
             }
-    
-            viewedImage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+            scrollToView();
             imageBlur();
-            setDownloadLink(viewedImage.getAttribute("original"));
             loadDetails();
             
         } catch (error) {
@@ -76,4 +75,8 @@ function loadLargeImage(direction) {
         document.querySelector("display-wrapper").classList.remove("open");
     }
 
+}
+
+function scrollToView() {
+    viewedImage.scrollIntoView({ behavior: "smooth", block: "center" });
 }

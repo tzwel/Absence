@@ -43,3 +43,9 @@ drawer-background.closed {
   opacity: 0;
   pointer-events: none;
 }
+
+drawer a {
+  margin-top: 1rem;
+  margin-bottom: .2rem;
+  color: var(--accent-color);
+}

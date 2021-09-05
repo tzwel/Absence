@@ -1,14 +1,40 @@
-let options;
+const https = require("https");
+const fs = require("fs");
+const path = require("path");
 
-options = {
-    defaultPath: app.getPath("documents") + `/${ Math.floor(Math.random() * 12048 ) } - Absence`,
-};
+document.querySelector(".download-link").addEventListener("click", (event) => {
+    event.preventDefault();
 
-try {
-    dialog.showSaveDialog(null, options, (path) => {
-        console.log(path);
+    downloadImage(viewedImage.getAttribute("original"));
+});
+
+if (!fs.existsSync(savePath)) {
+    fs.mkdir(savePath, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("Directory is created.");
     });
-} catch (error) {
-    console.log(error);
 }
 
+// downloadImage();
+
+function downloadImage(link) {
+    const Dir = `${savePath}/${ Math.floor(Math.random() * 12048 ) } - Absence.${path.extname(link)}`; 
+
+    https.get(link,(res) => {
+        const fileDir = fs.createWriteStream(Dir);
+
+        try {
+            res.pipe(fileDir);
+            console.log("Image is being downloaded"); 
+            fileDir.on("finish",() => {
+                fileDir.close();
+                console.log("Download Completed"); 
+            });    
+        } catch (error) {
+            console.log(error);
+        }
+
+    });    
+}

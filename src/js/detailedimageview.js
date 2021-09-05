@@ -40,6 +40,12 @@ function loadDetails() {
     }
 
     drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
+
+    drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
+    onclick="event.preventDefault();
+    shell.openExternal(this.href);"
+    href="https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}"> Open in browser <a>`);
+
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");
     }
