@@ -20,7 +20,7 @@ if (!fs.existsSync(savePath)) {
 // downloadImage();
 
 function downloadImage(link) {
-    const Dir = `${savePath}/${ Math.floor(Math.random() * 12048 ) } - Absence.${path.extname(link)}`; 
+    const Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence.${path.extname(link)}`; 
 
     https.get(link,(res) => {
         const fileDir = fs.createWriteStream(Dir);
