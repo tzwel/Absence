@@ -42,7 +42,6 @@ window.onclick = e => {
 
             viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
 
-            setDownloadLink(originalClickedImageUrl);
             document.querySelector("display-wrapper").classList.add("open");
         }
     }
@@ -53,10 +52,6 @@ window.onclick = e => {
     }
 
 };
-
-function setDownloadLink(link) {
-    document.querySelector(".download-link").href = link;
-}
 
 function imageBlur() {
     if (imageDisplayer.src.includes(".gif") === false) {
