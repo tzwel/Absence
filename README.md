@@ -3,14 +3,14 @@
 <h4 align="center"> An (heavily WIP) open-source Gelbooru client </h4>
 
 ## ⚠️ Disclaimer:
-Absence is still in early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
+Absence is still in its early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
 
 ## Dependencies:
 [Node](https://nodejs.org)
 
 [Git](https://git-scm.com)
 
-[Eslint](https://eslint.org/)
+[Eslint](https://eslint.org)
 
 ## Installation:
 ```shell
