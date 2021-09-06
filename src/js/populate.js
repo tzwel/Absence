@@ -56,7 +56,6 @@ function populate() {
         img.setAttribute("sampleBoolean", resp[i].sample);
         imageWrapper.insertAdjacentElement("beforeend", img);
 
-
     }
 
     generateReport();

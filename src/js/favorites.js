@@ -1,6 +1,5 @@
 let favorites = [];
 
-
 function addToFavorites() {
     const currentImageLink = document.querySelector("display-wrapper img").src;
     console.log(favorites);

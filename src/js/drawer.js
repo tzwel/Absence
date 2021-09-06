@@ -1,7 +1,6 @@
 let drawer;
 let drawerBackground;
 
-
 if (document.querySelector("drawer")){
 
     if (document.querySelectorAll("drawer").length > 1) {
@@ -17,7 +16,6 @@ if (document.querySelector("drawer")){
     console.info("no drawers found on page");
 }
 
-
 function drawerAction() {
     if (drawer.classList.contains("open")) {
         // drawer close
@@ -28,7 +26,6 @@ function drawerAction() {
         drawerBackground.classList.remove("closed");
     }
 }
-
 
 document.onclick = e => {
     //   console.log(e.target);

@@ -17,7 +17,6 @@ window.onclick = e => {
 
             console.log("klikniety obrazek");
 
-
             originalClickedImageUrl = e.target.getAttribute("original");
             sampleClickedImageUrl = e.target.getAttribute("sample");
             clickedImageNumber = e.target.getAttribute("number");
@@ -34,9 +33,7 @@ window.onclick = e => {
 
             loadDetails();
 
-
             imageDisplayer.style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
-
 
             imageBlur();
 
@@ -48,18 +45,14 @@ window.onclick = e => {
 
     if (e.target.tagName === "DISPLAY-WRAPPER") {
         document.querySelector("display-wrapper").classList.remove("open");
-
     }
 
 };
 
 function imageBlur() {
     if (imageDisplayer.src.includes(".gif") === false) {
-
         imageDisplayer.style.filter = "blur(4px)";
         imageDisplayer.addEventListener("load", popupLoad);
-
-
     }
 }
 

@@ -31,7 +31,7 @@
             "warn"
         ],
         "no-multiple-empty-lines": [
-            "error", {"max": 2}
+            "error", {"max": 1}
         ],
         "spaced-comment": [
             "warn", "always", { "exceptions": ["-", "+"] }

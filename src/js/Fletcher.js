@@ -1,5 +1,4 @@
 async function Fletcher(argument, get, log) {
-    
 
     if (argument === "test") {
         return console.log("🏹 Fletcher is active");

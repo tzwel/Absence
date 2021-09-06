@@ -13,7 +13,6 @@ dragcontainer.addEventListener("mousedown", dragStart, false);
 dragcontainer.addEventListener("mouseup", dragEnd, false);
 dragcontainer.addEventListener("mousemove", drag, false);
 
-
 function dragStart(e) {
     if (e.type === "touchstart") {
         initialX = e.touches[0].clientX - xOffset;

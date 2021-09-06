@@ -8,7 +8,6 @@ function render(component, content, destination) {
     document.querySelector(destination).insertAdjacentHTML("beforeend", component);
 }
 
-
 function generateReport() {
     if (resp.length === undefined || resp.length === 0) {
         alert("No results");

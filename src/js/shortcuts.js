@@ -74,7 +74,6 @@ function loadLargeImage(direction) {
         nextFetch();
         document.querySelector("display-wrapper").classList.remove("open");
     }
-
 }
 
 function scrollToView() {

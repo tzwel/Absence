@@ -11,7 +11,6 @@ function loadDetails() {
     console.log(resp[clickedNumber]);
     drawer.innerHTML = "";
 
-
     // temporary solution
     drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
   

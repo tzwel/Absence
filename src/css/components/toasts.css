@@ -23,12 +23,21 @@ toast {
     flex-wrap: wrap;
     user-select: none !important;
     border-radius: 4px;
-
     background: transparent;
-    border-left: 4px solid #ffffff8e;
+    /* border-left: 4px solid #ffffff8e; */
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    animation-name: toastEnter;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 toast * {
     font-size: 1rem;
     font-weight: 400;
 }
+
+@keyframes toastEnter {
+    0% {margin-top: -20px; opacity: 0;}
+    100% {margin-top: 0; opacity: 1}
+  }

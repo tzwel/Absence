@@ -7,7 +7,15 @@ toasts.download = {
     header: "Downloading image",
     message: "",
     timeOut: 4000,
-    background: "#172636"
+    background: "var(--main-background)"
+};
+
+toasts.path = {
+    name: "Path message",
+    header: "",
+    message: "",
+    timeOut: 4000,
+    background: "var(--main-background)"
 };
 
 document.querySelector(".download-link").addEventListener("click", (event) => {
@@ -19,8 +27,12 @@ document.querySelector(".download-link").addEventListener("click", (event) => {
 if (!fs.existsSync(savePath)) {
     fs.mkdir(savePath, (err) => {
         if (err) {
+            toasts.path.header = "Error creating download directory";
+            toast(toasts.path);    
             throw err;
         }
+        toasts.path.header = "Creating download directory...";
+        toast(toasts.path);
         console.log("Directory is created.");
     });
 }
@@ -28,11 +40,10 @@ if (!fs.existsSync(savePath)) {
 // downloadImage();
 
 function downloadImage(link) {
-    const Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence.${path.extname(link)}`; 
+    const Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
 
     console.log("Image is being downloaded"); 
-    toasts.download.header = "Downloading image";
-    toasts.download.background = "#172636";
+    toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
     toast(toasts.download);
 
     https.get(link,(res) => {
@@ -41,12 +52,10 @@ function downloadImage(link) {
         try {
             res.pipe(fileDir);            
 
-
             fileDir.on("finish",() => {
                 fileDir.close();
                 console.log("Download Completed"); 
-                toasts.download.header = "Image downloaded";
-                toasts.download.background = "#57a737";
+                toasts.download.header = "File downloaded";
                 toast(toasts.download);
             });    
         } catch (error) {
