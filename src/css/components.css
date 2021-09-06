@@ -194,6 +194,7 @@ article {
   transition: transform 0.3s, opacity 0.3s, top 0.3s;
   top: 12px;
   width: 225px;
+  height: 270px;
 }
 
 article:hover likes {
