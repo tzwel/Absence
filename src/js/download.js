@@ -7,7 +7,7 @@ toasts.download = {
     header: "Downloading image",
     message: "",
     timeOut: 4000,
-    background: "var(--main-background)"
+    color: "var(--accent-color)"
 };
 
 toasts.path = {
@@ -15,7 +15,7 @@ toasts.path = {
     header: "",
     message: "",
     timeOut: 4000,
-    background: "var(--main-background)"
+    color: "var(--accent-color)"
 };
 
 document.querySelector(".download-link").addEventListener("click", (event) => {
@@ -28,10 +28,12 @@ if (!fs.existsSync(savePath)) {
     fs.mkdir(savePath, (err) => {
         if (err) {
             toasts.path.header = "Error creating download directory";
-            toast(toasts.path);    
+            toasts.path.color = "red";
+            toast(toasts.path);
             throw err;
         }
         toasts.path.header = "Creating download directory...";
+        toasts.path.color = "lime";
         toast(toasts.path);
         console.log("Directory is created.");
     });
@@ -43,6 +45,7 @@ function downloadImage(link) {
     const Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
 
     console.log("Image is being downloaded"); 
+    toasts.download.color = "var(--accent-color)";
     toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
     toast(toasts.download);
 
@@ -55,12 +58,12 @@ function downloadImage(link) {
             fileDir.on("finish",() => {
                 fileDir.close();
                 console.log("Download Completed"); 
+                toasts.download.color = "lime";
                 toasts.download.header = "File downloaded";
                 toast(toasts.download);
-            });    
+            });
         } catch (error) {
             console.log(error);
         }
-
     });    
 }

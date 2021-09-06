@@ -9,9 +9,13 @@ async function toast(parameters) {
             <p> ${parameters.message} </p>
         </toast>
     `);
-    if (parameters.background) {
-        document.querySelector(`[toastId="${id}"]`).style.background = parameters.background;
+
+    const thisToast = document.querySelector(`[toastId="${id}"]`);
+
+    if (parameters.color) {
+        thisToast.style.color = parameters.color;
+        thisToast.style.borderColor = parameters.color;
     }
     await new Promise(resolve => setTimeout(resolve, parameters.timeOut));
-    document.querySelector(`[name="${parameters.name}"]`).remove();
+    thisToast.remove();
 }

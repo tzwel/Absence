@@ -10,6 +10,7 @@ toasts {
     pointer-events: none;
     flex-direction: column;
     margin: 1rem;
+    align-items: flex-start;
 }
 
 toast {
@@ -24,6 +25,8 @@ toast {
     user-select: none !important;
     border-radius: 4px;
     background: transparent;
+    background: rgba(22,22,22,0.6);
+    backdrop-filter: blur(20px);
     /* border-left: 4px solid #ffffff8e; */
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
