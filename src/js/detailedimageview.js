@@ -40,6 +40,8 @@ function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
 
+    drawer.insertAdjacentHTML("beforeend", `<h2> Dimensions </h2> <span> ${resp[clickedNumber]["width"]} x ${resp[clickedNumber]["height"]} </span>`);
+
     drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
     onclick="event.preventDefault();
     shell.openExternal(this.href);"
