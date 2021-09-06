@@ -46,7 +46,6 @@ window.onclick = e => {
     if (e.target.tagName === "DISPLAY-WRAPPER") {
         document.querySelector("display-wrapper").classList.remove("open");
     }
-
 };
 
 function imageBlur() {
