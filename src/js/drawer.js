@@ -9,7 +9,6 @@ if (document.querySelector("drawer")){
         drawer = document.querySelector("drawer");
         drawer.insertAdjacentHTML("afterend", "<drawer-background class='closed'></drawer-background>");
         drawerBackground = document.querySelector("drawer-background");    
-          
     }
 
 } else {
