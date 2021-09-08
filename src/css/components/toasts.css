@@ -40,7 +40,18 @@ toast * {
     font-weight: 400;
 }
 
+toast.closing {
+    animation-name: toastExit;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes toastEnter {
     0% {margin-top: -20px; opacity: 0;}
     100% {margin-top: 0; opacity: 1}
-  }
+}
+
+@keyframes toastExit {
+    0% { opacity: 1;}
+    100% {opacity: 0}
+}

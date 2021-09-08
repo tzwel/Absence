@@ -17,5 +17,7 @@ async function toast(parameters) {
         thisToast.style.borderColor = parameters.color;
     }
     await new Promise(resolve => setTimeout(resolve, parameters.timeOut));
+    thisToast.classList.add("closing");
+    await new Promise(resolve => setTimeout(resolve, 1000));
     thisToast.remove();
 }

@@ -33,7 +33,7 @@ if (!fs.existsSync(savePath)) {
             throw err;
         }
         toasts.path.header = "Creating download directory...";
-        toasts.path.color = "lime";
+        toasts.path.color = "var(--accent-color)";
         toast(toasts.path);
         console.log("Directory is created.");
     });

@@ -1,21 +1,18 @@
-let resp;
-let tags;
-let pid;
-let limit;
+let resp, tags, pid, limit;
 let trending = "";
 const trendingThreshold = "10";
 const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";
 
 async function apiFetch() {
     document.querySelector("grid").innerHTML = "";
-    tags = document.querySelector(".tags").value;
-    //  limit = document.querySelector(".limit").value;
-    pid = document.querySelector(".page").value;
 
+    tags = document.querySelector(".tags").value;
+    pid = document.querySelector(".page").value;
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} &json=1`, "json");
 
     console.log("loaded images:");
     console.log(resp);
+
     populate();
 }
 

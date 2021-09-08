@@ -1,4 +1,3 @@
-
 const links = document.querySelectorAll("a[target]");
 links.forEach(link => {
     link.addEventListener("click", openLink);

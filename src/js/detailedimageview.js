@@ -13,7 +13,7 @@ function loadDetails() {
 
     // temporary solution
     drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
-  
+    
     switch (resp[clickedNumber]["rating"]) {
     case "e":
         drawer.insertAdjacentHTML("beforeend",`
@@ -45,7 +45,14 @@ function loadDetails() {
     drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
     onclick="event.preventDefault();
     shell.openExternal(this.href);"
-    href="https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}"> Open in browser <a>`);
+    href="https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}"> Open in browser </a>`);
+
+    if (resp[clickedNumber]["source"]) {
+        drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
+        onclick="event.preventDefault();
+        shell.openExternal(this.href);"
+        href="${resp[clickedNumber]["source"]}"> Source </a>`);    
+    }
 
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");
