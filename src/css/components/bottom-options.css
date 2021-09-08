@@ -1,0 +1,26 @@
+body.mobile bottom-options {
+    position: fixed;
+    bottom: 0;
+}
+
+container.mirror bottom-options{
+    justify-content: flex-end;
+}
+
+bottom-options {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background: var(--secondary-background); */
+    display: flex;
+    pointer-events: none;
+}
+
+bottom-options * {
+    pointer-events: auto;
+}
+
+bottom-options label.switch {
+    background: var(--secondary-background);
+}

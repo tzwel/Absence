@@ -1,4 +1,3 @@
-
 const trendingToggle = document.querySelector(".trendingToggle");
 const reflowToggle = document.querySelector(".reflowToggle");
 const mirrorLayoutToggle = document.querySelector(".mirrorLayout");

@@ -252,15 +252,6 @@ article:hover download-button {
   opacity: 1;
 }
 
-pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
 article img:hover, article video:hover {
  transform: scale(1.025);
    /*transform: scale(0.975);*/
@@ -454,7 +445,9 @@ report {
   color: rgb(56, 56, 56);
   bottom: 0;
   right: 0;
-  z-index: 5;}
+  z-index: 5;
+  pointer-events: none;
+}
 
 search-buttons {
   display: flex;

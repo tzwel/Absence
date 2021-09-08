@@ -81,20 +81,6 @@
           <li>omamale</li>
         </ul>
         -->
-        <h2>options</h2>
-        <label for="reflowToggle">
-          media reflow
-          <input id="reflowToggle" class="reflowToggle" type="checkbox" name="" value="">
-        </label>
-        <label for="mirrorLayout">
-          mirror layout
-          <input id="mirrorLayout" class="mirrorLayout" type="checkbox" name="" value="">
-        </label>
-        <label for="mobileView">
-          mobile view
-          <input id="mobileView" class="mobileView" type="checkbox" name="" value="">
-        </label>
-
         <footer>
           <a target="_blank" href="https://github.com/tzwel/Absence"> <img src="img/github-mark.svg" alt="Github Logo/link"> </a>
         </footer>
@@ -104,12 +90,25 @@
         <grid>
           <!-- image grid -->
         </grid>
+        <bottom-options>
+          <label data-tooltip title="Media reflow" class="switch">
+            <input class="reflowToggle" type="checkbox"/>
+            <span class="switch-label"><img src="img/maximize-2.svg" class="switch-icon"/>
+            </span>
+          </label>
 
-        <pagination>
-          <button type="button" name="button"><</button>
-          <button type="button" name="button">></button>
-        </pagination>
+          <label data-tooltip title="Mirror layout" class="switch">
+            <input class="mirrorLayout" type="checkbox"/>
+            <span class="switch-label"><img src="img/align-right.svg" class="switch-icon"/>
+            </span>
+          </label>
 
+          <label data-tooltip title="Mobile view" class="switch">
+            <input  class="mobileView" id="mobileView" type="checkbox"/>
+            <span class="switch-label"><img src="img/smartphone.svg" class="switch-icon"/>
+            </span>
+          </label>
+        </bottom-options>
       </main>
 
       <display-wrapper>
@@ -130,6 +129,7 @@
     </toasts>
 
     <script src="./renderer.js"></script>
+    <script src="js/libs/tooltip.js" charset="utf-8"></script>
     <script src="js/drag.js" charset="utf-8"></script>
     <script src="js/blacklist.js" charset="utf-8"></script>
     <script src="js/report.js" charset="utf-8"></script>

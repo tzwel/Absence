@@ -3,6 +3,8 @@
 @import url("components/drawer.css");
 @import url("components/switch.css");
 @import url("components/toasts.css");
+@import url("components/bottom-options.css");
+@import url("components/tooltip.css");
 
 /* set variables */
 :root {
