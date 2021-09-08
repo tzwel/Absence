@@ -225,6 +225,33 @@ likes {
   opacity: 0;
 }
 
+download-button {
+  justify-self: flex-end;
+  transition: opacity .3s;
+  position: absolute;
+  z-index: 5;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 999px;
+  background: transparent;
+  padding: 4px;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  line-height: 1.5;
+  height: 28px;
+  font-size: .8rem;
+  color: var(--accent-color);
+  transition: opacity .3s;
+  opacity: 0;
+}
+
+article:hover download-button {
+  opacity: 1;
+}
+
 pagination {
   display: flex;
   justify-content: center;

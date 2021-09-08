@@ -43,7 +43,6 @@ function populate() {
 
         if (trendingToggle.checked) {
             imageWrapper.insertAdjacentHTML("beforeend", `<likes>${imgScore}^</likes>`);
-
         }
 
         img.setAttribute("number", [i]);
@@ -55,6 +54,9 @@ function populate() {
         img.setAttribute("sample", sampleUrl);
         img.setAttribute("sampleBoolean", resp[i].sample);
         imageWrapper.insertAdjacentElement("beforeend", img);
+
+        /*   imageWrapper.insertAdjacentHTML("beforeend", `<download-button
+        onclick="downloadImage('${img.getAttribute("original")}', 'fromgrid')"> bedzielink </download-button>`); */
     }
     generateReport();
 }

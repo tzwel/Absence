@@ -1,6 +1,7 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const { log } = require("console");
 
 toasts.download = {
     name: "Download message",
@@ -41,8 +42,16 @@ if (!fs.existsSync(savePath)) {
 
 // downloadImage();
 
-function downloadImage(link) {
-    const Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
+function downloadImage(link, method) {
+    let Dir;
+    Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
+
+    /* if (!method === "fromgrid") {
+        Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
+    } else {
+        Dir = `${savePath}/${ link } - Absence${path.extname(link)}`;
+        console.log("sesx");
+    } */
 
     console.log("Image is being downloaded"); 
     toasts.download.color = "var(--accent-color)";
