@@ -26,4 +26,5 @@ npm start
 
 ## Open source attributions
 Icons: [Feather Icons](https://feathericons.com)
+
 Tooltips: [tooltip.js](https://github.com/matthias-schuetz/Tooltip)
