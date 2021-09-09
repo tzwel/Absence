@@ -16,6 +16,9 @@ Absence is still in its early development stage. Everything (code, ui, etc.) is 
 ```shell
 git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
 ```
+or
+
+grab a release from the [releases](https://github.com/tzwel/Absence/releases) section (usually outdated)
 
 #### Running Absence
 Running start.cmd or
