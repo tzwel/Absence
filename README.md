@@ -2,22 +2,22 @@
 <h1 align="center"> Absence </h1>
 <h4 align="center"> An (heavily WIP) open-source Gelbooru client </h4>
 
-## ⚠️ Disclaimer:
+## ⚠️ Disclaimer
 Absence is still in its early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
 
-## Dependencies:
+## Dependencies
 [Node](https://nodejs.org)
 
 [Git](https://git-scm.com)
 
 [Eslint](https://eslint.org)
 
-## Installation:
+## Installation
 ```shell
 git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
 ```
 
-#### Running Absence:
+#### Running Absence
 Running start.cmd or
 
 ```shell
