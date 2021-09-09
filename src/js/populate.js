@@ -13,7 +13,6 @@ function populate() {
         const badge = document.createElement("badge");
         badge.innerHTML = ".gif";
         thumbnailUrl = `${thumbnailUrl}${resp[i].directory}/thumbnail_${resp[i].hash}.jpg`;
-        // console.log(thumbnailUrl);
 
         if (resp[i].file_url.includes("video-c") === true) {
             img = document.createElement("video");

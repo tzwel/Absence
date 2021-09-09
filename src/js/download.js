@@ -40,8 +40,6 @@ if (!fs.existsSync(savePath)) {
     });
 }
 
-// downloadImage();
-
 function downloadImage(link, method) {
     let Dir;
     Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 

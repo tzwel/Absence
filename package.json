@@ -1,6 +1,6 @@
 {
   "name": "Absence",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An open-source client for browsing Gelbooru",
   "main": "main.js",
   "repository": "https://github.com/tzwel/Absence",

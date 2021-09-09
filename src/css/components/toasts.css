@@ -27,7 +27,6 @@ toast {
     background: transparent;
     background: rgba(22,22,22,0.6);
     backdrop-filter: blur(20px);
-    /* border-left: 4px solid #ffffff8e; */
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
     animation-name: toastEnter;

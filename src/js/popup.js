@@ -5,8 +5,6 @@ let sampleClickedImageUrl;
 let originalClickedImageUrl;
 
 window.onclick = e => {
-    // console.log(e.target);
-    // console.log(e.target.tagName);
     if (e.target.tagName === "IMG") {
 
         if (e.target.hasAttribute("original") === true && e.target.tagName === "IMG") {
@@ -57,5 +55,4 @@ function imageBlur() {
 
 function popupLoad() {
     imageDisplayer.style.filter = "blur(0)";
-    //   imageDisplayer.style.backgroundImage = `url("")`;
 }

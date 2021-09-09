@@ -57,5 +57,4 @@ function loadDetails() {
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");
     }
-//  drawer.insertAdjacentHTML("beforeend", `<h2> Comments </h2> <span> ${commentsLink + resp[clickedNumber]["id"]} </span>`);
 }

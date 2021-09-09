@@ -18,7 +18,7 @@
 }(this, function() {
     let _options = {
         tooltipId: "tooltip",
-        offsetDefault: 15
+        offsetDefault: 30
     };
 
     let _tooltips = [];
@@ -156,7 +156,3 @@
         }
     };
 }));
-
-tooltip.setOptions({
-    offsetDefault: 30
-});

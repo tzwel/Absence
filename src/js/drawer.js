@@ -26,10 +26,7 @@ function drawerAction() {
     }
 }
 
-document.onclick = e => {
-    //   console.log(e.target);
-    //   console.log(e.target.tagName);
-   
+document.onclick = e => {   
     if (e.target.tagName === "DRAWER-BACKGROUND") {
         drawerAction();
     }
