@@ -9,7 +9,12 @@ function minimize() {
 }
 
 function close() {
-    remote.getCurrentWindow().close();
+    if (isDownloading === true) {
+        alert("A file is still downloading. Absence will be minimized.");
+        remote.getCurrentWindow().minimize();
+    } else {
+        remote.getCurrentWindow().close();
+    }
 }
 
 // temporary solution

@@ -2,6 +2,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { log } = require("console");
+let isDownloading = false;
 
 toasts.download = {
     name: "Download message",
@@ -50,7 +51,7 @@ function downloadImage(link, method) {
         Dir = `${savePath}/${ link } - Absence${path.extname(link)}`;
         console.log("sesx");
     } */
-
+    isDownloading = true;
     console.log("Image is being downloaded"); 
     toasts.download.color = "var(--accent-color)";
     toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
@@ -68,9 +69,11 @@ function downloadImage(link, method) {
                 toasts.download.color = "lime";
                 toasts.download.header = "File downloaded";
                 toast(toasts.download);
+                isDownloading = false;
             });
         } catch (error) {
             console.log(error);
+            isDownloading = false;
         }
     });    
 }
