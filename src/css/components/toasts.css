@@ -14,7 +14,7 @@ toasts {
 }
 
 toast {
-    margin: 2px;
+    margin: 4px;
     z-index: 30;
     align-items: center;
     padding-left: 12px;

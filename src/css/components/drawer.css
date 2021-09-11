@@ -49,3 +49,7 @@ drawer a {
   margin-bottom: .2rem;
   color: var(--accent-color);
 }
+
+drawer span {
+  color: rgba(255, 255, 255, 0.8)
+}
