@@ -10,8 +10,9 @@ function minimize() {
 
 function close() {
     if (isDownloading === true) {
-        alert("A file is still downloading. Absence will be minimized.");
-        remote.getCurrentWindow().minimize();
+        // alert("A file is still downloading. Absence will be minimized.");
+        toast(toasts.downloadNotice);
+        // remote.getCurrentWindow().minimize();
     } else {
         remote.getCurrentWindow().close();
     }

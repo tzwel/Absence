@@ -20,6 +20,14 @@ toasts.path = {
     color: "var(--accent-color)"
 };
 
+toasts.downloadNotice = {
+    name: "Download notice",
+    header: "A file is still downloading!",
+    message: "",
+    timeOut: 4000,
+    color: "#f8ff00"
+};
+
 document.querySelector(".download-link").addEventListener("click", (event) => {
     event.preventDefault();
 
