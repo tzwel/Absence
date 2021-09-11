@@ -5,6 +5,7 @@
 @import url("components/toasts.css");
 @import url("components/bottom-options.css");
 @import url("components/tooltip.css");
+@import url("fonts.css");
 
 /* set variables */
 :root {
@@ -32,14 +33,13 @@ html {
   padding: 0;
   position: relative;
   overflow: hidden;
-  font-family: sans-serif;
   user-select: none;
   -webkit-user-drag: none;
   box-sizing: inherit;
   font-size: 1.2rem;
   max-width: 100%;
   line-height: 1.3;
-  font-family: Segoe UI, sans-serif;
+  font-family: "JosefinSans", Segoe UI, sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 /* fix <head> bug */
