@@ -28,6 +28,14 @@ toasts.downloadNotice = {
     color: "#f8ff00"
 };
 
+toasts.fileExists = {
+    name: "Exists notice",
+    header: "This file already exists!",
+    message: "",
+    timeOut: 4000,
+    color: "#f8ff00"
+};
+
 document.querySelector(".download-link").addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -59,6 +67,11 @@ function downloadImage(link, method) {
         Dir = `${savePath}/${ link } - Absence${path.extname(link)}`;
         console.log("sesx");
     } */
+
+    if (fs.existsSync(`${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`)) {
+        return toast(toasts.fileExists);
+    }
+
     isDownloading = true;
     console.log("Image is being downloaded"); 
     toasts.download.color = "var(--accent-color)";
