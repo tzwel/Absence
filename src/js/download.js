@@ -4,38 +4,6 @@ const path = require("path");
 const { log } = require("console");
 let isDownloading = false;
 
-toasts.download = {
-    name: "Download message",
-    header: "Downloading image",
-    message: "",
-    timeOut: 4000,
-    color: "var(--accent-color)"
-};
-
-toasts.path = {
-    name: "Path message",
-    header: "",
-    message: "",
-    timeOut: 4000,
-    color: "var(--accent-color)"
-};
-
-toasts.downloadNotice = {
-    name: "Download notice",
-    header: "A file is still downloading!",
-    message: "",
-    timeOut: 4000,
-    color: "#f8ff00"
-};
-
-toasts.fileExists = {
-    name: "Exists notice",
-    header: "This file already exists!",
-    message: "",
-    timeOut: 4000,
-    color: "#f8ff00"
-};
-
 document.querySelector(".download-link").addEventListener("click", (event) => {
     event.preventDefault();
 

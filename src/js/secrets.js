@@ -1,13 +1,5 @@
 let currentTheme;
 
-toasts.theme = {
-    name: "Theme switched",
-    header: "Theme switched",
-    message: "",
-    timeOut: 4000,
-    color: "var(--accent-color)"
-};
-
 function switchTheme() {
     if (currentTheme === undefined) {
         currentTheme = "default";

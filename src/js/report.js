@@ -10,7 +10,9 @@ function render(component, content, destination) {
 
 function generateReport() {
     if (resp.length === undefined || resp.length === 0) {
-        alert("No results");
+        toasts.report.color = "red";
+        toasts.report.header = "No results!";
+        toast(toasts.report);
         return render(report, "No results", "grid");
     }
     render(report, `${document.querySelector("grid").getElementsByTagName("article").length} images fetched`, "grid");

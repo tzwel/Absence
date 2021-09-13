@@ -1,6 +1,6 @@
 ## Todo:
 
-- Add themes
+- ~~Add themes~~
 - Add filters
 - Add post limit
 - Add bottom pagination
