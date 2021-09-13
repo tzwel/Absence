@@ -1,4 +1,4 @@
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keyup", function(event) {
     let tags = document.querySelector(".tags").value;
     localStorage.searches = tags;
 });
