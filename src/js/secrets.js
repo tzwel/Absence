@@ -1,10 +1,49 @@
-if (localStorage.theme === "darker") {
-    document.documentElement.setAttribute("data-theme", "dark");
+let currentTheme;
+
+toasts.theme = {
+    name: "Theme switched",
+    header: "Theme switched",
+    message: "",
+    timeOut: 4000,
+    color: "var(--accent-color)"
+};
+
+function switchTheme() {
+    switch (currentTheme) {
+        
+    case "midnight":
+        currentTheme = "dark";
+        localStorage.setItem("theme", "dark");
+        break;
+        
+    case "dark":
+        currentTheme = "rule34";
+        localStorage.setItem("theme", "rule34");
+        break;
+        
+    case "rule34":
+        currentTheme = "default";
+        localStorage.setItem("theme", "default");
+        break;
+        
+    default:
+        currentTheme = "midnight";
+        localStorage.setItem("theme", "midnight");
+        break;
+    }
+    loadTheme();
+    toasts.theme.header = `Theme switched to ${currentTheme}`;
+    toast(toasts.theme);
 }
 
+function loadTheme() {
+    document.documentElement.setAttribute("data-theme", localStorage.theme); 
+}
+
+loadTheme();
+
 document.querySelector("h1.logo").addEventListener("dblclick", event => {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "darker");
+    switchTheme();
 });
   
 /*
