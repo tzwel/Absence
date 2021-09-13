@@ -42,6 +42,8 @@ function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", `<h2> Dimensions </h2> <span> ${resp[clickedNumber]["width"]} x ${resp[clickedNumber]["height"]} </span>`);
 
+    drawer.insertAdjacentHTML("beforeend", `<h2> Id </h2> <span> ${resp[clickedNumber]["id"]} </span>`);
+
     drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
     onclick="event.preventDefault();
     shell.openExternal(this.href);"
