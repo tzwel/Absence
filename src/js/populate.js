@@ -1,4 +1,3 @@
-
 function populate() {
     if (resp.length === undefined || resp.length === 0) {
         generateReport();
