@@ -1,13 +1,11 @@
 const imageDisplayer = document.querySelector("display-wrapper > img");
-let clickedImageNumber;
-let viewedImageNumber;
-let sampleClickedImageUrl;
-let originalClickedImageUrl;
+let clickedImageNumber, viewedImageNumber, sampleClickedImageUrl, originalClickedImageUrl;
 
 window.onclick = e => {
-    if (e.target.tagName === "IMG") {
+    let target = e.target;
+    if (target.tagName === "IMG") {
 
-        if (e.target.hasAttribute("original") === true && e.target.tagName === "IMG") {
+        if (target.hasAttribute("original") === true && target.tagName === "IMG") {
             imageDisplayer.style.transform = "translate3d(0px,0px,0px)";
 
             yOffset = 0;
@@ -15,14 +13,14 @@ window.onclick = e => {
 
             console.log("klikniety obrazek");
 
-            originalClickedImageUrl = e.target.getAttribute("original");
-            sampleClickedImageUrl = e.target.getAttribute("sample");
-            clickedImageNumber = e.target.getAttribute("number");
+            originalClickedImageUrl = target.getAttribute("original");
+            sampleClickedImageUrl = target.getAttribute("sample");
+            clickedImageNumber = target.getAttribute("number");
             console.log(originalClickedImageUrl);
             imageDisplayer.src = "";
-            viewedImageNumber = e.target.getAttribute("number");
+            viewedImageNumber = target.getAttribute("number");
 
-            if (e.target.getAttribute("sampleBoolean") === "1") {
+            if (target.getAttribute("sampleBoolean") === "1") {
                 imageDisplayer.src = sampleClickedImageUrl;
             } else {
                 console.log("nie ma sampla");
@@ -31,7 +29,7 @@ window.onclick = e => {
 
             loadDetails();
 
-            imageDisplayer.style.backgroundImage = `url("${e.target.getAttribute("src")}")`;
+            imageDisplayer.style.backgroundImage = `url("${target.getAttribute("src")}")`;
 
             imageBlur();
 
@@ -41,7 +39,7 @@ window.onclick = e => {
         }
     }
 
-    if (e.target.tagName === "DISPLAY-WRAPPER") {
+    if (target.tagName === "DISPLAY-WRAPPER") {
         document.querySelector("display-wrapper").classList.remove("open");
     }
 };
