@@ -9,7 +9,14 @@ toasts.theme = {
 };
 
 function switchTheme() {
+    if (currentTheme === undefined) {
+        currentTheme = "default";
+    }
     switch (currentTheme) {
+    case "default":
+        currentTheme = "midnight";
+        localStorage.setItem("theme", "midnight");
+        break;
         
     case "midnight":
         currentTheme = "dark";
@@ -27,8 +34,8 @@ function switchTheme() {
         break;
         
     default:
-        currentTheme = "midnight";
-        localStorage.setItem("theme", "midnight");
+        currentTheme = "default";
+        localStorage.setItem("theme", "default");
         break;
     }
     loadTheme();
@@ -38,6 +45,7 @@ function switchTheme() {
 
 function loadTheme() {
     document.documentElement.setAttribute("data-theme", localStorage.theme); 
+    currentTheme = localStorage.theme;
 }
 
 loadTheme();
