@@ -13,5 +13,5 @@ function generateReport() {
         alert("No results");
         return render(report, "No results", "grid");
     }
-    render(report, `${document.querySelector("grid").getElementsByTagName("article").length} images loaded`, "grid");
+    render(report, `${document.querySelector("grid").getElementsByTagName("article").length} images fetched`, "grid");
 }
