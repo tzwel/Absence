@@ -10,7 +10,7 @@ Absence is still in its early development stage. Everything (code, ui, etc.) is 
 
 [Git](https://git-scm.com)
 
-##Dev dependencies
+## Dev dependencies
 [Eslint](https://eslint.org)
 
 ## Installation
