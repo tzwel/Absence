@@ -10,9 +10,6 @@ async function apiFetch() {
     pid = document.querySelector(".page").value;
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} &json=1`, "json");
 
-    console.log("loaded images:");
-    console.log(resp);
-
     populate();
 }
 
