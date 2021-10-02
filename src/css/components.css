@@ -515,6 +515,7 @@ report {
   right: 0;
   z-index: 5;
   pointer-events: none;
+  font-size: 1rem;
 }
 
 search-buttons {
