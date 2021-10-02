@@ -2,7 +2,7 @@ label.switch {
 	padding: 0;
 	background: #FFF;
     height: 60px;
-    margin-bottom: 6px;
+    /* margin-bottom: 6px; */
     width: 100%;
     max-width: 60px;
     display: flex;
@@ -47,6 +47,6 @@ label.switch {
     height: 100%;
     width: 100%;
     margin: 0;
-    max-width: 38%;
+    max-width: 34%;
 }
 

@@ -108,8 +108,8 @@ nav button:hover img {
 
 aside button {
   min-width: 40px;
- /* margin-top: 6px; */
-  margin-bottom: 6px;
+ /* margin-top: 6px;
+  margin-bottom: 6px; */
   background: var(--main-background);
   padding: 8px;
   border-bottom: 4px solid transparent;
@@ -338,6 +338,32 @@ display-buttons a {
 display-buttons a:hover {
   color: #e0e0e0;
   background: transparent;
+}
+
+action-buttons {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+action-buttons button {
+  padding: 0;
+  border-bottom: 2px solid var(--accent-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 60px;
+  width: 60px;
+}
+
+action-buttons button img {
+  transition: filter .3s;
+  filter: invert(100%);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  max-width: 34%;
 }
 
 badge {
