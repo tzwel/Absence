@@ -29,7 +29,9 @@
 
     <container>
       <aside>
-        <h1 class="logo"> <img height="40px" width="auto" src="img/Absence-logo.png"> Absence</h1>
+        <h1 class="logo"> <img height="40px" width="auto" src="img/Absence-logo.png"> 
+          <span>Absence</span>
+        </h1>
         <label for="tags">tags</label>
         <input spellcheck="false" placeholder="black_hair bangs" id="tags" class="tags" type="text" name="" value="">
 
@@ -113,6 +115,12 @@
           <label data-tooltip title="Mobile layout" class="switch">
             <input  class="mobileView" id="mobileView" type="checkbox"/>
             <span class="switch-label"><img src="img/smartphone.svg" class="switch-icon"/>
+            </span>
+          </label>
+
+          <label data-tooltip title="Compact layout" class="switch">
+            <input class="compactLayout" type="checkbox"/>
+            <span class="switch-label"><img src="img/compact.svg" class="switch-icon"/>
             </span>
           </label>
         </bottom-options>

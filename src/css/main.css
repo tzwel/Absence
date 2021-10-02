@@ -16,6 +16,9 @@
   --text-color: #fff;
   --accent-color: #65b3ef; */
 }
+body {
+  --aside-width: 330px;
+}
 [data-theme="default"] {
   --main-background: #1d1d1d;
   --secondary-background: #161616;

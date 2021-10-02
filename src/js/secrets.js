@@ -33,13 +33,13 @@ function switchTheme() {
 }
 
 function loadTheme() {
+    document.documentElement.setAttribute("data-theme", localStorage.theme); 
+    currentTheme = localStorage.theme;
+
     if (typeof currentTheme === "undefined") {
         currentTheme = "default";
         localStorage.setItem("theme", "default");
     }
-
-    document.documentElement.setAttribute("data-theme", localStorage.theme); 
-    currentTheme = localStorage.theme;
 }
 
 loadTheme();

@@ -18,6 +18,10 @@ container {
   transition: filter .3s;
 }
 
+.logo span {
+  margin-bottom: -8px;
+}
+
 .logo:hover {
   transform: scale(1.05);
 }
@@ -32,7 +36,7 @@ aside {
   /* min-width: calc(100px + 20%); */
   /* position: fixed; */
   width: 100%;
-  max-width: 330px;
+  max-width: var(--aside-width);
   background: var(--secondary-background);
   z-index: 5;
   padding: 20px;
@@ -435,6 +439,24 @@ container.mirror {
 
 body.mobile container {
   flex-direction: column;
+}
+
+body.compact {
+  --aside-width: 220px;
+}
+
+body.compact aside {
+  padding: 0;
+  padding-top: 60px;
+}
+
+body.compact article {
+  width: 160px;
+  height: 210px;
+}
+
+body.compact .logo span {
+  display: none;
 }
 
 body.mobile aside {
