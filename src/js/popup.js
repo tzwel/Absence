@@ -58,7 +58,7 @@ function zoom(event) {
     }
 
     // Restrict scale
-    displayerScale = Math.min(Math.max(.125, displayerScale), 4);
+    displayerScale = Math.min(Math.max(.125, displayerScale), 6);
     imageDisplayer.style.transition = "transform .1s, top .2s";
     // Apply scale transform
     imageDisplayer.style.transform = `scale(${displayerScale})`;
