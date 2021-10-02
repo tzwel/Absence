@@ -17,6 +17,16 @@ document.addEventListener("keydown", function(event) {
         remote.getCurrentWindow().minimize();
     }
 
+    // search shortcut
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        if (!document.querySelector("display-wrapper").classList.contains("open")) {
+            apiFetch();
+        } else {
+            downloadImage(viewedImage.getAttribute("original"));
+        }
+    }
+
     // next/previous arrow shortcut
     if (!document.querySelector("display-wrapper").classList.contains("open")) {
         if (event.keyCode === 39) {

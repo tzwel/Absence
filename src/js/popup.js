@@ -1,5 +1,6 @@
 const imageDisplayer = document.querySelector("display-wrapper > img");
 let clickedImageNumber, viewedImageNumber, sampleClickedImageUrl, originalClickedImageUrl;
+let displayerScale = 1;
 
 window.onclick = e => {
     let target = e.target;
@@ -10,7 +11,7 @@ window.onclick = e => {
 
             yOffset = 0;
             xOffset = 0;
-
+            displayerScale = 1;
             console.log("klikniety obrazek");
 
             originalClickedImageUrl = target.getAttribute("original");
@@ -43,6 +44,23 @@ window.onclick = e => {
         document.querySelector("display-wrapper").classList.remove("open");
     }
 };
+
+// thx mdn
+function zoom(event) {
+    event.preventDefault();
+    yOffset = 0;
+    xOffset = 0;
+
+    displayerScale += event.deltaY * -0.001;
+    
+    // Restrict scale
+    displayerScale = Math.min(Math.max(.125, displayerScale), 4);
+    imageDisplayer.style.transition = "transform .1s, top .2s";
+    // Apply scale transform
+    imageDisplayer.style.transform = `scale(${displayerScale})`;
+    // imageDisplayer.style.transform = `scale(${displayerScale})` + "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+}
+imageDisplayer.onwheel = zoom;
 
 function imageBlur() {
     if (imageDisplayer.src.includes(".gif") === false) {

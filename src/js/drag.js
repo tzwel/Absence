@@ -8,6 +8,8 @@ let initialX;
 let initialY;
 let xOffset = 0;
 let yOffset = 0;
+let xPos;
+let yPos;
 
 dragcontainer.addEventListener("mousedown", dragStart, false);
 dragcontainer.addEventListener("mouseup", dragEnd, false);
@@ -55,5 +57,5 @@ function drag(e) {
 }
 
 function setTranslate(xPos, yPos, el) {
-    el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    el.style.transform = `scale(${displayerScale})` + "translate3d(" + xPos + "px, " + yPos + "px, 0)";
 }
