@@ -45,3 +45,11 @@ toasts.report = {
     timeOut: 4000,
     color: "var(--accent-color)"
 };
+
+toasts.imageLoaded = {
+    name: "Loaded a bigger version of an image",
+    header: "Bigger version loaded",
+    message: "",
+    timeOut: 3000,
+    color: "var(--accent-color)"
+};

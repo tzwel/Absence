@@ -51,7 +51,12 @@ function zoom(event) {
     xOffset = 0;
 
     displayerScale += event.deltaY * -0.001 * 2 + .011;
-    
+
+    if (displayerScale > 1.4 && imageDisplayer.src !== originalClickedImageUrl) {
+        imageDisplayer.src = originalClickedImageUrl;
+        // toast(toasts.imageLoaded);
+    }
+
     // Restrict scale
     displayerScale = Math.min(Math.max(.125, displayerScale), 4);
     imageDisplayer.style.transition = "transform .1s, top .2s";
