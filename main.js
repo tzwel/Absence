@@ -12,7 +12,7 @@ function createWindow () {
         minHeight: 700,
         webPreferences: {
             enableRemoteModule: true,
-            contextIsolation: true,
+            contextIsolation: false,
             nodeIntegration: true// ,
             // devTools: false
         }
