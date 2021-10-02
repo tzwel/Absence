@@ -1,12 +1,14 @@
+let searchTags;
+
 document.addEventListener("keyup", function(event) {
-    let tags = document.querySelector(".tags").value;
-    localStorage.searches = tags;
+    searchTags = document.querySelector(".tags").value;
+    localStorage.searches = searchTags;
 });
 
 function loadTags() {
-    if (!document.querySelector(".tags").value === "undefined") {
-        let tags = document.querySelector(".tags");
-        tags.value = localStorage.searches;
+    if (localStorage.searches !== "undefined") {
+        searchTags = document.querySelector(".tags");
+        searchTags.value = localStorage.searches;    
     }
 }
 

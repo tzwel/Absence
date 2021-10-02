@@ -3,6 +3,11 @@ const fs = require("fs");
 const path = require("path");
 const { log } = require("console");
 let isDownloading = false;
+let fileNum;
+
+fs.readdir(savePath, (err, files) => {
+    fileNum = files.length;
+});
 
 document.querySelector(".download-link").addEventListener("click", (event) => {
     event.preventDefault();
@@ -59,6 +64,15 @@ function downloadImage(link, method) {
                 toasts.download.header = "File downloaded";
                 toast(toasts.download);
                 isDownloading = false;
+
+                fs.readdir(savePath, (err, files) => {
+                    fileNum = files.length;
+                });
+                generateReport(fileNum); // no idea why in the flying fuck this doesnt work
+                // "temporary" "fix" in report.js
+                // actualy not sih sieotrhdujiorkjhdsjekt hsjko
+                // cant fix a retarded system
+                // /////////////////////// sadadsa
             });
         } catch (error) {
             console.log(error);
