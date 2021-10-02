@@ -16,7 +16,7 @@ toasts.path = {
 
 toasts.downloadNotice = {
     name: "Download notice",
-    header: "A file is still downloading!",
+    header: "A file is still being downloaded!",
     message: "",
     timeOut: 4000,
     color: "#f8ff00"

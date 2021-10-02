@@ -1,9 +1,6 @@
 let currentTheme;
 
 function switchTheme() {
-    if (currentTheme === undefined) {
-        currentTheme = "default";
-    }
     switch (currentTheme) {
     case "default":
         currentTheme = "midnight";
@@ -36,6 +33,11 @@ function switchTheme() {
 }
 
 function loadTheme() {
+    if (typeof currentTheme === "undefined") {
+        currentTheme = "default";
+        localStorage.setItem("theme", "default");
+    }
+
     document.documentElement.setAttribute("data-theme", localStorage.theme); 
     currentTheme = localStorage.theme;
 }
