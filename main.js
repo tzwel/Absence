@@ -4,7 +4,7 @@ const path = require("path");
 function createWindow () {
     const mainWindow = new BrowserWindow({
         fullscreenable: true,
-        transparent: true,
+        transparent: false,
         frame: false,
         width: 1200,
         minWidth: 480,
@@ -12,7 +12,7 @@ function createWindow () {
         minHeight: 700,
         webPreferences: {
             enableRemoteModule: true,
-            contextIsolation: false,
+            contextIsolation: true,
             nodeIntegration: true// ,
             // devTools: false
         }
