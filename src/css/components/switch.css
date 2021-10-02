@@ -41,6 +41,10 @@ label.switch {
     height: 100%;
 }
 
+.switch:hover img {
+    filter: invert(0%);
+}
+
 .switch-label img {
     transition: filter .3s;
     filter: invert(100%);
