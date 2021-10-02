@@ -38,6 +38,7 @@ function dragEnd(e) {
 
 function drag(e) {
     if (dragActive) {
+        // setPointer("dragging");
         imageDisplayer.style.transition = "";
         e.preventDefault();
 
@@ -53,9 +54,23 @@ function drag(e) {
         yOffset = currentY;
 
         setTranslate(currentX, currentY, draggableImage);
+    } else {
+        // setPointer("default");
     }
 }
 
 function setTranslate(xPos, yPos, el) {
     el.style.transform = `scale(${displayerScale})` + "translate3d(" + xPos + "px, " + yPos + "px, 0)";
 }
+/*
+function setPointer(pointer) {
+    switch (pointer) {
+    case "dragging":
+        imageDisplayer.style.pointer = "none";
+        break;
+    
+    default:
+        imageDisplayer.style.pointer = "grab";
+        break;
+    }
+} */
