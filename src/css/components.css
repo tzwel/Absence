@@ -349,8 +349,13 @@ display-buttons a::after {
   width: 50%;
   height: 2px;
   position: absolute;
-  bottom: calc(25%);
+  bottom: calc(20%);
   border-bottom: 2px solid var(--accent-color);
+  transition: width .3s;
+}
+
+display-buttons a:hover::after {
+  width: 85%;
 }
 
 display-buttons a:hover {

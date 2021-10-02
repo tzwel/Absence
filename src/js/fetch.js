@@ -5,6 +5,7 @@ const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";
 
 async function apiFetch() {
     document.querySelector("grid").innerHTML = "";
+    loading();
 
     tags = document.querySelector(".tags").value;
     pid = document.querySelector(".page").value;
@@ -24,6 +25,15 @@ function previousFetch() {
 function nextFetch() {
     document.querySelector(".page").value ++;
     apiFetch();
+}
+
+function loading() {
+    document.querySelector("grid").insertAdjacentHTML("beforeend", `
+        <loading> 
+            <span> Fetching... </span>
+            <img class="spinner" src="./img/rotate-cw.svg" alt="spinner-loading"/>
+        </loading>
+    `);
 }
 
 document.querySelector(".search").addEventListener("click", apiFetch);

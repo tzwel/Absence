@@ -11,7 +11,6 @@ async function toast(parameters) {
     `);
 
     const thisToast = document.querySelector(`[toastId="${id}"]`);
-
     if (parameters.color) {
         thisToast.style.color = parameters.color;
         thisToast.style.borderColor = parameters.color;

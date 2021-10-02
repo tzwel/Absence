@@ -17,7 +17,9 @@ function generateReport(fileNum) {
         toasts.report.color = "red";
         toasts.report.header = "No results!";
         toast(toasts.report);
-        return render(report, "No results", "grid");
+        return render(report,`
+            <loading> <span> No results </span> </loading>
+        `, "grid");
     }
     render(report, `
     ${document.querySelector("grid").getElementsByTagName("article").length} images fetched </br>
