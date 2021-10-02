@@ -50,7 +50,7 @@ function zoom(event) {
     yOffset = 0;
     xOffset = 0;
 
-    displayerScale += event.deltaY * -0.001;
+    displayerScale += event.deltaY * -0.001 * 2 + .011;
     
     // Restrict scale
     displayerScale = Math.min(Math.max(.125, displayerScale), 4);
