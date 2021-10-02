@@ -325,18 +325,28 @@ display-buttons {
   /*padding: 1rem;*/
   padding-right: 1rem;
   padding-left: 1rem;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(0 0 0 / 37%) 39%, rgb(33 33 33 / 59%) 100%);
+ /* background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(0 0 0 / 37%) 39%, rgb(33 33 33 / 59%) 100%); */
 }
 
 display-buttons a {
   color: #fff;
   text-decoration: none;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-  padding: 1rem;
+  padding: .5rem;
   padding-right: .5rem;
   padding-left: .5rem;
   transition: color .2s;
   background: transparent;
+}
+
+display-buttons a::after {
+  display: block;
+  content: "";
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  bottom: calc(25%);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 display-buttons a:hover {
