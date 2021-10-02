@@ -31,7 +31,6 @@ window.onclick = e => {
             loadDetails();
 
             imageDisplayer.style.backgroundImage = `url("${target.getAttribute("src")}")`;
-
             imageBlur();
 
             viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);

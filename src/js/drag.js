@@ -38,7 +38,7 @@ function dragEnd(e) {
 
 function drag(e) {
     if (dragActive) {
-
+        imageDisplayer.style.transition = "";
         e.preventDefault();
 
         if (e.type === "touchmove") {
