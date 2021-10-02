@@ -84,6 +84,10 @@ nav button {
   background: var(--secondary-background);
 }
 
+nav button img{
+  max-width: 38%;
+}
+
 button {
   transition: background .3s, color .3s;
 }
