@@ -11,6 +11,14 @@ document.addEventListener("keydown", function(event) {
 
     }
 
+    // Space drawer shortut
+    if (event.keyCode === 32) {
+        if (document.querySelector("display-wrapper").classList.contains("open")) {
+            event.preventDefault();
+            drawerAction();
+        }
+    }
+
     // panic tilde shortcut
     if (event.keyCode === 192) {
         event.preventDefault();
