@@ -13,7 +13,7 @@ document.addEventListener("keydown", function(event) {
 
     // Space drawer shortut
     if (event.keyCode === 32) {
-        if (document.querySelector("display-wrapper").classList.contains("open")) {
+        if (isDisplayOpen()) {
             event.preventDefault();
             drawerAction();
         }
@@ -28,7 +28,7 @@ document.addEventListener("keydown", function(event) {
     // search shortcut
     if (event.keyCode === 13) {
         event.preventDefault();
-        if (!document.querySelector("display-wrapper").classList.contains("open")) {
+        if (!isDisplayOpen()) {
             apiFetch();
         } else {
             downloadImage(viewedImage.getAttribute("original"));
@@ -36,7 +36,7 @@ document.addEventListener("keydown", function(event) {
     }
 
     // next/previous arrow shortcut
-    if (!document.querySelector("display-wrapper").classList.contains("open")) {
+    if (!isDisplayOpen()) {
         if (event.keyCode === 39) {
             event.preventDefault();
             nextFetch();
@@ -55,6 +55,14 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });
+
+function isDisplayOpen() {
+    if (document.querySelector("display-wrapper").classList.contains("open")) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function loadLargeImage(direction) {
     if (direction === "next") {
