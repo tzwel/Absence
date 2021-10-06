@@ -9,7 +9,8 @@ async function apiFetch() {
 
     tags = document.querySelector(".tags").value;
     pid = document.querySelector(".page").value;
-    resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} &json=1`, "json");
+    // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
+    resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.personal} &json=1`, "json");
 
     populate();
 }

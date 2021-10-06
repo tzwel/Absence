@@ -52,8 +52,8 @@ function zoom(event) {
 
     displayerScale += event.deltaY * -0.001 * 2 + .011;
 
-    if (displayerScale > 1.4 && imageDisplayer.src !== originalClickedImageUrl) {
-        imageDisplayer.src = originalClickedImageUrl;
+    if (displayerScale > 1.4 && imageDisplayer.src !== viewedImage.getAttribute("original")) {
+        imageDisplayer.src = viewedImage.getAttribute("original");
         // toast(toasts.imageLoaded);
     }
 

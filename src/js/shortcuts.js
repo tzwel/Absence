@@ -36,7 +36,11 @@ document.addEventListener("keydown", function(event) {
     }
 
     // next/previous arrow shortcut
+
     if (!isDisplayOpen()) {
+        if (document.activeElement === document.querySelector(".tags")) {
+            return;
+        }
         if (event.keyCode === 39) {
             event.preventDefault();
             nextFetch();
@@ -49,11 +53,12 @@ document.addEventListener("keydown", function(event) {
         if (event.keyCode === 39) {
             loadLargeImage("next");
         }
-
+    
         if (event.keyCode === 37) {
             loadLargeImage("previous");
         }
     }
+
 });
 
 function isDisplayOpen() {
@@ -71,6 +76,18 @@ function loadLargeImage(direction) {
         viewedImageNumber--;
     }
 
+    switch (viewedImageNumber) {
+    case -1:
+        return viewedImageNumber = 0;
+
+    case 101:
+        return viewedImageNumber = 100;
+    
+    default:
+        break;
+    }
+
+    displayerScale = 1;
     imageDisplayer.style.transform = "translate3d(0px,0px,0px)";
     yOffset = 0;
     xOffset = 0;
