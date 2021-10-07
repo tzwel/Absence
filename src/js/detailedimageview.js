@@ -54,7 +54,7 @@ function loadDetails() {
         onclick="event.preventDefault();
         shell.openExternal(this.href);"
         href="${resp[clickedNumber]["source"]}"> Source </a>`);    
-    }
+    } // navigator.clipboard.writeText(text)
 
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");

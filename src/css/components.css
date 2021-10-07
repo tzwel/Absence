@@ -266,7 +266,7 @@ article:hover download-button {
   opacity: 1;
 }
 
-article img:hover, article video:hover {
+article img:hover {
  transform: scale(1.025);
    /*transform: scale(0.975);*/
 }
