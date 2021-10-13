@@ -92,7 +92,7 @@ function loadLargeImage(direction) {
     yOffset = 0;
     xOffset = 0;
     
-    if (viewedImageNumber < 100) {
+    if (viewedImageNumber < document.querySelector("grid").getElementsByTagName("article").length) {
         try {
             viewedImage = document.querySelector(`article img[number='${viewedImageNumber}'`);
     
