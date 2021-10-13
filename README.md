@@ -5,7 +5,7 @@
 <p align="center"> 
 <img src="https://img.shields.io/tokei/lines/github/tzwel/absence?style=plastic" alt="Total lines of code" /> 
 <img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=plastic" alt="Uncompressed code size" />
-<img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=plastic" alt="Release" />
+<a href="https://github.com/tzwel/Absence/releases"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=plastic" alt="Release" /> </a>
 </p>
 
 ## ⚠️ Disclaimer
