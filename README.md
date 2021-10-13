@@ -2,6 +2,12 @@
 <h1 align="center"> Absence </h1>
 <h4 align="center"> An (heavily WIP) open-source Gelbooru client </h4>
 
+<p align="center"> 
+<img src="https://img.shields.io/tokei/lines/github/tzwel/absence?style=plastic" alt="Total lines of code" /> 
+<img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=plastic" alt="Uncompressed code size" />
+<img src="  https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=plastic" alt="Release" />
+</p>
+
 ## ⚠️ Disclaimer
 Absence is still in its early development stage. Everything (code, ui, etc.) is a subject to change or even break. No stable releases are planned for now.
 
