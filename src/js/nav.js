@@ -9,11 +9,12 @@ function minimize() {
 }
 
 function close() {
-    if (isDownloading === true) {
+    if (downloadArray.length > 0) {
         // alert("A file is still downloading. Absence will be minimized.");
         toast(toasts.downloadNotice);
         // remote.getCurrentWindow().minimize();
     } else {
+        console.log("closing");
         remote.getCurrentWindow().close();
     }
 }

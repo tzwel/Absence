@@ -2,7 +2,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { log } = require("console");
-let isDownloading = false;
+const downloadArray = [];
 let fileNum;
 
 fs.readdir(savePath, (err, files) => {
@@ -45,7 +45,7 @@ function downloadImage(link, method) {
         return toast(toasts.fileExists);
     }
 
-    isDownloading = true;
+    downloadArray.push(resp[clickedNumber]["id"]);
     console.log("Image is being downloaded"); 
     toasts.download.color = "var(--accent-color)";
     toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
@@ -63,8 +63,8 @@ function downloadImage(link, method) {
                 toasts.download.color = "lime";
                 toasts.download.header = "File downloaded";
                 toast(toasts.download);
-                isDownloading = false;
-
+                downloadArray.shift();
+                
                 fs.readdir(savePath, (err, files) => {
                     fileNum = files.length;
                 });
@@ -76,7 +76,7 @@ function downloadImage(link, method) {
             });
         } catch (error) {
             console.log(error);
-            isDownloading = false;
+            downloadArray.shift();
         }
     });    
 }
