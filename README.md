@@ -3,9 +3,9 @@
 <h4 align="center"> An (heavily WIP) open-source Gelbooru client </h4>
 
 <p align="center"> 
-<img src="https://img.shields.io/tokei/lines/github/tzwel/absence" alt="Total lines of code" /> 
-<img src="https://img.shields.io/github/languages/code-size/tzwel/absence" alt="Uncompressed code size" />
-<a href="https://github.com/tzwel/Absence/releases"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases" alt="Release" /> </a>
+<img src="https://img.shields.io/tokei/lines/github/tzwel/absence?style=flat" alt="Total lines of code" /> 
+<img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=plasflattic" alt="Uncompressed code size" />
+<a href="https://github.com/tzwel/Absence/releases"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat" alt="Release" /> </a>
 </p>
 
 ## ⚠️ Disclaimer
