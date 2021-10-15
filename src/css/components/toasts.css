@@ -46,11 +46,14 @@ toast.closing {
 }
 
 @keyframes toastEnter {
+    /*
     0% {margin-top: -20px; opacity: 0;}
-    100% {margin-top: 0; opacity: 1}
+    100% {margin-top: 0; opacity: 1} */
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(0)}
 }
 
 @keyframes toastExit {
-    0% { opacity: 1;}
-    100% {opacity: 0}
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-100%)}
 }

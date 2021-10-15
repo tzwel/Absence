@@ -3,7 +3,7 @@ const toasts = {};
 async function toast(parameters) {
     const id = Math.floor(Math.random() * 12048);
 
-    document.querySelector("toasts").insertAdjacentHTML("beforeend", `
+    document.querySelector("toasts").insertAdjacentHTML("afterbegin", `
         <toast toastId="${id}" name="${parameters.name}"> 
             <h1> ${parameters.header} </h1>
             <p> ${parameters.message} </p>
