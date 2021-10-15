@@ -25,7 +25,7 @@ git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
 ```
 ### or
 
-grab a release from the [releases](https://github.com/tzwel/Absence/releases) section (usually outdated)
+grab a release from the [releases](https://github.com/tzwel/Absence/releases) section (not recommended, usually outdated)
 
 ## Running Absence
 Running start.cmd or
