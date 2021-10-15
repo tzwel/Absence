@@ -23,6 +23,7 @@ function generateReport(fileNum) {
     }
     render(report, `
     ${document.querySelector("grid").getElementsByTagName("article").length} images fetched </br>
-    ${fileNum} files downloaded
+    ${fileNum} files downloaded </br>
+    Currently downloading ${downloadArray.length} file(s)
     `, "report");
 }

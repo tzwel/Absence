@@ -50,7 +50,8 @@ function downloadImage(link, method) {
     toasts.download.color = "var(--accent-color)";
     toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
     toast(toasts.download);
-
+    generateReport(fileNum); 
+    
     https.get(link,(res) => {
         const fileDir = fs.createWriteStream(Dir);
 
