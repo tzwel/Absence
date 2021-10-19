@@ -14,6 +14,7 @@ toasts {
 }
 
 toast {
+    border-bottom: 2px solid;
     margin: 4px;
     z-index: 30;
     align-items: center;
@@ -23,14 +24,14 @@ toast {
     padding-bottom: 8px;
     flex-wrap: wrap;
     user-select: none !important;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     background: transparent;
     background: rgba(22,22,22,0.6);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--accent-color);
+    /* border: 1px solid var(--accent-color); */
     color: var(--accent-color);
     animation-name: toastEnter;
-    animation-duration: 1s;
+    animation-duration: .6s;
     animation-fill-mode: forwards;
 }
 
@@ -41,7 +42,7 @@ toast * {
 
 toast.closing {
     animation-name: toastExit;
-    animation-duration: 1s;
+    animation-duration: .6s;
     animation-fill-mode: forwards;
 }
 
