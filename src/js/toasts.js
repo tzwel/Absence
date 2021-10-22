@@ -18,5 +18,9 @@ async function toast(parameters) {
     await new Promise(resolve => setTimeout(resolve, parameters.timeOut));
     thisToast.classList.add("closing");
     await new Promise(resolve => setTimeout(resolve, 1000));
+    thisToast.style.height = "0";
+    thisToast.style.margin = "0";
+    thisToast.style.padding = "0";
+    await new Promise(resolve => setTimeout(resolve, 1000));
     thisToast.remove();
 }

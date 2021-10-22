@@ -33,6 +33,8 @@ toast {
     animation-name: toastEnter;
     animation-duration: .6s;
     animation-fill-mode: forwards;
+    height: 42px;
+    transition: height .3s, padding .3s, margin .3s;
 }
 
 toast * {
@@ -56,5 +58,5 @@ toast.closing {
 
 @keyframes toastExit {
     0% {transform: translateX(0)}
-    100% {transform: translateX(-100%)}
+    100% {transform: translateX(calc(-100% - 12px ) )}
 }
