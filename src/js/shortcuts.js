@@ -58,7 +58,6 @@ document.addEventListener("keydown", function(event) {
             loadLargeImage("previous");
         }
     }
-
 });
 
 function isDisplayOpen() {
