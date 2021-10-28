@@ -13,10 +13,7 @@ async function apiFetch() {
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.personal} &json=1`, "json");
 
     if (resp.length === undefined || resp.length === 0) {
-        document.querySelector("grid").innerHTML = "<loading> <span> No results </span> </loading>";
-        toasts.report.color = "red";
-        toasts.report.header = "No results!";
-        toast(toasts.report);
+        noresults();
     } else {
         populate();
     }
@@ -43,6 +40,13 @@ function loading() {
             <img class="spinner" src="./img/rotate-cw.svg" alt="spinner-loading"/>
         </loading>
     `);
+}
+
+function noresults() {
+    document.querySelector("grid").innerHTML = "<loading> <span> No results </span> </loading>";
+    toasts.report.color = "red";
+    toasts.report.header = "No results!";
+    toast(toasts.report);
 }
 
 document.querySelector(".search").addEventListener("click", apiFetch);
