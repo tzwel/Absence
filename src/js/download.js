@@ -50,7 +50,6 @@ function downloadImage(link, method) {
     toasts.download.color = "var(--accent-color)";
     toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
     toast(toasts.download);
-    rerender();
     
     https.get(link,(res) => {
         const fileDir = fs.createWriteStream(Dir);
@@ -69,7 +68,6 @@ function downloadImage(link, method) {
                 fs.readdir(savePath, (err, files) => {
                     fileNum = files.length;
                 });
-                rerender();
 
                 // generateReport(fileNum); // no idea why in the flying fuck this doesnt work
                 // "temporary" "fix" in report.js

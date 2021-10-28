@@ -55,5 +55,5 @@ function populate() {
         /*   imageWrapper.insertAdjacentHTML("beforeend", `<download-button
         onclick="downloadImage('${img.getAttribute("original")}', 'fromgrid')"> bedzielink </download-button>`); */
     }
-    rerender();
+    render();
 }

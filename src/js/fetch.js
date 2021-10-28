@@ -17,7 +17,6 @@ async function apiFetch() {
     } else {
         populate();
     }
-
 }
 
 function previousFetch() {

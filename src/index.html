@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Absence</title>
+    <title> Absence </title>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
     <header>
       <nav>
-        <button  class="minimize-button" type="button" name="button">
+        <button class="minimize-button" type="button" name="button">
           <img src="img/minimize.svg" alt="- minimize button"/>
         </button>
-        <button  class="fullscreen-button" type="button" name="button">
+        <button class="fullscreen-button" type="button" name="button">
           <img src="img/fullscreen.svg" alt="fullscreen button"/>
         </button>
-        <button  class="close-button" type="button" name="button">
+        <button class="close-button" type="button" name="button">
           <img src="img/x.svg" alt="X close button"/>
         </button>
       </nav>
@@ -29,19 +29,20 @@
 
     <container>
       <aside>
-        <h1 class="logo"> <img height="40px" width="auto" src="img/Absence-logo.png"> 
+        <h1 class="logo"> <img height="40px" width="auto" src="img/Absence-logo.png">
           <span>Absence</span>
         </h1>
         <label for="tags">tags</label>
         <input spellcheck="false" placeholder="black_hair bangs" id="tags" class="tags" type="text" name="" value="">
 
         <div class="pageWrapper">
-          <button  class="previous" type="button" name="button"><</button>
+          <button class="previous" type="button" name="button"><</button>
           <label for="page">page</label>
           <input max="200" id="page" class="page" min="0" type="number" name="" value="0">
           <button  class="next" type="button" name="button">></button>
         </div>
 
+        <!--  
         <div id="ratingsWrapper">
           <label for="ratingsWrapper">rating</label>
 
@@ -59,11 +60,11 @@
             trending
             <input id="trending" class="trending" type="checkbox" name="" value="">
           </label>
-          <!--         score:>=10 -->
-        </div>
+                 score:>=10 
+        </div> -->
 
         <search-buttons>
-          <button  class="search" type="button" name="button">search</button>
+          <button class="search" type="button" name="button"> search </button>
 
           <label class="switch">
             <input class="trendingToggle" type="checkbox"/>
@@ -75,7 +76,7 @@
         <action-buttons>
           <button class="open-saved-folder">
             <img src="img/folder.svg"/>
-          </button>  
+          </button>
         </action-buttons>
 
         <!-- <h2>search history</h2> -->
@@ -88,12 +89,15 @@
           <li>omamale</li>
         </ul>
         -->
+
         <footer>
-          <a target="_blank" href="https://github.com/tzwel/Absence"> <img src="img/github-mark.svg" alt="Github Logo/link"> </a>
+          <a target="_blank" href="https://github.com/tzwel/Absence">
+             <img src="img/github-mark.svg" alt="Github Logo/link">
+          </a>
         </footer>
 
         <report>
-            ${document.querySelector('grid').getElementsByTagName('article').length} images fetched <br>
+            ${document.querySelector('grid').getElementsByTagName('article').length}images fetched <br>
             ${fileNum} files downloaded <br>
             Currently downloading ${downloadArray.length} file(s)
         </report>
@@ -117,7 +121,7 @@
           </label>
 
           <label data-tooltip title="Mobile layout" class="switch">
-            <input  class="mobileView" id="mobileView" type="checkbox"/>
+            <input class="mobileView" id="mobileView" type="checkbox"/>
             <span class="switch-label"><img src="img/smartphone.svg" class="switch-icon"/>
             </span>
           </label>
@@ -146,6 +150,7 @@
 
     <toasts>
     </toasts>
+    
     <script src="js/blacklist.js" charset="utf-8"></script>
     <script src="./renderer.js"></script>
     <script src="js/toasts.js"></script>
