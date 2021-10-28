@@ -12,7 +12,15 @@ async function apiFetch() {
     // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.personal} &json=1`, "json");
 
-    populate();
+    if (resp.length === undefined || resp.length === 0) {
+        document.querySelector("grid").innerHTML = "<loading> <span> No results </span> </loading>";
+        toasts.report.color = "red";
+        toasts.report.header = "No results!";
+        toast(toasts.report);
+    } else {
+        populate();
+    }
+
 }
 
 function previousFetch() {

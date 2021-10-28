@@ -1,6 +1,5 @@
 function populate() {
     if (resp.length === undefined || resp.length === 0) {
-        generateReport();
         return console.log("No search results!");
     }
     document.querySelector("grid").innerHTML = "";
@@ -56,5 +55,5 @@ function populate() {
         /*   imageWrapper.insertAdjacentHTML("beforeend", `<download-button
         onclick="downloadImage('${img.getAttribute("original")}', 'fromgrid')"> bedzielink </download-button>`); */
     }
-    generateReport(fileNum);
+    rerender();
 }

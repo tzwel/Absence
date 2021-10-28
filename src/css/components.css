@@ -532,6 +532,10 @@ report {
   font-size: 1rem;
 }
 
+active {
+  all: unset;
+}
+
 search-buttons {
   display: flex;
 }

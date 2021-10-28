@@ -92,7 +92,11 @@
           <a target="_blank" href="https://github.com/tzwel/Absence"> <img src="img/github-mark.svg" alt="Github Logo/link"> </a>
         </footer>
 
-        <report></report>
+        <report>
+            ${document.querySelector('grid').getElementsByTagName('article').length} images fetched <br>
+            ${fileNum} files downloaded <br>
+            Currently downloading ${downloadArray.length} file(s)
+        </report>
 
       </aside>
       <main>
@@ -160,8 +164,9 @@
     <script src="js/drawer.js"></script>
     <script src="js/detailedimageview.js"></script>
     <script src="js/download.js"></script>
-    <script src="js/report.js" charset="utf-8"></script>
+    <!-- <script src="js/report.js" charset="utf-8"></script> -->
     <script src="js/secrets.js"></script>
     <script src="js/aside.js"></script>
+    <script src="js/libs/jsinhtml.js"></script>
   </body>
 </html>
