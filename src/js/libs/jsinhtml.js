@@ -34,15 +34,15 @@ let render;
                 .replace("${" ,"")
                 .replace("}" ,"");
             let evaluated = Function(`return ${init}`);
-            if (active.innerHTML !== evaluated()) {
+            if (active.innerHTML !== evaluated.toString()) {
                 active.innerHTML = evaluated();
             }
 
         }
     };
-    
+    defineDOM();
+
     setInterval(() => {
         render();
     }, 2);
-    defineDOM();
 })();
