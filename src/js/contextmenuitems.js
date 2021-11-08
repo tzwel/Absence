@@ -70,15 +70,25 @@ function deselectAll() {
 }
 
 function downloadSelected() {
-    deselect();
-    const selectedImageNodes = document.querySelectorAll("[selected]");
-    for (const image of selectedImageNodes) {
-        downloadImage(image.getAttribute("original"), "bulk", image.id);
+    let prompt;
+    //  if (document.querySelectorAll("grid > article > img").length === fileNum - 1) {
+    //      prompt = confirm(`Do you really want to download ${fileNum} files?`);
+    //  } else {
+    //      prompt === true;
+    //  }
+    
+    prompt = confirm(`Do you really want to download ${selectedItems} files?`);
+    if (prompt === true) {
+        deselectAll();
+        const selectedImageNodes = document.querySelectorAll("[selected]");
+        for (const image of selectedImageNodes) {
+            downloadImage(image.getAttribute("original"), "bulk", image.id);
+        }
     }
 }
 
 function selectAll() {
-    selectedItems = fileNum;
+    selectedItems = document.querySelector("grid").getElementsByTagName("article").length;
     const images = document.querySelectorAll("grid > article > img");
     for (const image of images) {
         image.setAttribute("selected", "");

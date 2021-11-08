@@ -1,6 +1,6 @@
 let searchTags;
 
-document.addEventListener("keyup", function(event) {
+document.addEventListener("keyup", () => {
     searchTags = document.querySelector(".tags").value;
     localStorage.searches = searchTags;
 });
