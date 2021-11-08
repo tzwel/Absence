@@ -30,5 +30,4 @@ document.onclick = e => {
     if (e.target.tagName === "DRAWER-BACKGROUND") {
         drawerAction();
     }
-   
 };

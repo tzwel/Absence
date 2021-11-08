@@ -57,6 +57,6 @@ function loadDetails() {
     } // navigator.clipboard.writeText(text)
 
     if (`${resp[clickedNumber]["sample"]}` === "0") {
-        drawer.insertAdjacentHTML("beforeend", "<h2> This image doesn't have a smaller version. </h2>");
+        drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
     }
 }
