@@ -44,7 +44,7 @@ function loadTheme() {
 
 loadTheme();
 
-document.querySelector("h1.logo").addEventListener("dblclick", event => {
+document.querySelector("h1.logo").addEventListener("dblclick", () => {
     switchTheme();
 });
   

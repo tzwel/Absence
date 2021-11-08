@@ -1,0 +1,28 @@
+contextmenu {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background: rgba(22,22,22,0.6);
+    backdrop-filter: blur(20px);
+    z-index: 35;
+    display: none;
+    transform: translateX(-100px) translateY(-5px);
+    flex-direction: column;
+}
+
+contextmenu > option {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: .2rem;
+    background: transparent;
+    transition: background .2s, color .2s;
+    cursor: pointer;
+}
+
+contextmenu > option:hover {
+    color: #000;
+    background: var(--accent-color);
+}

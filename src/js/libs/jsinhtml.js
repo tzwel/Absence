@@ -6,7 +6,6 @@ let render;
     defineDOM = function() {
         for (const i of document.querySelectorAll("body *:not(script)")) {
             if (i.innerHTML.includes("${") && !i.innerHTML.includes("</")) {
-                console.log(i);
                 DOM.push(i);
             }
         }
