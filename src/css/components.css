@@ -258,7 +258,7 @@ download-button {
   height: 28px;
   font-size: .8rem;
   color: var(--accent-color);
-  transition: opacity .3s;
+  transition: opacity .3s, filter .2s;
   opacity: 0;
 }
 
@@ -281,6 +281,11 @@ img,video {
   margin: 10px;
   max-width: 100%;
   transition: transform .2s;
+}
+
+article img[selected] {
+  border: 4px solid var(--accent-color);
+  filter: brightness(65%);
 }
 
 display-wrapper {

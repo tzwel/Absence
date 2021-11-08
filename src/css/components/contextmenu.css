@@ -7,16 +7,16 @@ contextmenu {
     background: rgba(22,22,22,0.6);
     backdrop-filter: blur(20px);
     z-index: 35;
-    display: none;
     transform: translateX(-100px) translateY(-5px);
     flex-direction: column;
+    transition: clip-path .2s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 contextmenu > option {
-    text-align: center;
     width: 100%;
     height: auto;
-    padding: .2rem;
+    padding: .25rem;
     background: transparent;
     transition: background .2s, color .2s;
     cursor: pointer;
@@ -26,4 +26,9 @@ contextmenu > option {
 contextmenu > option:hover {
     color: #000;
     background: var(--accent-color);
+}
+
+contextmenu.open {
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }

@@ -1,3 +1,5 @@
+let selectedItems = 0;
+
 function copy() { 
     // else if madness
     // I'm really sorry
@@ -47,7 +49,30 @@ function opensaved() {
     require("child_process").exec(`start ${savePath.replace("./","")}`);
 }
 
-setItem("Copy", copy);
-setItem("Paste", paste);
-setItem("Show saved images", opensaved);
-setItem("Refresh client", refresh);
+function select() {
+    if (rightClickedElement.hasAttribute("loading")) {
+        rightClickedElement.setAttribute("selected", "");
+        selectedItems++;
+    }
+}
+
+function deselect() {
+    rightClickedElement.removeAttribute("selected");
+    selectedItems--;
+}
+
+function deselectAll() {
+    selectedItems = 0;
+    const selectedImageNodes = document.querySelectorAll("[selected]");
+    for (const image of selectedImageNodes) {
+        image.removeAttribute("selected");
+    }
+}
+
+function downloadSelected() {
+    deselect();
+    const selectedImageNodes = document.querySelectorAll("[selected]");
+    for (const image of selectedImageNodes) {
+        downloadImage(image.getAttribute("original"), "bulk", image.id);
+    }
+}

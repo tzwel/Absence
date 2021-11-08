@@ -30,33 +30,33 @@ if (!fs.existsSync(savePath)) {
     });
 }
 
-function downloadImage(link, method) {
+function downloadImage(link, method = "default", id) {    
     let Dir;
-    Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
 
-    /* if (!method === "fromgrid") {
+    toasts.download.color = "var(--accent-color)";
+
+    if (method === "default") {
         Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
-    } else {
-        Dir = `${savePath}/${ link } - Absence${path.extname(link)}`;
-        console.log("sesx");
-    } */
+        if (fs.existsSync(`${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`)) {
+            return toast(toasts.fileExists);
+        }
+        downloadArray.push(resp[clickedNumber]["id"]);
+        toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
 
-    if (fs.existsSync(`${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`)) {
-        return toast(toasts.fileExists);
+    } else if (method === "bulk") {
+        Dir = `${savePath}/${id} - Absence${path.extname(link)}`; 
+        downloadArray.push(id);
+        toasts.download.header = `Downloading file ${id}...`;
     }
 
-    downloadArray.push(resp[clickedNumber]["id"]);
-    console.log("Image is being downloaded"); 
-    toasts.download.color = "var(--accent-color)";
-    toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
     toast(toasts.download);
-    
+
     https.get(link,(res) => {
         const fileDir = fs.createWriteStream(Dir);
-
+    
         try {
             res.pipe(fileDir);            
-
+    
             fileDir.on("finish",() => {
                 fileDir.close();
                 console.log("Download Completed"); 
@@ -64,11 +64,11 @@ function downloadImage(link, method) {
                 toasts.download.header = "File downloaded";
                 toast(toasts.download);
                 downloadArray.shift();
-                
+                    
                 fs.readdir(savePath, (err, files) => {
                     fileNum = files.length;
                 });
-
+    
                 // generateReport(fileNum); // no idea why in the flying fuck this doesnt work
                 // "temporary" "fix" in report.js
                 // actualy not sih sieotrhdujiorkjhdsjekt hsjko
@@ -79,5 +79,6 @@ function downloadImage(link, method) {
             console.log(error);
             downloadArray.shift();
         }
-    });    
+    }); 
+    
 }

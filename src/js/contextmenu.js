@@ -1,19 +1,40 @@
 const contextmenuNode = document.querySelector("contextmenu");
 let activeElement = "";
 let rightClickedElement = "";
-contextmenuNode.style.display = "none";
 
 function contextmenuAction(mouseX, mouseY) {
-    const contextmenuNodeDisplay = contextmenuNode.style.display;
+
+    clearContextmenu();
+    setItem("Copy", copy);
+    if (rightClickedElement.tagName === "INPUT") {
+        setItem("Paste", paste);
+    }
+
+    if (!rightClickedElement.hasAttribute("large")) {
+        if (!rightClickedElement.hasAttribute("selected")) {
+            setItem("Select", select);
+        } else {
+            setItem("Deselect", deselect);
+        }   
+    }
+
+    if (selectedItems >= 1) {
+        setItem("Download selected", downloadSelected);
+        setItem("Deselect all", deselectAll);
+    }
+    setItem("Show saved images", opensaved);
+    setItem("Refresh client", refresh);
+
+    const contextmenuNodeDisplay = contextmenuNode.classList.contains("open");
     switch (contextmenuNodeDisplay) {
-    case "none":
-        contextmenuNode.style.display = "flex";
+    case false:
+        contextmenuNode.classList.add("open");
         contextmenuNode.style.left = `${mouseX}px`;
         contextmenuNode.style.top = `${mouseY}px`;
         break;
     
     default:
-        contextmenuNode.style.display = "none";
+        contextmenuNode.classList.remove("open");
         break;
     }
 }
@@ -32,6 +53,10 @@ function setItem(label, option, style = "") {
     }
 }
 
+function clearContextmenu() {
+    contextmenuNode.innerHTML = "";
+}
+
 window.addEventListener("contextmenu", (event) => {
     event.preventDefault();
     activeElement = document.activeElement;
@@ -44,7 +69,7 @@ window.addEventListener("contextmenu", (event) => {
 }, false);
 
 window.addEventListener("click", (e) => {    
-    if (e.target.tagName !== "BODY" && contextmenuNode.style.display !== "none") {
+    if (e.target.tagName !== "BODY" && contextmenuNode.classList.contains("open")) {
         contextmenuAction();
     }
 }, false);
