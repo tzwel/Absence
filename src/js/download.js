@@ -45,6 +45,9 @@ function downloadImage(link, method = "default", id) {
 
     } else if (method === "bulk") {
         Dir = `${savePath}/${id} - Absence${path.extname(link)}`; 
+        if (fs.existsSync(`${savePath}/${id} - Absence${path.extname(link)}`)) {
+            return toast(toasts.fileExists);
+        }
         downloadArray.push(id);
         toasts.download.header = `Downloading file ${id}...`;
     }

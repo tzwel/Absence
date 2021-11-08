@@ -79,12 +79,12 @@ function downloadSelected() {
     
     prompt = confirm(`Do you really want to download ${selectedItems} files?`);
     if (prompt === true) {
-        deselectAll();
         const selectedImageNodes = document.querySelectorAll("[selected]");
         for (const image of selectedImageNodes) {
             downloadImage(image.getAttribute("original"), "bulk", image.id);
         }
     }
+    deselectAll();
 }
 
 function selectAll() {
