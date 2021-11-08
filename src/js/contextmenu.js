@@ -1,5 +1,6 @@
 const contextmenuNode = document.querySelector("contextmenu");
 let activeElement = "";
+let rightClickedElement = "";
 contextmenuNode.style.display = "none";
 
 function contextmenuAction(mouseX, mouseY) {
@@ -32,9 +33,12 @@ function setItem(label, option) {
 window.addEventListener("contextmenu", (event) => {
     event.preventDefault();
     activeElement = document.activeElement;
+    rightClickedElement = event.target;
+    // if (event.target.tagName !== "IMG") {
     this.mouseX = event.clientX.toString();
     this.mouseY = event.clientY.toString();
-    contextmenuAction(mouseX, mouseY);
+    contextmenuAction(mouseX, mouseY);    
+    // }
 }, false);
 
 window.addEventListener("click", (e) => {    
@@ -43,14 +47,30 @@ window.addEventListener("click", (e) => {
     }
 }, false);
 
-function copy() {
-    if (window.getSelection) {
+function copy() { // else if madness
+    console.log(activeElement.tagName);
+    if (window.getSelection().toString()) {
         try {
             clipboard.writeText(window.getSelection().toString());
         } catch (err) {
             console.error("Failed to copy!", err);
         }
-    } 
+
+    } else if (rightClickedElement.tagName === "IMG") { 
+
+        switch (rightClickedElement.hasAttribute("original")) {
+        case true:
+            clipboard.writeText(rightClickedElement.getAttribute("original"));
+            break;
+        
+        default:
+            clipboard.writeText(`https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}`);
+            break;
+        }
+
+    } else if (activeElement.value) { // fix
+        clipboard.writeText(activeElement.value);
+    }
 }
 
 function paste() {
