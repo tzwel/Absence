@@ -13,6 +13,7 @@ function contextmenuAction(mouseX, mouseY) {
     if (!rightClickedElement.hasAttribute("large")) {
         if (!rightClickedElement.hasAttribute("selected")) {
             setItem("Select", select);
+            setItem("Select all", selectAll);
         } else {
             setItem("Deselect", deselect);
         }   

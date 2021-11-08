@@ -76,3 +76,11 @@ function downloadSelected() {
         downloadImage(image.getAttribute("original"), "bulk", image.id);
     }
 }
+
+function selectAll() {
+    selectedItems = fileNum;
+    const images = document.querySelectorAll("grid > article > img");
+    for (const image of images) {
+        image.setAttribute("selected", "");
+    }
+}
