@@ -50,6 +50,7 @@ function populate() {
         img.setAttribute("original", `${resp[i].file_url}`);
         img.setAttribute("sample", sampleUrl);
         img.setAttribute("sampleBoolean", resp[i].sample);
+        img.setAttribute("copyable", "");
         imageWrapper.insertAdjacentElement("beforeend", img);
 
         /*   imageWrapper.insertAdjacentHTML("beforeend", `<download-button

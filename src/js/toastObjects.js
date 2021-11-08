@@ -53,3 +53,11 @@ toasts.imageLoaded = {
     timeOut: 3000,
     color: "var(--accent-color)"
 };
+
+toasts.imageCopied = {
+    name: "Image link copied",
+    header: "Image link copied",
+    message: "",
+    timeOut: 2500,
+    color: "var(--accent-color)"
+};

@@ -18,16 +18,18 @@ function contextmenuAction(mouseX, mouseY) {
     }
 }
 
-function setItem(label, option) {
+function setItem(label, option, style = "") {
     const id = Math.floor(Math.random() * 12048);
 
     contextmenuNode.insertAdjacentHTML("beforeend", `
-    <option optionId="${id}">
+    <option optionId="${id}" class="${style}">
         ${label}
     </option>
     `);
 
-    document.querySelector(`[optionId="${id}"]`).addEventListener("click", option);
+    if (option !== "") {
+        document.querySelector(`[optionId="${id}"]`).addEventListener("click", option);
+    }
 }
 
 window.addEventListener("contextmenu", (event) => {
@@ -47,8 +49,9 @@ window.addEventListener("click", (e) => {
     }
 }, false);
 
-function copy() { // else if madness
-    console.log(activeElement.tagName);
+function copy() { 
+    // else if madness
+    // I'm really sorry
     if (window.getSelection().toString()) {
         try {
             clipboard.writeText(window.getSelection().toString());
@@ -56,19 +59,21 @@ function copy() { // else if madness
             console.error("Failed to copy!", err);
         }
 
-    } else if (rightClickedElement.tagName === "IMG") { 
+    } else if (rightClickedElement.tagName === "IMG" && rightClickedElement.hasAttribute("copyable")) { 
 
         switch (rightClickedElement.hasAttribute("original")) {
         case true:
             clipboard.writeText(rightClickedElement.getAttribute("original"));
+            toast(toasts.imageCopied);
             break;
         
         default:
             clipboard.writeText(`https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}`);
+            toast(toasts.imageCopied);
             break;
         }
 
-    } else if (activeElement.value) { // fix
+    } else if (activeElement.value) { // fix later
         clipboard.writeText(activeElement.value);
     }
 }
