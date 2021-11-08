@@ -286,6 +286,7 @@ img,video {
 article img[selected] {
   border: 4px solid var(--accent-color);
   filter: brightness(65%);
+  transform: scale(.9);
 }
 
 display-wrapper {
