@@ -27,7 +27,7 @@ Since Absence is built in Electron, it allows for high customisation and extensi
 - Detailed info about currently displayed image such as tags, dimensions, and rating (see screenshots)
 - Lots of handy keyboard (and mouse) shortcuts e.g. Enter to download currently displayed image, right arrow to go to the next page/image
 - Browsing by trending
-- [Search query shortlands](../wiki/Search-query-shortlands)
+- [Search query shortlands](https://github.com/tzwel/Absence/wiki/Search-query-shortlands)
 - Fullscreen mode
 - Automatic content adjusting depending on available space
 - Compact mode
