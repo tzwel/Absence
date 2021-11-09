@@ -10,7 +10,13 @@ async function apiFetch() {
     tags = document.querySelector(".tags").value;
     pid = document.querySelector(".page").value;
     // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
-    resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.personal} &json=1`, "json");
+    resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} 
+    ${tags
+        .replace("r:", "rating:")
+        .replace("rating:s", "rating:safe")
+        .replace("rating:q", "rating:questionable")
+        .replace("rating:e", "rating:explicit")
+        .replace("rating:x", "rating:explicit")} ${blacklists.personal} &json=1`, "json");
 
     if (resp.length === undefined || resp.length === 0) {
         noresults();
