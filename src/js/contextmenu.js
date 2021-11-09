@@ -5,10 +5,6 @@ let rightClickedElement = "";
 function contextmenuAction(mouseX, mouseY) {
 
     clearContextmenu();
-    setItem("Copy", copy);
-    if (rightClickedElement.tagName === "INPUT") {
-        setItem("Paste", paste);
-    }
 
     if (!rightClickedElement.hasAttribute("large")) {
         if (!rightClickedElement.hasAttribute("selected")) {
@@ -20,9 +16,15 @@ function contextmenuAction(mouseX, mouseY) {
     }
 
     if (selectedItems >= 1) {
-        setItem("Download selected", downloadSelected);
         setItem("Deselect all", deselectAll);
+        setItem("Download selected", downloadSelected);
     }
+
+    setItem("Copy", copy);
+    if (rightClickedElement.tagName === "INPUT") {
+        setItem("Paste", paste);
+    }
+
     setItem("Show saved images", opensaved);
     setItem("Refresh client", refresh);
 
@@ -74,4 +76,3 @@ window.addEventListener("click", (e) => {
         contextmenuAction();
     }
 }, false);
-
