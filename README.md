@@ -11,6 +11,8 @@
 Absence is a feature rich application built in Electron enhancing the original website's experience \
 Absence is built in electron, hence it allows for high customisation, and extensibility, providing integration with filesystem using Node
 
+[Old README, literally tl;dr](/README.old.md)
+
 <!-- [![Uncompressed code size](https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square)]()
 [![Release](https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square)](https://github.com/tzwel/Absence/releases)
 -->
