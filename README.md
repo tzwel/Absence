@@ -23,6 +23,7 @@ Absence is built in electron, hence it allows for high customisation and extensi
 - Multiple color themes
 - custom folder with saved files & custom client-specific filenames
 - Info about files fetched per page, files downloaded, and currently downloading files (could be a lot!)
+- Detailed info about currently displayed image such as tags, dimensions, and rating 
 - Lots of handy keyboard (and mouse) shortcuts e.g. Enter to download currently displayed image, right arrow to go to the next page/image
 - Browsing by trending
 - Fullscreen mode
