@@ -38,6 +38,8 @@ And a lot more
 ## Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/tzwel/Absence/main/screenshots/absence.png)
+![App Screenshot](https://raw.githubusercontent.com/tzwel/Absence/main/screenshots/Absence2.jpg)
+![App Screenshot](https://raw.githubusercontent.com/tzwel/Absence/main/screenshots/Absence3.jpg)
 
 
 ## Run Locally
