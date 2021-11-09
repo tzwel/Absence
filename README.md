@@ -50,7 +50,7 @@ And a lot more
 [Eslint](https://eslint.org)
 
 --- 
-\
+
 Clone repo & install dependencies
 
 ```bash
