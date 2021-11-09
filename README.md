@@ -1,17 +1,17 @@
-
 <p align="center"> <img src="src/img/Absence-logo.png" width="auto" height="80px" alt="Absence logo" /> </p>
 
 <h1 align="center"> Absence </h1>
-
-An (WIP) open-source Gelbooru client \
-Absence is a feature rich application built in Electron enhancing the original website's experience
+<p align="center">  An (WIP) open-source Gelbooru client </p>
 
 <p align="center"> 
 <img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square" alt="Uncompressed code size" />
 <a href="https://github.com/tzwel/Absence/releases"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square" alt="Release" /> </a>
 </p>
 
-<!--> [![Uncompressed code size](https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square)]()
+Absence is a feature rich application built in Electron enhancing the original website's experience \
+Absence is built in electron, hence it allows for high customisation, and extensibility, providing integration with filesystem using Node
+
+<!-- [![Uncompressed code size](https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square)]()
 [![Release](https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square)](https://github.com/tzwel/Absence/releases)
 -->
 ## Features
@@ -29,7 +29,8 @@ Absence is a feature rich application built in Electron enhancing the original w
 - Mobile mode (kinda broken)
 - Mirroring layout
 - Multiplatform
-- And a lot more
+
+And a lot more
 
 ## Screenshots
 
