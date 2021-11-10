@@ -20,7 +20,7 @@ Since Absence is built in Electron, it allows for high customisation and extensi
 
 - 100 images per page (as opposed to 42 on Gelbooru)
 - Custom right click menu with features such as selecting multiple images, downloading whole pages of images and more
-- Multiple color themes
+- Multiple color themes (double click the logo)
 - Custom folder with saved files & custom client-specific filenames
 - Customizable blacklist, including default presets
 - Info about files fetched per page, files downloaded, and currently downloading files (could be a lot!)
