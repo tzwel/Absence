@@ -1,14 +1,14 @@
 // const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
 let clickedNumber;
 
-function loadDetails() {
+async function loadDetails() {
+
     if (!document.querySelector("display-wrapper").classList.contains("open")) {
         clickedNumber = parseInt(clickedImageNumber, 10);
     } else {
         clickedNumber = parseInt(viewedImageNumber, 10);
     }
-  
-    console.log(resp[clickedNumber]);
+
     drawer.innerHTML = "";
 
     // temporary solution
@@ -44,6 +44,22 @@ function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", `<h2> Id </h2> <span> ${resp[clickedNumber]["id"]} </span>`);
 
+    // //////////////////// TEMPORARY FETCHING SCRIPT
+    const commentsXML = await fetch(`https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=${resp[clickedNumber.toString()]["id"]}`)
+        .then(response => response.text())
+        .then(data => {
+            //  const parser = new DOMParser();
+            //  const xml = parser.parseFromString(data, "application/xml");
+            //   console.log(xml);
+            // eslint-disable-next-line quotes
+            data.replace('<!--?xml version="1.0" encoding="UTF-8"?-->', "");
+            return data;
+        })
+        .catch(console.error);
+    // //////////////////// TEMPORARY FETCHING SCRIPT
+
+    await drawer.insertAdjacentHTML("beforeend", `<h2> Comments </h2> ${commentsXML}`);
+
     drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
     onclick="event.preventDefault();
     shell.openExternal(this.href);"
@@ -54,7 +70,7 @@ function loadDetails() {
         onclick="event.preventDefault();
         shell.openExternal(this.href);"
         href="${resp[clickedNumber]["source"]}"> Source </a>`);    
-    } // navigator.clipboard.writeText(text)
+    }
 
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
