@@ -8,7 +8,6 @@ function loadDetails() {
         clickedNumber = parseInt(viewedImageNumber, 10);
     }
   
-    console.log(resp[clickedNumber]);
     drawer.innerHTML = "";
 
     // temporary solution
