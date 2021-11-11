@@ -52,6 +52,7 @@ And a lot more
 [Git](https://git-scm.com)
 
 #### Dev dependencies
+[Electron](https://www.electronjs.org/)
 [Eslint](https://eslint.org)
 
 --- 
@@ -67,6 +68,9 @@ Start the server
 ```bash
   npm start
 ```
+> 'electron' is not recognized as internal command, operable program or batch file
+Don't forget to install electron, run `npm i -g electron`
+
 ## FAQ
 
 #### Autoupdater when
