@@ -25,7 +25,7 @@ Since Absence is built in Electron, it allows for high customisation and extensi
 - Customizable blacklist, including default presets
 - Info about files fetched per page, files downloaded, and currently downloading files (could be a lot!)
 - Detailed info about currently displayed image such as tags, dimensions, and rating (see screenshots)
-- Lots of handy keyboard (and mouse) shortcuts e.g. Enter to download currently displayed image, right arrow to go to the next page/image
+- Lots of [handy keyboard (and mouse) shortcuts](https://github.com/tzwel/Absence/wiki/Keyboard-shortcuts) e.g. Enter to download currently displayed image, right arrow to go to the next page/image
 - Browsing by trending
 - [Search query shortlands](https://github.com/tzwel/Absence/wiki/Search-query-shortlands)
 - Fullscreen mode

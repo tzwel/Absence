@@ -36,7 +36,6 @@ document.addEventListener("keydown", function(event) {
     }
 
     // next/previous arrow shortcut
-
     if (!isDisplayOpen()) {
         if (document.activeElement === document.querySelector(".tags")) {
             return;
@@ -53,7 +52,6 @@ document.addEventListener("keydown", function(event) {
         if (event.keyCode === 39) {
             loadLargeImage("next");
         }
-    
         if (event.keyCode === 37) {
             loadLargeImage("previous");
         }
@@ -81,7 +79,7 @@ function loadLargeImage(direction) {
 
     case 101:
         return viewedImageNumber = 100;
-    
+
     default:
         break;
     }
