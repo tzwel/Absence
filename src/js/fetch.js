@@ -12,6 +12,7 @@ async function apiFetch() {
     // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} 
     ${tags
+        .replace("-", "_")
         .replace("r:", "rating:")
         .replace("rating:s", "rating:safe")
         .replace("rating:q", "rating:questionable")
