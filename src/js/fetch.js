@@ -16,7 +16,8 @@ async function apiFetch() {
         .replace("rating:s", "rating:safe")
         .replace("rating:q", "rating:questionable")
         .replace("rating:e", "rating:explicit")
-        .replace("rating:x", "rating:explicit")} ${blacklists.personal} &json=1`, "json");
+        .replace("rating:x", "rating:explicit")
+        .replace("s:", "score:")} ${blacklists.personal} &json=1`, "json");
 
     if (resp.length === undefined || resp.length === 0) {
         noresults();
