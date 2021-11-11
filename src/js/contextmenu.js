@@ -7,7 +7,7 @@ function contextmenuAction(mouseX, mouseY) {
     clearContextmenu();
 
     if (!rightClickedElement.hasAttribute("large")) {
-        if (!rightClickedElement.hasAttribute("selected") && rightClickedElement.tagName !== "INPUT") {
+        if (!rightClickedElement.hasAttribute("selected") && rightClickedElement.tagName === "IMG") {
             setItem("Select", select);
             setItem("Select all", selectAll);
         } else if (rightClickedElement.tagName === "IMG") {
