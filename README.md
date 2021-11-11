@@ -53,6 +53,7 @@ And a lot more
 
 #### Dev dependencies
 [Electron](https://www.electronjs.org/)
+
 [Eslint](https://eslint.org)
 
 --- 
