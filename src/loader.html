@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absence Loader</title>
+    <style>
+        html, body {
+            border-radius: 10px;
+            background-color: transparent;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        loader {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #1d1d1d;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            animation-name: bg;
+            animation-duration: 3.5s;
+            animation-fill-mode: forwards;
+        }
+        loader img {
+            max-width: 100%;
+            -webkit-user-drag: none;
+            animation-name: logo;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes logo {
+            0% {
+                transform: scale(0);
+            }
+            25% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+
+        }
+
+        @keyframes bg {
+            0%, 15% {
+                background-color: #1d1d1d;
+            }
+
+            100% {
+                background-color: transparent;
+            }
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <loader>
+        <img src="../src/img/Absence-logo.png">
+    </loader>
+</body>
+</html>

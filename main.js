@@ -1,7 +1,8 @@
 const {app, remote, BrowserWindow} = require("electron");
 const path = require("path");
 
-function createWindow () {
+async function createWindow () {
+
     const mainWindow = new BrowserWindow({
         show: false,
         backgroundColor: "#1d1d1d",
@@ -20,15 +21,51 @@ function createWindow () {
             // devTools: false
         }
     });
+
+    const loader = new BrowserWindow({ 
+        transparent: true,
+        titleBarStyle: "hidden",
+        parent: mainWindow,
+        frame: false,
+        show: false,
+        width: 150,
+        height: 150,
+        resizable: false,
+        devTools: false,
+        opacity: 1,
+        hasShadow: false
+    });
+
+    //  loader.loadFile("./src/loader.html");
+    // mainWindow.loadFile("./src/index.html");
+
+    loader.loadURL(`file://${__dirname}/src/loader.html`);
+    loader.setIgnoreMouseEvents(true);
+    mainWindow.loadURL(`file://${__dirname}/src/index.html`);
+
+    loader.once("ready-to-show", () => {
+        loader.show();
+    });
+
     mainWindow.setMenuBarVisibility(false);
-    mainWindow.loadFile("./src/index.html");
     mainWindow.setIcon(path.join(__dirname, "/src/img/Absence-logo.png"));
+
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
 
-    mainWindow.once("ready-to-show", () => {
+    mainWindow.webContents.once("dom-ready", () => {
         mainWindow.show();
+        setTimeout(() => loader.destroy(), 4000);
     });
+
+    /*
+    mainWindow.once("dom-ready", () => {
+        mainWindow.show();
+        setTimeout(() => loader.destroy(), 4000);
+        //  loader.hide();
+        //   loader.close();
+        //  loader.destroy();
+    }); */
 }
 
 // This method will be called when Electron has finished
@@ -50,3 +87,6 @@ app.whenReady().then(() => {
 app.on("window-all-closed", function () {
     if (process.platform !== "darwin") app.quit();
 });
+
+app.commandLine.appendSwitch("auto-detect", "false");
+app.commandLine.appendSwitch("no-proxy-server");
