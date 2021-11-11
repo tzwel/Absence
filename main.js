@@ -13,7 +13,9 @@ function createWindow () {
         webPreferences: {
             enableRemoteModule: true,
             contextIsolation: false,
-            nodeIntegration: true// ,
+            nodeIntegration: true,
+            show: false
+            // ,
             // devTools: false
         }
     });
@@ -22,6 +24,10 @@ function createWindow () {
     mainWindow.setIcon(path.join(__dirname, "/src/img/Absence-logo.png"));
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
+
+    mainWindow.once("ready-to-show", () => {
+        mainWindow.show();
+    });
 }
 
 // This method will be called when Electron has finished
