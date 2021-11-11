@@ -3,6 +3,7 @@ const path = require("path");
 
 function createWindow () {
     const mainWindow = new BrowserWindow({
+        show: false,
         backgroundColor: "#1d1d1d",
         fullscreenable: true,
         transparent: false,
@@ -14,8 +15,7 @@ function createWindow () {
         webPreferences: {
             enableRemoteModule: true,
             contextIsolation: false,
-            nodeIntegration: true,
-            show: false
+            nodeIntegration: true
             // ,
             // devTools: false
         }
