@@ -43,9 +43,9 @@ async function createWindow () {
     loader.setIgnoreMouseEvents(true);
     mainWindow.loadURL(`file://${__dirname}/src/index.html`);
 
-    loader.once("ready-to-show", () => {
-        loader.show();
-    });
+    // loader.once("ready-to-show", () => {
+    loader.show();
+    //  });
 
     mainWindow.setMenuBarVisibility(false);
     mainWindow.setIcon(path.join(__dirname, "/src/img/Absence-logo.png"));
@@ -54,7 +54,7 @@ async function createWindow () {
     // mainWindow.webContents.openDevTools()
 
     mainWindow.webContents.once("dom-ready", () => {
-        mainWindow.show();
+        //   mainWindow.show();
         setTimeout(() => loader.destroy(), 4000);
     });
 
