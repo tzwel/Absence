@@ -68,8 +68,8 @@ Start the server
 ```bash
   npm start
 ```
-> 'electron' is not recognized as internal command, operable program or batch file
-Don't forget to install electron, run `npm i -g electron`
+> 'electron' is not recognized as internal command, operable program or batch file?
+> Don't forget to install electron, run `npm i -g electron`
 
 ## FAQ
 
