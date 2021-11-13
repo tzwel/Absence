@@ -50,7 +50,7 @@ function loading() {
 }
 
 function noresults() {
-    document.querySelector("grid").innerHTML = "<loading> <span> No results </span> </loading>";
+    document.querySelector("grid").innerHTML = `<loading> <span> No results for</span> <h3> ${tags} </h3> </loading>`;
     toasts.report.color = "red";
     toasts.report.header = "No results!";
     toast(toasts.report);

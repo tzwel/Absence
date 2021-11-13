@@ -33,7 +33,8 @@ async function createWindow () {
         resizable: false,
         devTools: false,
         opacity: 1,
-        hasShadow: false
+        hasShadow: false,
+        alwaysOnTop: true
     });
 
     //  loader.loadFile("./src/loader.html");
@@ -45,6 +46,7 @@ async function createWindow () {
 
     // loader.once("ready-to-show", () => {
     loader.show();
+    
     //  });
 
     mainWindow.setMenuBarVisibility(false);
