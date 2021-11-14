@@ -82,7 +82,7 @@ function downloadSelected() {
         
         const selectedImageNodes = document.querySelectorAll("[selected]");
         for (const image of selectedImageNodes) {
-            downloadImage(image.getAttribute("original"), "bulk", image.id);
+            downloadImage(image.getAttribute("original"), "bulk", image.id); // Show only 1 toast todo
         }
         deselectAll();
     }
