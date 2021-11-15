@@ -1,7 +1,9 @@
 // const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
+const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&names=";
+const artistLink = "https://gelbooru.com/index.php?page=post&s=list&tags=";
 let clickedNumber;
 
-function loadDetails() {
+async function loadDetails() {
     if (!document.querySelector("display-wrapper").classList.contains("open")) {
         clickedNumber = parseInt(clickedImageNumber, 10);
     } else {
@@ -11,6 +13,13 @@ function loadDetails() {
     drawer.innerHTML = "";
 
     // temporary solution
+
+    drawer.insertAdjacentHTML("beforeend", `
+    <h2> Artist </h2> 
+    <a artist onclick="event.preventDefault();shell.openExternal(this.href);">
+     Fetching... </a>
+    `);
+
     drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
     
     switch (resp[clickedNumber]["rating"]) {
@@ -57,5 +66,40 @@ function loadDetails() {
 
     if (`${resp[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
+    }
+
+    const imageTags = await fetchTags();
+    drawer.querySelector("a[artist]").innerHTML = imageTags.artistTag;
+    if (imageTags.artistTag !== "no artist specified") {
+        drawer.querySelector("a[artist]").href = artistLink + imageTags.artistTag;
+    }
+}
+
+async function fetchTags() {
+    const currentTags = resp[clickedNumber]["tags"].replace(/ /g, "+");
+    const tagInfo = await fetch(`${tagInfoLink}${currentTags}`);
+    console.log(`${tagInfoLink}${currentTags}`);
+    if (tagInfo.ok) {
+        let text = await tagInfo.text();
+        parser = new DOMParser();
+        xml = parser.parseFromString(text, "text/xml");
+
+        //  xml.querySelector("[tags]")[0].childNodes[0].nodeValue;
+        // console.log(xml);
+        let artistTag;
+        try {
+            artistTag = xml.querySelector("[type='1']").getAttribute("name");
+        } catch (error) {
+            artistTag = "no artist specified";
+            console.log("no artist");
+        }
+        const response = {
+            artistTag: artistTag
+        };
+        //  console.log(response);
+        return response;
+
+    } else {
+        console.log("error");
     }
 }
