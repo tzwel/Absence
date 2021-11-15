@@ -83,7 +83,6 @@ async function fetchTags() {
         let text = await tagInfo.text();
         parser = new DOMParser();
         xml = parser.parseFromString(text, "text/xml");
-
         //  xml.querySelector("[tags]")[0].childNodes[0].nodeValue;
         // console.log(xml);
         let artistTag;
