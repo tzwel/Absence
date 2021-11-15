@@ -2,6 +2,7 @@
 const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&names=";
 const artistLink = "https://gelbooru.com/index.php?page=post&s=list&tags=";
 let clickedNumber;
+let imageTags;
 
 async function loadDetails() {
     if (!document.querySelector("display-wrapper").classList.contains("open")) {
@@ -16,7 +17,7 @@ async function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", `
     <h2> Artist </h2> 
-    <a artist onclick="event.preventDefault();shell.openExternal(this.href);">
+    <a artist onclick="event.preventDefault();artistSearch();">
      Fetching... </a>
     `);
 
@@ -68,7 +69,7 @@ async function loadDetails() {
         drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
     }
 
-    const imageTags = await fetchTags();
+    imageTags = await fetchTags();
     drawer.querySelector("a[artist]").innerHTML = imageTags.artistTag;
     if (imageTags.artistTag !== "no artist specified") {
         drawer.querySelector("a[artist]").href = artistLink + imageTags.artistTag;
@@ -101,4 +102,13 @@ async function fetchTags() {
     } else {
         console.log("error");
     }
+}
+
+function artistSearch() {
+    document.querySelector(".tags").value = imageTags.artistTag;
+    if (drawer.classList.contains("open")) {
+        drawerAction();
+    }
+    document.querySelector("display-wrapper").classList.remove("open");
+    apiFetch();
 }
