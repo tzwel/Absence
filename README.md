@@ -4,6 +4,7 @@
 <p align="center">  An (WIP) open-source Gelbooru client </p>
 
 <p align="center"> 
+<img src="https://img.shields.io/badge/vanilla-JS-f0db4f?style=flat-square" alt="vanilla JS" />
 <img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square" alt="Uncompressed code size" />
 <a href="https://github.com/tzwel/Absence/releases"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square" alt="Release" /> </a>
 </p>
