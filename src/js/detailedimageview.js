@@ -3,7 +3,7 @@ const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&name
 const artistLink = "https://gelbooru.com/index.php?page=post&s=list&tags=";
 let clickedNumber = 0;
 let imageTags;
-const fetching = `Fetching...`;
+const fetching = "Fetching...";
 
 async function loadDetails() {
     if (!document.querySelector("display-wrapper").classList.contains("open")) {

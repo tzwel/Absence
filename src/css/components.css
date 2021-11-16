@@ -371,7 +371,6 @@ count-indicator {
   left: 0;
   bottom: 0;
   display: flex;
-  /*padding: 1rem;*/
   padding-right: 1rem;
   padding-left: 1rem;
 }
