@@ -1,8 +1,9 @@
 // const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
 const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&names=";
 const artistLink = "https://gelbooru.com/index.php?page=post&s=list&tags=";
-let clickedNumber;
+let clickedNumber = 0;
 let imageTags;
+const fetching = `Fetching...`;
 
 async function loadDetails() {
     if (!document.querySelector("display-wrapper").classList.contains("open")) {
@@ -17,8 +18,14 @@ async function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", `
     <h2> Artist </h2> 
-    <a artist onclick="event.preventDefault();artistSearch();">
-     Fetching... </a>
+    <a artist onclick='event.preventDefault();searchBy("artist")'>
+     ${fetching} </a>
+    `);
+
+    drawer.insertAdjacentHTML("beforeend", `
+    <h2> Character </h2> 
+    <a character onclick='event.preventDefault();searchBy("character")'>
+     ${fetching} </a>
     `);
 
     drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
@@ -70,9 +77,14 @@ async function loadDetails() {
     }
 
     imageTags = await fetchTags();
-    drawer.querySelector("a[artist]").innerHTML = imageTags.artistTag;
-    if (imageTags.artistTag !== "no artist specified") {
-        drawer.querySelector("a[artist]").href = artistLink + imageTags.artistTag;
+
+    drawer.querySelector("a[artist]").innerHTML = imageTags.artist.replace(/_/g," ");
+    if (imageTags.artist !== "no artist specified") {
+        drawer.querySelector("a[artist]").href = artistLink + imageTags.artist;
+    }
+    drawer.querySelector("a[character]").innerHTML = imageTags.character.replace(/_/g," ");
+    if (imageTags.character !== "no character specified") {
+        drawer.querySelector("a[character]").href = artistLink + imageTags.character;
     }
 }
 
@@ -86,17 +98,29 @@ async function fetchTags() {
         xml = parser.parseFromString(text, "text/xml");
         //  xml.querySelector("[tags]")[0].childNodes[0].nodeValue;
         // console.log(xml);
+        console.log(xml);
         let artistTag;
+        let characterTag;
+
         try {
             artistTag = xml.querySelector("[type='1']").getAttribute("name");
         } catch (error) {
             artistTag = "no artist specified";
-            console.log("no artist");
+            console.log("no artist " + error);
         }
+
+        try {
+            characterTag = xml.querySelector("[type='4']").getAttribute("name");
+        } catch (error) {
+            characterTag = "no character specified";
+            console.log("no character " + error);
+        }
+
         const response = {
-            artistTag: artistTag
+            artist: artistTag,
+            character: characterTag
         };
-        //  console.log(response);
+
         return response;
 
     } else {
@@ -104,8 +128,18 @@ async function fetchTags() {
     }
 }
 
-function artistSearch() {
-    document.querySelector(".tags").value = imageTags.artistTag;
+function searchBy(what) {
+    document.querySelector(".page").value = 0;
+    switch (what) {
+    case "artist":
+        document.querySelector(".tags").value = imageTags.artist;
+        break;
+
+    case "character":
+        document.querySelector(".tags").value = imageTags.character;
+        break;
+    }
+
     if (drawer.classList.contains("open")) {
         drawerAction();
     }

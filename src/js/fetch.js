@@ -1,4 +1,4 @@
-let resp, tags, pid, limit;
+let [resp, tags, pid, limit] = "undefined";
 let trending = "";
 const trendingThreshold = "10";
 const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";

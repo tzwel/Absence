@@ -365,6 +365,17 @@ display-buttons a::after {
   transition: width .3s;
 }
 
+count-indicator {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  /*padding: 1rem;*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
 display-buttons a:hover::after {
   width: 85%;
 }

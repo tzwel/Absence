@@ -136,6 +136,9 @@
 
       <display-wrapper>
         <img large copyable src="" alt="large displayed image">
+        <count-indicator>
+          ${clickedNumber + 1} / ${document.querySelector('grid').getElementsByTagName('article').length}
+        </count-indicator>
         <display-buttons>
       <!--    <a class="add-to-favorites" href="#">add to favorites</a> -->
           <a onclick="drawerAction()" href="#">image info</a>
