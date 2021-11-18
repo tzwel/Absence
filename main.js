@@ -56,7 +56,7 @@ async function createWindow () {
     // mainWindow.webContents.openDevTools()
 
     mainWindow.webContents.once("dom-ready", () => {
-        //   mainWindow.show();
+        mainWindow.show();
         setTimeout(() => loader.destroy(), 4000);
     });
 
