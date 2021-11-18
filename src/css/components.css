@@ -373,6 +373,7 @@ count-indicator {
   display: flex;
   padding-right: 1rem;
   padding-left: 1rem;
+  padding: .5rem;
 }
 
 display-buttons a:hover::after {
