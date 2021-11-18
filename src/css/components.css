@@ -544,7 +544,6 @@ report {
   bottom: 0;
   right: 0;
   z-index: 5;
-  pointer-events: none;
   font-size: 1rem;
 }
 
