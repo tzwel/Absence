@@ -61,3 +61,19 @@ toasts.imageCopied = {
     timeOut: 2500,
     color: "var(--accent-color)"
 };
+
+toasts.outdated = {
+    name: "Absence is outdated!",
+    header: "Absence is outdated! <br/> You may want to install an update",
+    message: "",
+    timeOut: 4000,
+    color: "#f8ff00"
+};
+
+toasts.dev = {
+    name: "dev",
+    header: "You are currently working in dev environment. <br/> If you think this is a bug, please open an issue on Github.",
+    message: "",
+    timeOut: 6300,
+    color: "var(--accent-color)"
+};

@@ -33,7 +33,7 @@ toast {
     animation-name: toastEnter;
     animation-duration: .6s;
     animation-fill-mode: forwards;
-    height: 42px;
+    min-height: 42px;
     transition: height .3s, padding .3s, margin .3s;
 }
 
