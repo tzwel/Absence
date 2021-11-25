@@ -1,7 +1,7 @@
 // console.log(blacklist);
 
 const blacklists = {
-    default: "-loli -piss -bestiality -drinking_pee -fart -fart_fetish -smell -peeing_in_mouth",
+    default: "-loli -piss -bestiality -drinking_pee -fart -fart_fetish -smell -peeing_in_mouth -guro -necrophilia",
 
     nomen: "-1boy -yaoi -futanari -boy -man -men -trap -shemale -gay -shota -3boys -male_focus",
 
