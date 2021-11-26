@@ -2,7 +2,7 @@
 
 <h1 align="center"> Absence </h1>
 <p align="center">  An (WIP) open-source Gelbooru client </p>
-<p align="center"> <a href="https://github.com/tzwel/absence/releases/latest/download/Absence-Setup.exe"> <img src="https://img.shields.io/badge/-Download%20latest%20version-brightgreen&style=flat-square"/> </a> </p>
+<p align="center"> <a href="https://github.com/tzwel/absence/releases/latest/download/Absence-Setup.exe"> <img src="https://img.shields.io/badge/-Download%20latest%20version-brightgreen"/> </a> </p>
 
 <p align="center"> 
 <img src="https://img.shields.io/badge/vanilla-JS-f0db4f?style=flat-square" alt="vanilla JS" />
