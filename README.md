@@ -7,7 +7,7 @@
 <p align="center"> 
 <img src="https://img.shields.io/badge/vanilla-JS-f0db4f?style=flat-square" alt="vanilla JS" />
 <img src="https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square" alt="Uncompressed code size" />
-<img src="https://img.shields.io/tokei/lines/github/tzwel/absence?style=flat-square" alt="Code lines" />
+<!-- <img src="https://img.shields.io/tokei/lines/github/tzwel/absence?style=flat-square" alt="Code lines" /> -->
 <a href="https://github.com/tzwel/Absence/releases/latest"> <img src="https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square" alt="Release" /> </a>
 </p>
 
