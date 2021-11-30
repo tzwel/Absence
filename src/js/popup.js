@@ -3,6 +3,16 @@ let clickedImageNumber, viewedImageNumber, sampleClickedImageUrl, originalClicke
 let displayerScale = 1;
 
 window.onclick = e => {
+    if (e.target.tagName === "IMG" && e.target.hasAttribute("loading") && !e.target.hasAttribute("selected") && e.ctrlKey) {
+        e.target.setAttribute("selected", "");
+        selectedItems++;
+        return;
+    } else if (e.target.tagName === "IMG" && e.target.hasAttribute("selected") && e.ctrlKey) {
+        e.target.removeAttribute("selected");
+        selectedItems --;
+        return;
+    }
+
     let target = e.target;
     if (target.tagName === "IMG") {
 

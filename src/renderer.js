@@ -2,6 +2,7 @@ const { remote } = require("electron");
 const { shell } = require("electron");
 const { dialog, app } = require("electron").remote;
 const { clipboard } = require("electron");
+const version = "1.3";
 
 // Customizable variables
 

@@ -16,8 +16,7 @@ let render;
                 for (const match of matches) {
                     const nodeText = node.innerHTML;
                     let evaluated = Function(`return ${match}`);
-                    node.innerHTML = nodeText.replace(`$\{${match}}`, `
-                        <active init="${match}"> ${evaluated()} </active>
+                    node.innerHTML = nodeText.replace(`$\{${match}}`, `<active init="${match}"> ${evaluated()} </active>
                     `);
                 }    
             }

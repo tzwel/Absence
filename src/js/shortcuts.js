@@ -70,7 +70,7 @@ function loadLargeImage(direction) {
     if (direction === "next") {
         viewedImageNumber++;
     } else {
-        viewedImageNumber--;
+        viewedImageNumber --;
     }
 
     switch (viewedImageNumber) {

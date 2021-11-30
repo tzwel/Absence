@@ -73,6 +73,15 @@ nav {
   max-height: 40px;
 }
 
+nav > span {
+  font-size: .8rem;
+  align-self: center;
+  color: var(--text-color);
+  opacity: .2;
+  padding-right: .6rem;
+  padding-left: .6rem;
+}
+
 grid {
   padding-top: 40px;
 }
