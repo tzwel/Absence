@@ -32,11 +32,13 @@ function previousFetch() {
         return document.querySelector(".page").value = 0;
     }
     document.querySelector(".page").value --;
+    selectedItems = 0;
     apiFetch();
 }
 
 function nextFetch() {
     document.querySelector(".page").value ++;
+    selectedItems = 0;
     apiFetch();
 }
 
