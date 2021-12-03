@@ -101,5 +101,5 @@ If I still didn't fix the bug you created an issue about and you know some js, f
 
 (Licensing may change in the future)
 
-[Apache License 2.0](https://github.com/tzwel/Absence/blob/main/LICENSE.md)
+[Apache License 2.0](https://github.com/tzwel/Absence/blob/main/LICENSE.txt)
 
