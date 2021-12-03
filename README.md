@@ -16,7 +16,8 @@ Hence Absence is built in Electron, it allows for high customisation and extensi
 
 [Old README, literally tl;dr](/README.old.md)
 
-Note: Absence is still a work in progress app, it's recommended to install it through command line instead of downloading releases, since they might be outdated and contain bugs already fixed in latest versions
+Note: Absence is still a work in progress app, it's recommended to [install it through command line](#run-locally)
+ instead of downloading releases, since they might be outdated and contain bugs already fixed in latest versions
 
 <!-- [![Uncompressed code size](https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square)]()
 [![Release](https://img.shields.io/github/v/release/tzwel/absence?color=yellow&include_prereleases&style=flat-square)](https://github.com/tzwel/Absence/releases)
