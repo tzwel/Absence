@@ -67,13 +67,13 @@ And a lot more
 Clone repo & install dependencies
 
 ```bash
-  git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
+git clone https://github.com/tzwel/Absence.git && cd Absence && npm install
 ```
 
 Start the server
 
 ```bash
-  npm start
+npm start
 ```
 > 'electron' is not recognized as internal command, operable program or batch file? \
 > Don't forget to install electron, run `npm i -g electron`
