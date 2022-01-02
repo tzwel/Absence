@@ -65,8 +65,8 @@ window.addEventListener("contextmenu", (event) => {
     activeElement = document.activeElement;
     rightClickedElement = event.target;
     // if (event.target.tagName !== "IMG") {
-    this.mouseX = event.clientX.toString();
-    this.mouseY = event.clientY.toString();
+    this.mouseX = event.clientX + 100;
+    this.mouseY = event.clientY;
     contextmenuAction(mouseX, mouseY);    
     // }
 }, false);
