@@ -45,6 +45,18 @@ body {
   --text-color: #000000;
   --accent-color: #009;
 }
+[data-theme="rose"] {
+  --main-background: #422b3c;
+  --secondary-background: #331f2d;
+  --text-color: #FFFFFF;
+  --accent-color: #f13f58;
+}
+[data-theme="minion"] {
+  --main-background: #2D2A32;
+  --secondary-background: #2D2A32;
+  --text-color: #FAFDF6;
+  --accent-color: #EAE151;
+}
 /* boilerplate colors */
 html {
   box-sizing: border-box;

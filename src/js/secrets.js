@@ -18,9 +18,19 @@ function switchTheme() {
         break;
         
     case "rule34":
+        currentTheme = "rose";
+        localStorage.setItem("theme", "rose");
+        break;
+ 
+    case "rose":
+        currentTheme = "minion";
+        localStorage.setItem("theme", "minion");
+        break;
+
+    case "minion":
         currentTheme = "default";
         localStorage.setItem("theme", "default");
-        break;
+        break;        
         
     default:
         currentTheme = "default";
