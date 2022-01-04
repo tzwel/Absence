@@ -19,7 +19,7 @@ function copy() {
             break;
         
         default:
-            clipboard.writeText(`https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}`);
+            clipboard.writeText(`https://gelbooru.com/index.php?page=post&s=view&id=${resp.post[clickedNumber]["id"]}`);
             toast(toasts.imageCopied);
             break;
         }

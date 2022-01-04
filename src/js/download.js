@@ -36,12 +36,12 @@ function downloadImage(link, method = "default", id) {
     toasts.download.color = "var(--accent-color)";
 
     if (method === "default") {
-        Dir = `${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
-        if (fs.existsSync(`${savePath}/${ resp[clickedNumber]["id"] } - Absence${path.extname(link)}`)) {
+        Dir = `${savePath}/${ resp.post[clickedNumber]["id"] } - Absence${path.extname(link)}`; 
+        if (fs.existsSync(`${savePath}/${ resp.post[clickedNumber]["id"] } - Absence${path.extname(link)}`)) {
             return toast(toasts.fileExists);
         }
-        downloadArray.push(resp[clickedNumber]["id"]);
-        toasts.download.header = `Downloading file ${resp[clickedNumber]["id"]}...`;
+        downloadArray.push(resp.post[clickedNumber]["id"]);
+        toasts.download.header = `Downloading file ${resp.post[clickedNumber]["id"]}...`;
 
     } else if (method === "bulk") {
         Dir = `${savePath}/${id} - Absence${path.extname(link)}`; 

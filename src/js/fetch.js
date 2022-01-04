@@ -20,7 +20,7 @@ async function apiFetch() {
         .replace("rating:x", "rating:explicit")
         .replace("s:", "score:")} ${blacklists.personal} &json=1`, "json");
 
-    if (resp.length === undefined || resp.length === 0) {
+    if (resp.post.length === undefined || resp.post.length === 0) {
         noresults();
     } else {
         populate();

@@ -13,7 +13,7 @@ function render(component, content, destination) {
 }
 
 function generateReport(fileNum) {
-    if (resp.length === undefined || resp.length === 0) {
+    if (resp.post.length === undefined || resp.post.length === 0) {
         toasts.report.color = "red";
         toasts.report.header = "No results!";
         toast(toasts.report);

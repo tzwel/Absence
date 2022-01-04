@@ -28,9 +28,9 @@ async function loadDetails() {
      ${fetching} </a>
     `);
 
-    drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
+    drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp.post[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
     
-    switch (resp[clickedNumber]["rating"]) {
+    switch (resp.post[clickedNumber]["rating"]) {
     case "e":
         drawer.insertAdjacentHTML("beforeend",`
         <h2> Rating </h2> <span style="color:#f72828"> explicit </span>
@@ -50,29 +50,29 @@ async function loadDetails() {
         break;
 
     default:
-        drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp[clickedNumber]["rating"]} </span>`);
+        drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp.post[clickedNumber]["rating"]} </span>`);
         break;
     }
 
-    drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp[clickedNumber]["score"]} </span>`);
+    drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp.post[clickedNumber]["score"]} </span>`);
 
-    drawer.insertAdjacentHTML("beforeend", `<h2> Dimensions </h2> <span> ${resp[clickedNumber]["width"]} x ${resp[clickedNumber]["height"]}px </span>`);
+    drawer.insertAdjacentHTML("beforeend", `<h2> Dimensions </h2> <span> ${resp.post[clickedNumber]["width"]} x ${resp.post[clickedNumber]["height"]}px </span>`);
 
-    drawer.insertAdjacentHTML("beforeend", `<h2> Id </h2> <span> ${resp[clickedNumber]["id"]} </span>`);
+    drawer.insertAdjacentHTML("beforeend", `<h2> Id </h2> <span> ${resp.post[clickedNumber]["id"]} </span>`);
 
     drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
     onclick="event.preventDefault();
     shell.openExternal(this.href);"
-    href="https://gelbooru.com/index.php?page=post&s=view&id=${resp[clickedNumber]["id"]}"> Open in browser </a>`);
+    href="https://gelbooru.com/index.php?page=post&s=view&id=${resp.post[clickedNumber]["id"]}"> Open in browser </a>`);
 
-    if (resp[clickedNumber]["source"]) {
+    if (resp.post[clickedNumber]["source"]) {
         drawer.insertAdjacentHTML("beforeend", `<a target="_blank" 
         onclick="event.preventDefault();
         shell.openExternal(this.href);"
-        href="${resp[clickedNumber]["source"]}"> Source </a>`);    
+        href="${resp.post[clickedNumber]["source"]}"> Source </a>`);    
     } // navigator.clipboard.writeText(text)
 
-    if (`${resp[clickedNumber]["sample"]}` === "0") {
+    if (`${resp.post[clickedNumber]["sample"]}` === "0") {
         drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
     }
 
@@ -89,7 +89,7 @@ async function loadDetails() {
 }
 
 async function fetchTags() {
-    const currentTags = resp[clickedNumber]["tags"].replace(/ /g, "+");
+    const currentTags = resp.post[clickedNumber]["tags"].replace(/ /g, "+");
     const tagInfo = await fetch(`${tagInfoLink}${currentTags}`);
     console.log(`${tagInfoLink}${currentTags}`);
     if (tagInfo.ok) {
