@@ -94,9 +94,11 @@ async function loadDetails() {
     for (const tag of fetchedJsonTags.tag) {
         if (tag.type === 1) {
             drawer.querySelector("a[artist]").innerHTML = tag.name;
+            drawer.querySelector("a[artist]").href = "#";
         }
         if (tag.type === 4) {
             drawer.querySelector("a[character]").innerHTML = tag.name;
+            drawer.querySelector("a[character]").href = "#";
         }
     }
 }
