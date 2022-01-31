@@ -99,7 +99,7 @@ function loadLargeImage(direction) {
             if (viewedImage.getAttribute("sampleBoolean") === "1") {
                 imageDisplayer.src = viewedImage.getAttribute("sample");
             } else {
-                console.log("nie ma sampla");
+                // console.log("nie ma sampla");
                 imageDisplayer.src = viewedImage.getAttribute("original");
             }
 
