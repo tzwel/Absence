@@ -1,5 +1,3 @@
-// console.log(blacklist);
-
 const blacklists = {
     default: "-loli -piss -bestiality -drinking_pee -fart -fart_fetish -smell -peeing_in_mouth -guro -necrophilia",
 
