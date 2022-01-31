@@ -68,9 +68,9 @@ window.addEventListener("contextmenu", (event) => {
     const contextMenuWidth = contextmenuNode.offsetWidth /2;
     
     if (flipmenu) {
-        this.mouseX = event.clientX - contextMenuWidth;
+        this.mouseX = event.clientX - contextMenuWidth + 20;
     } else {
-        this.mouseX = event.clientX + 100;
+        this.mouseX = event.clientX + 80;
     }
     this.mouseY = event.clientY;
     contextmenuAction(mouseX, mouseY);    
