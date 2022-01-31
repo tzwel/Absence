@@ -64,11 +64,16 @@ window.addEventListener("contextmenu", (event) => {
     event.preventDefault();
     activeElement = document.activeElement;
     rightClickedElement = event.target;
-    // if (event.target.tagName !== "IMG") {
-    this.mouseX = event.clientX + 100;
+    const flipmenu = event.clientX > window.innerWidth / 2;
+    const contextMenuWidth = contextmenuNode.offsetWidth /2;
+    
+    if (flipmenu) {
+        this.mouseX = event.clientX - contextMenuWidth;
+    } else {
+        this.mouseX = event.clientX + 100;
+    }
     this.mouseY = event.clientY;
     contextmenuAction(mouseX, mouseY);    
-    // }
 }, false);
 
 window.addEventListener("click", (e) => {    
