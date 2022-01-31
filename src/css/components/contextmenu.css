@@ -3,7 +3,7 @@ contextmenu {
     display: flex;
     top: 0;
     left: 0;
-    width: 200px;
+    /* width: 200px; */
     background: rgba(22,22,22,0.6);
     backdrop-filter: blur(20px);
     z-index: 35;

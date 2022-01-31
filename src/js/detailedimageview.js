@@ -76,16 +76,18 @@ async function loadDetails() {
         drawer.insertAdjacentHTML("beforeend", "<span> This image doesn't have a larger version. </span>");
     }
 
-    imageTags = await fetchTags();
+    // STUFF FOR DRAWER HERE     ---------------------------------------
 
-    drawer.querySelector("a[artist]").innerHTML = imageTags.artist.replace(/_/g," ");
+    // imageTags = await fetchTags();
+
+    /* drawer.querySelector("a[artist]").innerHTML = imageTags.artist.replace(/_/g," ");
     if (imageTags.artist !== "no artist specified") {
         drawer.querySelector("a[artist]").href = artistLink + imageTags.artist;
     }
     drawer.querySelector("a[character]").innerHTML = imageTags.character.replace(/_/g," ");
     if (imageTags.character !== "no character specified") {
         drawer.querySelector("a[character]").href = artistLink + imageTags.character;
-    }
+    }*/
 }
 
 async function fetchTags() {
@@ -117,8 +119,8 @@ async function fetchTags() {
         }
 
         const response = {
-            artist: artistTag,
-            character: characterTag
+            artist: "This feature has been broken by latest gelbooru api changes",
+            character: "This feature has been broken by latest gelbooru api changes"
         };
 
         return response;

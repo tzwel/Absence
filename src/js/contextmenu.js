@@ -25,7 +25,7 @@ function contextmenuAction(mouseX, mouseY) {
         setItem("Paste", paste);
     }
 
-    setItem("Show saved images", opensaved);
+    setItem("Open saved images location", opensaved);
     setItem("Refresh client", refresh);
 
     const contextmenuNodeDisplay = contextmenuNode.classList.contains("open");

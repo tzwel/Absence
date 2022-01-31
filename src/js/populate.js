@@ -1,5 +1,5 @@
 function populate() {
-    if (resp.post.length === undefined || resp.post.length === 0) {
+    if (resp.post.length === undefined || resp.post.length === 0 || resp["@attributes"].count === 0) {
         return console.log("No search results!");
     }
     document.querySelector("grid").innerHTML = "";
@@ -13,7 +13,7 @@ function populate() {
         thumbnailUrl = `${resp.post[i].preview_url}`;
         console.log(thumbnailUrl);
 
-        if (resp.post[i].file_url.includes("video-c") === true) {
+        if (resp.post[i].file_url.includes(".mp4") === true || resp.post[i].file_url.includes(".webm") === true) {
             img = document.createElement("video");
             img.setAttribute("controls","");
             img.setAttribute("loop","");
@@ -46,7 +46,10 @@ function populate() {
         img.setAttribute("number", [i]);
         img.setAttribute("loading", "lazy");
         document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
-        let sampleUrl = `https://img3.gelbooru.com//samples/${resp.post[i].directory}/sample_${resp.post[i].file_url.replace("https://img3.gelbooru.com/images/","").replace(`${resp.post[i].directory}/`,"").replace("jpeg","jpg").replace("png","jpg")}`;
+
+        // REWRITE THIS
+        // URGENT
+        let sampleUrl = `https://img3.gelbooru.com//samples/${resp.post[i].directory}/sample_${resp.post[i].file_url.replace("https://img3.gelbooru.com/","").replace("https://video-cdn3.gelbooru.com/","").replace(`${resp.post[i].directory}/`,"").replace("images/","").replace("jpeg","jpg").replace("png","jpg")}`;
         // console.log(`kutas ${sampleUrl}`);
         img.setAttribute("original", `${resp.post[i].file_url}`);
         img.setAttribute("sample", sampleUrl);
