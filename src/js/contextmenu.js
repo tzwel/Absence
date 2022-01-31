@@ -8,7 +8,7 @@ function contextmenuAction(mouseX, mouseY) {
 
     if (!rightClickedElement.hasAttribute("large")) {
         if (!rightClickedElement.hasAttribute("selected") && rightClickedElement.tagName === "IMG") {
-            setItem("Select", select);
+            setItem("Select (ctrl+lmb)", select);
             setItem("Select all", selectAll);
         } else if (rightClickedElement.tagName === "IMG") {
             setItem("Deselect", deselect);
@@ -26,7 +26,7 @@ function contextmenuAction(mouseX, mouseY) {
     }
 
     setItem("Open saved images location", opensaved);
-    setItem("Refresh client", refresh);
+    setItem("Relaunch client (ctrl+r)", refresh);
 
     const contextmenuNodeDisplay = contextmenuNode.classList.contains("open");
     switch (contextmenuNodeDisplay) {
