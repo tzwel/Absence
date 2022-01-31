@@ -22,23 +22,23 @@ window.onclick = e => {
             yOffset = 0;
             xOffset = 0;
             displayerScale = 1;
-            console.log("klikniety obrazek");
+            //console.log("klikniety obrazek");
 
             originalClickedImageUrl = target.getAttribute("original");
             sampleClickedImageUrl = target.getAttribute("sample");
             clickedImageNumber = target.getAttribute("number");
-            console.log(originalClickedImageUrl);
+            //console.log(originalClickedImageUrl);
             imageDisplayer.src = "";
             viewedImageNumber = target.getAttribute("number");
 
             if (target.getAttribute("sampleBoolean") === "1") {
                 imageDisplayer.src = sampleClickedImageUrl;
             } else {
-                console.log("nie ma sampla");
+                //console.log("nie ma sampla");
                 imageDisplayer.src = originalClickedImageUrl;
             }
 
-            loadDetails();
+            // loadDetails();
 
             imageDisplayer.style.backgroundImage = `url("${target.getAttribute("src")}")`;
             imageBlur();
@@ -78,7 +78,7 @@ imageDisplayer.onwheel = zoom;
 
 function imageBlur() {
     if (imageDisplayer.src.includes(".gif") === false) {
-        imageDisplayer.style.filter = "blur(4px)";
+        imageDisplayer.style.filter = "blur(5px)";
         imageDisplayer.addEventListener("load", popupLoad);
     }
 }

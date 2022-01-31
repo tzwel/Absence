@@ -1,5 +1,5 @@
 // const commentsLink = "https://gelbooru.com/index.php?page=dapi&s=comment&q=index&json=1&post_id=";
-const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&names=";
+const tagInfoLink = "https://gelbooru.com/index.php?page=dapi&s=tag&q=index&json=1&names=";
 const artistLink = "https://gelbooru.com/index.php?page=post&s=list&tags=";
 let clickedNumber = 0;
 let imageTags;
@@ -88,8 +88,27 @@ async function loadDetails() {
     if (imageTags.character !== "no character specified") {
         drawer.querySelector("a[character]").href = artistLink + imageTags.character;
     }*/
+    const fetchedJsonTags = await fetchTagsJson();
+    drawer.querySelector("a[artist]").innerHTML = "no artist specified";
+    drawer.querySelector("a[character]").innerHTML = "no character specified";
+    for (const tag of fetchedJsonTags.tag) {
+        if (tag.type === 1) {
+            drawer.querySelector("a[artist]").innerHTML = tag.name;
+        }
+        if (tag.type === 4) {
+            drawer.querySelector("a[character]").innerHTML = tag.name;
+        }
+    }
 }
 
+async function fetchTagsJson() {
+    const currentTags = resp.post[clickedNumber]["tags"].replace(/ /g, "+");
+    const tagInfo = await fetch(`${tagInfoLink}${currentTags}`);
+    const json = await tagInfo.json();
+    return json;
+}
+
+/*
 async function fetchTags() {
     const currentTags = resp.post[clickedNumber]["tags"].replace(/ /g, "+");
     const tagInfo = await fetch(`${tagInfoLink}${currentTags}`);
@@ -129,16 +148,16 @@ async function fetchTags() {
         console.log("error");
     }
 }
-
+*/
 function searchBy(what) {
     document.querySelector(".page").value = 0;
     switch (what) {
     case "artist":
-        document.querySelector(".tags").value = imageTags.artist;
+        document.querySelector(".tags").value = document.querySelector("a[artist]").innerHTML;
         break;
 
     case "character":
-        document.querySelector(".tags").value = imageTags.character;
+        document.querySelector(".tags").value = document.querySelector("a[character]").innerHTML;
         break;
     }
 

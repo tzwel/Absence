@@ -21,6 +21,7 @@ function drawerAction() {
         drawer.classList.remove("open");
         drawerBackground.classList.add("closed");
     } else {
+        loadDetails();
         drawer.classList.add("open");
         drawerBackground.classList.remove("closed");
     }
