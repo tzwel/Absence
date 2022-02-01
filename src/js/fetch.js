@@ -8,7 +8,7 @@ async function apiFetch() {
     loading();
 
     tags = document.querySelector(".tags").value;
-    pid = document.querySelector(".page").value;
+    pid = document.querySelector(".page").value - 1;
     // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} 
     ${tags
@@ -30,8 +30,8 @@ async function apiFetch() {
 }
 
 function previousFetch() {
-    if (document.querySelector(".page").value <= 0) {
-        return document.querySelector(".page").value = 0;
+    if (document.querySelector(".page").value <= 1) {
+        return document.querySelector(".page").value = 1;
     }
     document.querySelector(".page").value --;
     selectedItems = 0;

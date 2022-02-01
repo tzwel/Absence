@@ -113,6 +113,9 @@ function loadLargeImage(direction) {
     } else {
         nextFetch();
         document.querySelector("display-wrapper").classList.remove("open");
+        if (drawer.classList.contains("open")) {
+            drawerAction();
+        }
     }
 }
 
