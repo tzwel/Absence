@@ -16,8 +16,7 @@ Hence Absence is built in Electron, it allows for high customisation and extensi
 
 [Old README, literally tl;dr](/README.old.md)
 
-### ⚠ Note: Due to latest Gelbooru API changes, Absence may malfuction. File Issues if you find any.
-Note 2: Absence is still a work in progress app, it's recommended to [install it through command line](#run-locally) (if you don't mind worse performance)
+Note: Absence is still a work in progress app, it's recommended to [install it through command line](#run-locally) (if you don't mind worse performance)
  instead of downloading releases, since they might be outdated and contain bugs already fixed in latest versions
 
 <!-- [![Uncompressed code size](https://img.shields.io/github/languages/code-size/tzwel/absence?style=flat-square)]()
