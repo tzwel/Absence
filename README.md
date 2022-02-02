@@ -12,7 +12,7 @@
 </p>
 
 Absence is a feature rich application built in Electron enhancing the original website's experience \
-Hence Absence is built in Electron, it allows for high customisation and extensibility, providing integration with filesystem using Node
+Hence Absence is built in Electron, it allows for high customization and extensibility, providing integration with filesystem using Node
 
 [Old README, literally tl;dr](/README.old.md)
 
