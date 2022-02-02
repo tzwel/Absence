@@ -91,7 +91,7 @@ I add a lot of features in a short amount of time, I only create releases once I
 #### Bugfix when
 
 Create an issue to be sure I know about the bug's existence. \
-If I still hadn't fix the bug you created an issue about and you know some js, feel free to fix it yourself and create a pull request!
+If I still hadn't fixed the bug you created an issue about, and you know some js, feel free to fix it yourself and create a pull request!
 
 ## Acknowledgements
 
