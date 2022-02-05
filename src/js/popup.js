@@ -22,19 +22,16 @@ window.onclick = e => {
             yOffset = 0;
             xOffset = 0;
             displayerScale = 1;
-            //console.log("klikniety obrazek");
 
             originalClickedImageUrl = target.getAttribute("original");
             sampleClickedImageUrl = target.getAttribute("sample");
             clickedImageNumber = target.getAttribute("number");
-            //console.log(originalClickedImageUrl);
             imageDisplayer.src = "";
             viewedImageNumber = target.getAttribute("number");
 
             if (target.getAttribute("sampleBoolean") === "1") {
                 imageDisplayer.src = sampleClickedImageUrl;
             } else {
-                //console.log("nie ma sampla");
                 imageDisplayer.src = originalClickedImageUrl;
             }
 
