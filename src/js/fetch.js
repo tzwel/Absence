@@ -4,7 +4,10 @@ const trendingThreshold = "10";
 const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";
 
 async function apiFetch() {
-    document.querySelector("grid").innerHTML = "";
+    if (!endlessscrolling) {
+        document.querySelector("grid").innerHTML = "";
+    }
+
     loading();
 
     tags = document.querySelector(".tags").value;
@@ -19,8 +22,6 @@ async function apiFetch() {
         .replace("rating:e", "rating:explicit")
         .replace("rating:x", "rating:explicit")
         .replace("s:", "score:")} ${blacklists.personal} &json=1`, "json");
-
-    console.log(resp);
 
     if (resp["@attributes"].count === 0) {
         noresults();

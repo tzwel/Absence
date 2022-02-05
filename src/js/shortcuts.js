@@ -105,7 +105,6 @@ function loadLargeImage(direction) {
 
             scrollToView();
             imageBlur();
-            loadDetails();
             
         } catch (error) {
             return console.log(`something went wrong! ${error}`);

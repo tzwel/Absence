@@ -30,6 +30,7 @@ async function loadDetails() {
 
     drawer.insertAdjacentHTML("beforeend", ` <h2> Tags </h2> <span style="max-height: 200px; overflow-y: auto" > ${resp.post[clickedNumber]["tags"].replace(/ /g, "</br>")} </span>`);
     
+    /*
     switch (resp.post[clickedNumber]["rating"]) {
     case "e":
         drawer.insertAdjacentHTML("beforeend",`
@@ -52,7 +53,8 @@ async function loadDetails() {
     default:
         drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp.post[clickedNumber]["rating"]} </span>`);
         break;
-    }
+    }*/
+    drawer.insertAdjacentHTML("beforeend", `<h2> Rating </h2> <span> ${resp.post[clickedNumber]["rating"]} </span>`);
 
     drawer.insertAdjacentHTML("beforeend", `<h2> Likes </h2> <span> ${resp.post[clickedNumber]["score"]} </span>`);
 
@@ -106,7 +108,7 @@ async function loadDetails() {
 async function fetchTagsJson() {
     const currentTags = resp.post[clickedNumber]["tags"].replace(/ /g, "+");
     const tagInfo = await fetch(`${tagInfoLink}${currentTags}`);
-    const json = await tagInfo.json();
+    const json = tagInfo.json();
     return json;
 }
 

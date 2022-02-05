@@ -1,8 +1,14 @@
+let globalimagenumber = 0;
+
 function populate() {
     if (resp.post.length === undefined || resp.post.length === 0 || resp["@attributes"].count === 0) {
         return console.log("No search results!");
     }
-    document.querySelector("grid").innerHTML = "";
+    if (!endlessscrolling) {
+        document.querySelector("grid").innerHTML = "";
+    } else {
+        document.querySelector("loading").remove();
+    }
 
     for (let i = 0; i < resp.post.length; i++) {
         let img = [];
@@ -11,7 +17,6 @@ function populate() {
         const badge = document.createElement("badge");
         badge.innerHTML = ".gif";
         thumbnailUrl = `${resp.post[i].preview_url}`;
-        console.log(thumbnailUrl);
 
         if (resp.post[i].file_url.includes(".mp4") === true || resp.post[i].file_url.includes(".webm") === true) {
             img = document.createElement("video");
@@ -42,8 +47,13 @@ function populate() {
         if (trendingToggle.checked) {
             imageWrapper.insertAdjacentHTML("beforeend", `<likes>${imgScore}^</likes>`);
         }
+        if (endlessscrolling) {
+            img.setAttribute("number", globalimagenumber.toString());
+            globalimagenumber++;
+        } else {
+            img.setAttribute("number", [i]);
+        }
 
-        img.setAttribute("number", [i]);
         img.setAttribute("loading", "lazy");
         document.querySelector("grid").insertAdjacentElement("beforeend", imageWrapper);
 
