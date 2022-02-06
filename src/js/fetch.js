@@ -2,6 +2,8 @@ let [resp, tags, pid, limit] = "undefined";
 let trending = "";
 const trendingThreshold = "10";
 const apiUrl = "http://gelbooru.com/index.php?page=dapi&s=post&q=index&";
+let caching = false;
+let responseCache = [];
 
 async function apiFetch() {
     if (!endlessscrolling) {
@@ -13,6 +15,14 @@ async function apiFetch() {
     tags = document.querySelector(".tags").value;
     pid = document.querySelector(".page").value - 1;
     // resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} ${tags} ${blacklists.default} ${blacklists.personal} &json=1`, "json");
+
+    /*
+    for (const cached of responseCache) {
+        if (cached.pid === pid) {
+            console.log(`strona ${cached.pid} jest w keszu`);
+        }
+    }*/
+
     resp = await Fletcher(`${apiUrl}limit=${limit}&pid=${pid}&tags=${trending} 
     ${tags
     // .replace("-", "_")
@@ -26,6 +36,9 @@ async function apiFetch() {
     if (resp["@attributes"].count === 0) {
         noresults();
     } else {
+        if (caching) {
+            responseCache.push({pid, resp});
+        }
         populate();
     }
 }

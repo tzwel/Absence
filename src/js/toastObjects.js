@@ -77,3 +77,11 @@ toasts.dev = {
     timeOut: 6300,
     color: "var(--accent-color)"
 };
+
+toasts.experimental = {
+    name: "experimental",
+    header: "You enabled an experimental feature. It may act unstable and cause errors.",
+    message: "",
+    timeOut: 6300,
+    color: "var(--accent-color)"
+};
