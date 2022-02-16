@@ -33,7 +33,7 @@ async function apiFetch() {
         .replace("rating:x", "rating:explicit")
         .replace("s:", "score:")} ${blacklists.personal} &json=1`, "json");
 
-    if (resp["@attributes"].count === 0) {
+    if (resp["@attributes"].count === 0 || resp.post === undefined) {
         noresults();
     } else {
         if (caching) {

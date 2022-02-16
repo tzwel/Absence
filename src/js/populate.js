@@ -1,7 +1,7 @@
 let globalimagenumber = 0;
 
 function populate() {
-    if (resp.post.length === undefined || resp.post.length === 0 || resp["@attributes"].count === 0) {
+    if (resp.post === undefined || resp.post === 0 || resp["@attributes"].count === 0) {
         return console.log("No search results!");
     }
     if (!endlessscrolling) {
