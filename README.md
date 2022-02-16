@@ -49,6 +49,7 @@ And a lot more
 ![App Screenshot](https://raw.githubusercontent.com/tzwel/Absence/main/screenshots/Absence2.jpg)
 ![App Screenshot](https://raw.githubusercontent.com/tzwel/Absence/main/screenshots/Absence3.jpg)
 
+*Above screenshots may be outdated*
 
 ## Run Locally
 
