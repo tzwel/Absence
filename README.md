@@ -33,7 +33,7 @@ Note: Absence is still a work in progress app, it's recommended to [install it t
 - Detailed info about currently displayed image such as tags, dimensions, and rating (see screenshots)
 - Lots of [handy keyboard (and mouse) shortcuts](https://github.com/tzwel/Absence/wiki/Keyboard-shortcuts) e.g. Enter to download currently displayed image, right arrow to go to the next page/image
 - Browsing by trending
-- [Search query shortlands](https://github.com/tzwel/Absence/wiki/Search-query-shortlands)
+- [Search query shorthands](https://github.com/tzwel/Absence/wiki/Search-query-shorthands)
 - Full screen mode
 - Automatic content adjusting depending on available space
 - Compact mode
