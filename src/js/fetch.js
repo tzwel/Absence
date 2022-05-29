@@ -27,7 +27,8 @@ async function apiFetch() {
     ${tags
     // .replace("-", "_")
         .replace("r:", "rating:")
-        .replace("rating:s", "rating:safe")
+        .replace("rating:g", "rating:general")
+        .replace("rating:s", "rating:sensitive")
         .replace("rating:q", "rating:questionable")
         .replace("rating:e", "rating:explicit")
         .replace("rating:x", "rating:explicit")
