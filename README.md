@@ -12,7 +12,7 @@
 </p>
 
 > **Warning**: The Absence client is considered abandonware now (but I will still accept PR's).
-It's still fully functional and I still think it's the best desktop Gelbooru client out there, but It won't recieve minor updates/patches. The codebase is constantly growing and becomes more and more cluttered, and fixing countless new bugs started to become less fun for me over time. Though, I will make efforts to rewrite it in Svelte, and improve on it a lot, stay tuned.
+It's still fully functional and I still think it's the best desktop Gelbooru client out there, but It won't receive minor updates/patches. The codebase is constantly growing and becomes more and more cluttered, and fixing countless new bugs started to become less fun for me over time. Though, I will make efforts to rewrite it in Svelte, and improve on it a lot, stay tuned.
 
 Absence is a feature rich application built in Electron enhancing the original website's experience \
 Hence Absence is built in Electron, it allows for high customization and extensibility, providing integration with filesystem using Node
